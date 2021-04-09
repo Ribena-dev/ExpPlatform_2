@@ -1404,7 +1404,7 @@ border-radius: 5px</string>
      <attribute name="title">
       <string>Platform</string>
      </attribute>
-     <widget class="QLineEdit" name="platform_clear_dist">
+     <widget class="QLineEdit" name="platform_stop_dist">
       <property name="geometry">
        <rect>
         <x>190</x>
@@ -1424,7 +1424,7 @@ border-radius: 5px</string>
 border-radius: 5px</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="platform_stop_dist">
+     <widget class="QLineEdit" name="platform_clear_dist">
       <property name="geometry">
        <rect>
         <x>190</x>

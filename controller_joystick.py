@@ -99,14 +99,14 @@ class LidarProcessor(object):
         self.flag_fr = self.update_flag(dist_fr)
         self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr]
 
-    def update_flag(self, dist):
+    def update_flag(self, dist, data):
         if dist >= self.dist_slow:
             flag = 1
-        elif dist <=self.dist_stop:
+        elif dist <= self.dist_stop:
             flag = 3
         else:
             flag = 2
-        # flag = 2
+        #flag = 1
         return flag
 
     @staticmethod
@@ -142,8 +142,10 @@ class JoystickProcessor(object):
 
     def callback(self, data):
         global clamp
-        print('front_flag:', self.lidar.flag_f,
-              'left_flag:', self.lidar.flag_l,
+        print('left_flag:', self.lidar.flag_l,
+              'frontleft_flag:', self.lidar.flag_fl,
+              'front_flag:', self.lidar.flag_f,
+              'frontright_flag:', self.lidar.flag_fr,
               'right_flag:', self.lidar.flag_r)
         print('clamp: ' + str(clamp))
         self.move(data)
@@ -154,9 +156,9 @@ class JoystickProcessor(object):
         # Data.axis[1] = joystick moving front and back, data.axis[0] = joystick moving left and right
         speed = data.axes[1] * 2
         if speed > 0:  # Joystick is indicating to move forward
-            twist =  self.move_forward(self.lidar.flag_f, speed, twist)
+            twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
         if speed < 0:  # Joystick is indicating to move in a reverse direction
-            twist = self.move_forward(1, speed, twist)
+            twist = self.move_forward(1, 1, 1, speed/2, twist)
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
@@ -171,23 +173,25 @@ class JoystickProcessor(object):
         if clamp == False:
             self.pub.publish(twist)
 
-    def move_forward(self, flag, multiplier, twist):
-        if flag == 1:
-            twist.linear.x = self.speed_fast * multiplier
-        elif flag == 2:
-            twist.linear.x = self.speed_slow * multiplier
-        elif flag == 3:
+    def move_forward(self, flag_front, flag_frontleft, flag_frontright, multiplier, twist):        
+        flag_frontside = max(flag_frontleft, flag_frontright)
+
+        if (flag_front == 3) | (flag_frontside == 3):
             twist.linear.x = 0
+        elif (flag_front == 2) | (flag_frontside == 2):
+            twist.linear.x = self.speed_slow * multiplier
+        elif (flag_front == 1):
+            twist.linear.x = self.speed_fast * multiplier
 
         print("x: ", twist.linear.x)
         return twist
 
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
-        if (flag_frontside == 3) & (flag_side >= 2):
+        if (flag_frontside == 3) | (flag_side == 3):
             twist.angular.z = 0
-        elif (flag_frontside <= 2) & (flag_side >= 2):
+        elif ((flag_frontside <= 2) & (flag_side >= 2) | (flag_frontside >= 2) & (flag_side <= 2)):
             twist.angular.z = self.speed_slow * angular_speed
-        elif (flag_frontside == 1) & (flag_side == 1):
+        elif (flag_frontside <= 2) & (flag_side == 1):
             twist.angular.z = self.speed_fast * angular_speed
 
         twist.angular.z = twist.angular.z * 2.5

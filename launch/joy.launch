@@ -1,6 +1,6 @@
 <launch>	
 	<node pkg="joy" type="joy_node" name="joystick" output="screen">
-		<param name="dev" value="/dev/input/ttyACM1" />
+		<param name="dev" value="/dev/ttyUSB0" />
 	</node>
 	
 	<node pkg="yardbot" type="teleop_joy_node" name="teleop" output="screen">

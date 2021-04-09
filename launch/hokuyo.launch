@@ -9,6 +9,7 @@
 	<param name="hokuyo_node/calibrate_time" value="true" />
 	<param name="frame_id" value="base_laser" />
 	<remap from="/scan" to="base_scan" />
+	<!-- <param name="port" value="/dev/ttyUSB1"/> -->
 </node>
 </launch>
 

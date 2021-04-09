@@ -112,7 +112,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.choose_rewards.activated.connect(self.set_rewards)
 
         self.maze_numberOfTrials.setText("30")
-        self.maze_angleTolerance.setText("90")
+        self.maze_angleTolerance.setText("89")
         self.maze_positionTolerance.setText("20") #in CM
         self.maze_destinationDuration.setText("2")
         self.maze_rewardDuration.setText("10")
@@ -124,7 +124,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # platform stuff
         self.platform_clear_dist.setText("1.6") #need convert to metres default 1.2 [1.6 = 80cm slow]
-        self.platform_stop_dist.setText("1.0")  #need convert to metres default 0.7 [1.0 = 60cm stop]
+        self.platform_stop_dist.setText("1.2")  #need convert to metres default 0.7 [1.0 = 60cm stop]
         self.platform_slowDownSpeed.setText("0.1") 
         self.platform_normalSpeed.setText("0.2")
 
@@ -350,7 +350,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             #Maze
             #self.maze_rewardLocation.setText(str(exp_info.get("maze_rewardlocation", 3.0)))
             self.maze_numberOfTrials.setText(str(exp_info.get("maze_numberOfTrials", 3.0)))
-            self.maze_angleTolerance.setText(str(exp_info.get("maze_angleTolerance", 90)))
+            self.maze_angleTolerance.setText(str(exp_info.get("maze_angleTolerance", 89)))
             self.maze_positionTolerance.setText(str(exp_info.get("maze_positionTolerance", 15)))
             self.maze_destinationDuration.setText(str(exp_info.get("maze_destinationDuration", 2.0)))
             self.maze_rewardDuration.setText(str(exp_info.get("maze_rewardDuration", 10.0)))
