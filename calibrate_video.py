@@ -6,8 +6,8 @@ from random import seed, shuffle
 from datetime import datetime
 
 def main(edffile='test.edf',
-         screen_width=800,
-         screen_height=600,
+         screen_width=1680,
+         screen_height=1050,
          full_screen=True,
          dot_duration=2.0, 
          is_random_point=True):

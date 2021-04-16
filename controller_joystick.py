@@ -56,6 +56,15 @@ class LidarProcessor(object):
     flag_old = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
     flag_new = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
 
+    dist_l = 0
+    dist_fl = 0
+    dist_f = 0
+    dist_fr = 0
+    dist_r = 0
+    dist_cl = 0
+    dist_cr = 0
+    dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r]
+
     pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
 
     def __init__(self,settings):
@@ -72,15 +81,18 @@ class LidarProcessor(object):
 
     def update_distance(self):
         # print (self.laser_subs_object)
-        dist_r = self.calc_avg(self.laser_subs_object.laser_ranges[0:193])
-        dist_fr = self.calc_avg(self.laser_subs_object.laser_ranges[193:386])
-        dist_f = self.calc_avg(self.laser_subs_object.laser_ranges[386:579])
-        dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
-        dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:963])
+        # Max array length [0:961]
+        self.dist_r = self.calc_avg(self.laser_subs_object.laser_ranges[0:193])
+        self.dist_fr = self.calc_avg(self.laser_subs_object.laser_ranges[193:386])
+        self.dist_f = self.calc_avg(self.laser_subs_object.laser_ranges[386:579])
+        self.dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
+        self.dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:962])
 
-        self.save_data((dist_f))
+        self.dist = [self.dist_l, self.dist_fl, self.dist_f, self.dist_fr, self.dist_r]
 
-        self.update_flags(dist_f,dist_l,dist_r,dist_fl,dist_fr)
+        self.save_data((self.dist_f))
+
+        self.update_flags(self.dist_f,self.dist_l,self.dist_r,self.dist_fl,self.dist_fr)
 
     def update_speed(self):
         if self.flag_old != self.flag_new:
@@ -99,13 +111,15 @@ class LidarProcessor(object):
         self.flag_fr = self.update_flag(dist_fr)
         self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr]
 
-    def update_flag(self, dist, data):
+    def update_flag(self, dist):
         if dist >= self.dist_slow:
             flag = 1
+        elif (dist >= self.dist_stop) & (dist <= self.dist_slow):
+            flag = 2
         elif dist <= self.dist_stop:
             flag = 3
         else:
-            flag = 2
+            flag = 3
         #flag = 1
         return flag
 
@@ -118,7 +132,7 @@ class LidarProcessor(object):
 
     @staticmethod
     def calc_avg(values):
-        return sum(values) / len(values)
+        return np.percentile(values,25)
 
 
 class JoystickProcessor(object):
@@ -148,6 +162,7 @@ class JoystickProcessor(object):
               'frontright_flag:', self.lidar.flag_fr,
               'right_flag:', self.lidar.flag_r)
         print('clamp: ' + str(clamp))
+        print(["{:0.3f}".format(x) for x in self.lidar.dist])
         self.move(data)
 
     def move(self, data):
@@ -176,10 +191,16 @@ class JoystickProcessor(object):
     def move_forward(self, flag_front, flag_frontleft, flag_frontright, multiplier, twist):        
         flag_frontside = max(flag_frontleft, flag_frontright)
 
+        slow_scale_factor = (self.lidar.dist_f - self.lidar.dist_stop) / (self.lidar.dist_slow - self.lidar.dist_stop)
+        slow_scale = (6 * slow_scale_factor) / (1 + (6 * slow_scale_factor))
+
+        #flag_frontside = 1
+        
         if (flag_front == 3) | (flag_frontside == 3):
             twist.linear.x = 0
-        elif (flag_front == 2) | (flag_frontside == 2):
-            twist.linear.x = self.speed_slow * multiplier
+        elif (flag_front == 2):
+            twist.linear.x = self.speed_fast * multiplier * slow_scale
+            #twist.linear.x = self.speed_slow * multiplier
         elif (flag_front == 1):
             twist.linear.x = self.speed_fast * multiplier
 
@@ -189,12 +210,12 @@ class JoystickProcessor(object):
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
         if (flag_frontside == 3) | (flag_side == 3):
             twist.angular.z = 0
+            #twist.angular.z = self.speed_slow * angular_speed * -2.5
         elif ((flag_frontside <= 2) & (flag_side >= 2) | (flag_frontside >= 2) & (flag_side <= 2)):
-            twist.angular.z = self.speed_slow * angular_speed
+            twist.angular.z = self.speed_fast * angular_speed * 2.5
         elif (flag_frontside <= 2) & (flag_side == 1):
-            twist.angular.z = self.speed_fast * angular_speed
+            twist.angular.z = self.speed_fast * angular_speed * 2.5
 
-        twist.angular.z = twist.angular.z * 2.5
         print("z: ", twist.angular.z)
         return twist
 

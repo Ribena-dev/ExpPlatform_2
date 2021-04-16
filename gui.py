@@ -123,8 +123,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.maze_ITI_Max.setText("3")   #in Seconds
 
         # platform stuff
-        self.platform_clear_dist.setText("1.6") #need convert to metres default 1.2 [1.6 = 80cm slow]
-        self.platform_stop_dist.setText("1.2")  #need convert to metres default 0.7 [1.0 = 60cm stop]
+        self.platform_clear_dist.setText("1.5") #need convert to metres default 1.2 [1.6 = 80cm slow]
+        self.platform_stop_dist.setText("0.5")  #need convert to metres default 0.7 [1.0 = 60cm stop]
         self.platform_slowDownSpeed.setText("0.1") 
         self.platform_normalSpeed.setText("0.2")
 
