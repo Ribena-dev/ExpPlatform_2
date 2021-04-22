@@ -5,11 +5,11 @@ import pickle
 from random import seed, shuffle
 from datetime import datetime
 
-def main(edffile='test.edf',
+def main(edffile='testvid.edf', #8 characters max name
          screen_width=1680,
          screen_height=1050,
          full_screen=True,
-         dot_duration=2.0, 
+         dot_duration=0.1, #2.0
          is_random_point=True):
     # read set up
     # with open('eparams.pkl','rb') as handle:
@@ -47,8 +47,9 @@ def main(edffile='test.edf',
 
     # start the recording
     tracker.start_recording()
-    tracker.send_message('Start Trial {}'.format(rospy.get_time()))
-    idx = 00
+    #tracker.send_message('Start Trial {}'.format(rospy.get_time()))
+    tracker.send_message('Start Trial {}'.format("0"))
+    idx = 0
 
     if is_random_point:
         seed(datetime.now())

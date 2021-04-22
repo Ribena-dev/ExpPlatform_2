@@ -173,7 +173,8 @@ class JoystickProcessor(object):
         if speed > 0:  # Joystick is indicating to move forward
             twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
         if speed < 0:  # Joystick is indicating to move in a reverse direction
-            twist = self.move_forward(1, 1, 1, speed/2, twist)
+            #twist = self.move_forward(1, 1, 1, speed/2, twist)
+            twist = self.move_forward(3, 3, 3, speed/2, twist)
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative

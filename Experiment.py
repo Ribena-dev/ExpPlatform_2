@@ -2,7 +2,7 @@ from __future__ import with_statement
 
 import requests
 import curses
-from psychopy import core
+from psychopy import visual, core
 import sys
 import select
 import numpy as np
@@ -19,8 +19,10 @@ import pickle
 import shutil
 import subprocess
 import math
+import eyelink
+from datetime import datetime
 
-with open('eparams.pkl','rb') as handle:
+with open('eparams.pkl', 'rb') as handle:
 	exp_info = pickle.load(handle)
 
 # terminal display
@@ -30,9 +32,11 @@ import os
 date_folder = exp_info["sessionDate"]
 shutil.move('eparams.pkl', date_folder + '/eparams.pkl')
 
-with open(os.devnull,'w') as fp:
-	subprocess.Popen(['cd ~/ExperimentPlatform/' + str(date_folder) + '&& rosbag record -o posebag /amcl_pose /trigger_msgs __name:=my_bag'],shell=True,stdout=fp)
-	subprocess.Popen(['cd ~/ExperimentPlatform/' + str(date_folder) + '&& rosbag record -o triggerbag /trigger_msgs __name:=my_bag2'],shell=True,stdout=fp)
+with open(os.devnull, 'w') as fp:
+	subprocess.Popen(['cd ~/ExperimentPlatform/' + str(date_folder) +
+	                 '&& rosbag record -o posebag /amcl_pose /trigger_msgs __name:=my_bag'], shell=True, stdout=fp)
+	subprocess.Popen(['cd ~/ExperimentPlatform/' + str(date_folder) +
+	                 '&& rosbag record -o triggerbag /trigger_msgs __name:=my_bag2'], shell=True, stdout=fp)
 
 stdscr = curses.initscr()
 curses.noecho()
@@ -42,10 +46,12 @@ stdscr.nodelay(1)
 
 phase = "Pre Trial Interval"
 
+
 def isData():
     return select.select([sys.stdin], [], [], 0) == ([sys.stdin], [], [])
 
 # to pull from gui.py / map parameters
+
 
 move_duration = 45
 move_duration = exp_info["maze_trialDuration"]
@@ -59,7 +65,7 @@ penalty_duration = exp_info["maze_penaltyDuration"]
 reward_duration = 2
 reward_duration = exp_info["maze_rewardDuration"]
 
-inter_trial_interval = [5, 5] # 2 way inclusive
+inter_trial_interval = [5, 5]  # 2 way inclusive
 inter_trial_interval = [exp_info["maze_ITI_Min"], exp_info["maze_ITI_Max"]]
 
 num_trials = 15
@@ -70,14 +76,14 @@ reward_map = exp_info["maze_rewardMap"]
 with open("RewardData/" + reward_map, 'r') as f:
 	reader = csv.reader(f)
 	poster_locations = list(reader)
-poster_locations = poster_locations[1:]	
+poster_locations = poster_locations[1:]
 poster_count = len(poster_locations)
 print(poster_count)
 
-angle_tol = 90 # in degrees
+angle_tol = 90  # in degrees
 angle_tol = exp_info["maze_angleTolerance"]
 
-pos_tol = 20 # in cm
+pos_tol = 20  # in cm
 pos_tol = exp_info["maze_positionTolerance"]
 
 dest_duration = 5
@@ -87,7 +93,8 @@ dest_duration = exp_info["maze_destinationDuration"]
 # generating balanced, random reward sequence
 
 reward_sequence = np.arange(poster_count)
-reward_sequence = np.squeeze(np.transpose(np.matlib.repmat(reward_sequence, 1, 5)))
+reward_sequence = np.squeeze(np.transpose(
+    np.matlib.repmat(reward_sequence, 1, 5)))
 
 while True:
 	np.random.shuffle(reward_sequence)
@@ -95,13 +102,14 @@ while True:
 
 	evaluation = evaluation == 0
 	if not evaluation.any():
-		break	
+		break
 
 full_targets = reward_sequence
 
 while len(full_targets) < num_trials:
 	reward_sequence = np.arange(poster_count)
-	reward_sequence = np.squeeze(np.transpose(np.matlib.repmat(reward_sequence, 1, 5)))
+	reward_sequence = np.squeeze(np.transpose(
+	    np.matlib.repmat(reward_sequence, 1, 5)))
 	while True:
 		np.random.shuffle(reward_sequence)
 		evaluation = np.diff(np.transpose(reward_sequence)) == 0
@@ -120,15 +128,16 @@ targets = full_targets.tolist()
 target_location = [0, 0, 0]
 
 '''
-Check if alpha is between theta and beta (all in degrees)
+# Check if alpha is between theta and beta (all in degrees)
 '''
+
+
 def is_angle_between(alpha, theta, beta):
-    while( math.fabs(beta - alpha) > 180 ):
+    while(math.fabs(beta - alpha) > 180):
         if(beta > alpha):
             alpha += 360
         else:
             beta += 360
-
 
     # Here I replace alpha with beta if alpha is bigger to keep things consistent
     # You can choose the bigger angle however you please
@@ -142,26 +151,30 @@ def is_angle_between(alpha, theta, beta):
 
     return (alpha < theta) and (theta < beta)
 
+
 def reached_target_location(data):
     (roll, pitch, angle) = euler_from_quaternion([data.pose.pose.orientation.x,
-                                                  data.pose.pose.orientation.y, 
-                                                  data.pose.pose.orientation.z, 
+                                                  data.pose.pose.orientation.y,
+                                                  data.pose.pose.orientation.z,
                                                   data.pose.pose.orientation.w])
     angle = math.degrees(angle)
     x = data.pose.pose.position.x
     y = data.pose.pose.position.y
-    has_reached_position =  (target_location[0] - x)**2 + \
-                            (target_location[1] - y)**2 < (pos_tol/100)**2 # to meters
+    has_reached_position = (target_location[0] - x)**2 + \
+                            (target_location[1] -
+                             y)**2 < (pos_tol/100)**2  # to meters
     convert_angle = lambda angle: angle - angle//(360)*(360)
-    target_a = math.degrees(math.atan2((target_location[1]-y),(target_location[0]-x)))
+    target_a = math.degrees(math.atan2(
+        (target_location[1]-y), (target_location[0]-x)))
     has_faced_target = is_angle_between(convert_angle(angle - angle_tol),
     									convert_angle(math.degrees(target_location[2]))+180,
     									convert_angle(angle + angle_tol))
     print(has_reached_position, has_faced_target)
     return has_reached_position and has_faced_target
 
+
 def positionParser(data):
-	
+
 	global phase
 
 	if phase == "Movement":
@@ -173,12 +186,13 @@ def positionParser(data):
 	global zone_entered
 	dts = master_timer.getTime()
 
-	global target_location # [x, y]
-	global pos_saver # position for entire trial
+	global target_location  # [x, y]
+	global pos_saver  # position for entire trial
 
-	pos_saver.append([dts, data.pose.pose.position.x, data.pose.pose.position.y, sum([i**2 for i in data.pose.covariance])])
+	pos_saver.append([dts, data.pose.pose.position.x, data.pose.pose.position.y, sum(
+	    [i**2 for i in data.pose.covariance])])
 
-	if reached_target_location(data):		
+	if reached_target_location(data):
 		if zone_entered == -1:
 			zone_entered = master_timer.getTime()
 	else:
@@ -190,10 +204,47 @@ marker = rospy.Publisher('current_poster', PointStamped, queue_size=2)
 rospy.init_node('triggers', anonymous=True)
 rospy.Subscriber("/amcl_pose", PoseWithCovarianceStamped, positionParser)
 
+
 def _sendHttpMsg(id):
 	param = {'imageId': id}
 	addr = 'http://localhost:8081/updateImage'
-	r = requests.get(addr, params = param)
+	r = requests.get(addr, params=param)
+
+# Video Calibration
+
+# import calibrate_video
+# calibrate_video.main()
+
+edffile='test.edf' # 8 characters max name
+screen_width=1680
+screen_height=1050
+full_screen=True
+dot_duration=0.1  # 2.0
+is_random_point=True
+
+# create a window
+win = visual.Window(
+    size=(screen_width, screen_height), fullscr=full_screen, screen=0,
+    allowGUI=True, allowStencil=False,
+    monitor='testMonitor', color=[0, 0, 0], colorSpace='rgb',
+    blendMode='avg', useFBO=False)
+
+# use pixels as units
+win.setUnits('pix')
+win.close()
+
+# keep track of time
+clock = core.Clock()
+
+# establish a connection to the tracker
+try:
+	tracker = eyelink.Eyelink(win, edffile)
+except:
+	tracker.stop_recording()
+	tracker = eyelink.Eyelink(win, edffile)
+	
+# start the recording
+tracker.start_recording()
 
 try:
 
@@ -207,15 +258,17 @@ try:
 		wr.writerows(master_log)
 		storage.close()
 	master_log = []
-	attempts = 0 # inclusive of failed attempts
-	curr_trial = 0 # only tracks successful attempts
-	curr_target = 0 # follows curr_trial, actually kind of redundant
-	inter_trial_duration = np.random.randint(inter_trial_interval[0], inter_trial_interval[1]+1)
-	master_timer = core.MonotonicClock() # reference clock, csv file will report with this time
-	mini_timer = core.MonotonicClock() # to be used every event
+	attempts = 0  # inclusive of failed attempts
+	curr_trial = 0  # only tracks successful attempts
+	curr_target = 0  # follows curr_trial, actually kind of redundant
+	inter_trial_duration = np.random.randint(
+	    inter_trial_interval[0], inter_trial_interval[1]+1)
+	# reference clock, csv file will report with this time
+	master_timer = core.MonotonicClock()
+	mini_timer = core.MonotonicClock()  # to be used every event
 	status = "Normal"
 	phase = "Pre Trial Interval"
-	encoding_dict = {"Cue Up":10, "Movement":20, "Reward":30, "Penalty":40}
+	encoding_dict = {"Cue Up": 10, "Movement": 20, "Reward": 30, "Penalty": 40}
 	pt = PointStamped()
 	pt.header.stamp = rospy.Time.now()
 	pt.header.frame_id = '/map'
@@ -223,9 +276,12 @@ try:
 	pt.point.y = float(poster_locations[targets[curr_target]][1])
 	pt.point.z = 0
 	marker.publish(pt)
-	target_location = [pt.point.x, pt.point.y, float(poster_locations[targets[curr_target]][2])]
+	target_location = [pt.point.x, pt.point.y, float(
+	    poster_locations[targets[curr_target]][2])]
 	pos_saver = []
 	zone_entered = -1
+
+	tracker.send_message('Start Trial {}'.format("0"))
 
 	while True:
 
@@ -239,6 +295,9 @@ try:
 				message.data = encoding_dict[phase]+targets[curr_target]+1
 				publisher.publish(message)
 				master_log.append([encoding_dict[phase]+targets[curr_target]+1, master_timer.getTime()])
+				# Send movement phase message to Eyelink
+				tracker.send_message('Movement {}'.format(message.data))
+				# Send movement phase message to Ripple
 				mini_timer = core.MonotonicClock()
 
 		if phase == "Movement":
@@ -248,6 +307,9 @@ try:
 				message.data = encoding_dict[phase]+targets[curr_target]+1
 				publisher.publish(message)
 				master_log.append([encoding_dict[phase]+targets[curr_target]+1, master_timer.getTime()])
+				# Send penalty phase message to Eyelink
+				tracker.send_message('Penalty {}'.format(message.data))
+				# Send penalty phase message to Ripple
 				mini_timer = core.MonotonicClock()
 
 		if phase == "Penalty":
@@ -273,6 +335,8 @@ try:
 				pt.point.z = 0
 				marker.publish(pt)
 				target_location = [pt.point.x, pt.point.y, float(poster_locations[targets[curr_target]][2])]
+				# Send pre-trial interval phase message to Eyelink
+				# Send pre-trial interval phase message to Ripple
 				mini_timer = core.MonotonicClock()
 				if status == "Pausing":
 					status = "Paused"
@@ -292,6 +356,10 @@ try:
 						wr.writerows(master_log)
 						storage.close()
 					master_log = []
+					# Send session end phase message to Eyelink
+					tracker.send_message('Session_End {}'.format(message.data))
+					# Send session end phase message to Ripple
+					# Send session end to activate juicer
 					mini_timer = core.MonotonicClock()
 				else:
 					phase = "Pre Trial Interval"
@@ -339,6 +407,9 @@ try:
 				publisher.publish(message)
 				_sendHttpMsg(targets[curr_target])
 				master_log.append([encoding_dict[phase]+targets[curr_target]+1, master_timer.getTime()])
+				# Send cue up phase message to Eyelink
+				tracker.send_message('Start Trial {}'.format(message.data))
+				# Send cue up phase message to Ripple
 				mini_timer = core.MonotonicClock()
 			
 		########## control mechanisms ##########
@@ -358,6 +429,7 @@ try:
 				mini_timer = core.MonotonicClock()
 
 		elif input == 116: # t for terminate, phase 1
+			phase = "Terminate?"
 			if phase == "Halted" or phase == "End of Session":
 				phase = "Terminate?"
 
@@ -365,16 +437,20 @@ try:
 			break
 
 		elif input == 110 and phase == "Terminate?": # n to reject terminate
-			phase = "Halted"				
+			phase = "Halted"		
 
 		# elif input == 32 and phase == "Movement": # space for dummy hit target
-		if zone_entered > 0 and master_timer.getTime() - zone_entered > dest_duration:		
+		if (zone_entered > 0 and master_timer.getTime() - zone_entered > dest_duration) or (input == 32 and phase == "Movement"):		
 			phase = "Reward"
 			zone_entered = -1
 			message = Int16()
 			message.data = encoding_dict[phase]+targets[curr_target]+1
 			publisher.publish(message)
 			master_log.append([encoding_dict[phase]+targets[curr_target]+1, master_timer.getTime()])
+			# Send reward phase message to Eyelink
+			tracker.send_message('Reward {}'.format(message.data))
+			# Send reward phase message to Ripple
+			# Send signal to activate juicer
 			mini_timer = core.MonotonicClock()			
 
 		########## display ##########
@@ -406,5 +482,6 @@ finally:
 	curses.echo()
 	curses.nocbreak()
 	curses.endwin()
+	tracker.stop_recording()
 	
 
