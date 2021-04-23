@@ -6,7 +6,7 @@ import cv2
 import csv
 import numpy as np
 import sys
-from math import cos, sin, atan, asin, pi
+from math import cos, sin, atan, asin, pi, floor, ceil
 import gui
 
 import rospy
@@ -136,6 +136,9 @@ class LidarProcessor(object):
 
 
 class JoystickProcessor(object):
+    #rosrun joy joy_node
+    #rostopic echo joy
+    
     speed_slow = 0
     speed_fast = 0
 
@@ -170,21 +173,26 @@ class JoystickProcessor(object):
 
         # Data.axis[1] = joystick moving front and back, data.axis[0] = joystick moving left and right
         speed = data.axes[1] * 2
-        if speed > 0:  # Joystick is indicating to move forward
-            twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
-        if speed < 0:  # Joystick is indicating to move in a reverse direction
-            #twist = self.move_forward(1, 1, 1, speed/2, twist)
-            twist = self.move_forward(3, 3, 3, speed/2, twist)
+        if data.axes[3] == -1.0:
+            twist = self.move_forward(1, 1, 1, speed, twist)
+        else:
+            if speed > 0:  # Joystick is indicating to move forward
+                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
+            if speed < 0:  # Joystick is indicating to move in a reverse direction
+                #twist = self.move_forward(1, 1, 1, speed/2, twist)
+                twist = self.move_forward(3, 3, 3, speed/2, twist)
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
         angular_speed = data.axes[0]
         #angular_speed = angular_speed * -1 # for small joystick, inverted
-        if angular_speed > 0:
-            twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
-        if angular_speed < 0:
-            twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
-        
+        if data.axes[3] == -1.0:
+            twist = self.move_sideway(angular_speed, 1, 1, twist)
+        else:
+            if angular_speed > 0:
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
+            if angular_speed < 0:
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
         if clamp == False:
             self.pub.publish(twist)
@@ -196,7 +204,7 @@ class JoystickProcessor(object):
         slow_scale = (6 * slow_scale_factor) / (1 + (6 * slow_scale_factor))
 
         #flag_frontside = 1
-        
+
         if (flag_front == 3) | (flag_frontside == 3):
             twist.linear.x = 0
         elif (flag_front == 2):
@@ -206,9 +214,11 @@ class JoystickProcessor(object):
             twist.linear.x = self.speed_fast * multiplier
 
         print("x: ", twist.linear.x)
+        print("x: ", multiplier)
         return twist
 
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
+        
         if (flag_frontside == 3) | (flag_side == 3):
             twist.angular.z = 0
             #twist.angular.z = self.speed_slow * angular_speed * -2.5
@@ -218,6 +228,7 @@ class JoystickProcessor(object):
             twist.angular.z = self.speed_fast * angular_speed * 2.5
 
         print("z: ", twist.angular.z)
+        print("z: ", angular_speed)
         return twist
 
 def get_gui(data = None):

@@ -113,7 +113,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.maze_numberOfTrials.setText("30")
         self.maze_angleTolerance.setText("89")
-        self.maze_positionTolerance.setText("20") #in CM
+        self.maze_positionTolerance.setText("100") #in CM
         self.maze_destinationDuration.setText("2")
         self.maze_rewardDuration.setText("10")
         self.maze_penaltyDuration.setText("5")

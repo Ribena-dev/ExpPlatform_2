@@ -126,7 +126,6 @@ targets = full_targets.tolist()
 # setting up communication methods
 
 target_location = [0, 0, 0]
-
 '''
 # Check if alpha is between theta and beta (all in degrees)
 '''
@@ -169,7 +168,9 @@ def reached_target_location(data):
     has_faced_target = is_angle_between(convert_angle(angle - angle_tol),
     									convert_angle(math.degrees(target_location[2]))+180,
     									convert_angle(angle + angle_tol))
-    print(has_reached_position, has_faced_target)
+    #print(has_reached_position, has_faced_target)
+    stdscr.addstr(8, 0, "Position   : {}".format(has_reached_position).ljust(40, ' '))
+    stdscr.addstr(9, 0, "Angle      : {}".format(has_faced_target).ljust(40, ' '))
     return has_reached_position and has_faced_target
 
 
@@ -203,7 +204,6 @@ publisher = rospy.Publisher('trigger_msgs', Int16, queue_size=2)
 marker = rospy.Publisher('current_poster', PointStamped, queue_size=2)
 rospy.init_node('triggers', anonymous=True)
 rospy.Subscriber("/amcl_pose", PoseWithCovarianceStamped, positionParser)
-
 
 def _sendHttpMsg(id):
 	param = {'imageId': id}
@@ -250,7 +250,7 @@ try:
 
 	# initialization
 	stdscr.refresh()
-	stdscr.addstr(0, 0, "Poster sequence generated ... ")
+	#stdscr.addstr(0, 0, "Poster sequence generated ... ")
 	master_log = []
 	master_log.append(["Marker", "Master Time"])
 	with open(date_folder + "/sessionTriggers.csv", 'w') as storage:
@@ -281,7 +281,7 @@ try:
 	pos_saver = []
 	zone_entered = -1
 
-	tracker.send_message('Start Trial {}'.format("0"))
+	tracker.send_message('Start Trial {}'.format("00"))
 
 	while True:
 
@@ -454,10 +454,12 @@ try:
 			mini_timer = core.MonotonicClock()			
 
 		########## display ##########
-
+		
+		animals = ['Cat', 'Camel', 'Rabbit', 'Donkey', 'Croc', 'Pig']
 		stdscr.addstr(0, 0, "Trial Number   : {}".format(str(curr_trial+1).ljust(40, ' ')))
 		stdscr.addstr(1, 0, "Attempt Number : {}".format(str(attempts+1).ljust(40, ' ')))
-		stdscr.addstr(2, 0, "Target Poster  : {}".format(str(targets[curr_target]+1).ljust(40, ' ')))
+		stdscr.addstr(2, 0, "Target Poster  : {} {}".format(str(targets[curr_target]+1).ljust(0, ' '), str("(" + animals[targets[curr_target]] + ")".ljust(40, ' '))))
+		#stdscr.addstr(2, 0, "Target Poster  : {}".format(str(targets[curr_target]+1).ljust(40, ' ')))
 
 		stdscr.addstr(4, 0, "Stage      : {}".format(phase).ljust(40, ' '))
 		if phase == "Terminate?" or phase == "Halted" or phase == "End of Session":
