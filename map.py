@@ -78,6 +78,7 @@ class LaserSubs(object):
 
     
     def get_laser_data(self):
+        print('laser_coordinate', self.laser_coordinate)
         return np.copy(self.laser_coordinate)
 
 class PoseArrayClass(object):
@@ -171,7 +172,7 @@ class PostProcessPose(object):
     def computeDelta(self, data):
         # data should be in shape (n, 5)
         # a row is (angle, x_lidar, y_lidar, x, y)
-        # result is (x, y, angle) of the robot 
+        # result is (x, y, angle) of the robot
         matrix = np.asarray([self.computeDelta1(data[i]) for i in range(len(data))])        
         matrix = np.sum(matrix, axis=0)
         #matrix now should have shape (1,3)
@@ -182,6 +183,7 @@ class PostProcessPose(object):
 
     def get_data_list(self, x_amcl, y_amcl, angle_amcl):
         laser_data = self.laserSubs.get_laser_data()
+        print("test_laser", laser_data)
         num_points = laser_data.shape[0]
         A = np.asarray([[math.cos(angle_amcl), -math.sin(angle_amcl)], [math.sin(angle_amcl), math.cos(angle_amcl)]])
         B = np.asarray([x_amcl, y_amcl])
@@ -219,8 +221,10 @@ class PostProcessPose(object):
                 iteration = 0
                 while (iteration < self.num_iterations):
                     # LOCK = True
-                    # print("iteration:" + str(iteration))
+                    print("num_iteration:" + str(self.num_iterations))
+                    print("iteration:" + str(iteration))
                     data  = self.get_data_list(x, y, angle)
+                    print("test", data)
                     delta = self.computeDelta(data)   
                     x += delta[0]
                     y += delta[1]
@@ -264,7 +268,3 @@ if __name__ == '__main__':
     # laserSubs = LaserSubs()
     PostProcessPose(0.1, 0.2, 5)
     rospy.spin()
-
-
-    
-    

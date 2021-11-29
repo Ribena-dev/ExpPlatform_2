@@ -8,6 +8,7 @@ import numpy as np
 import sys
 from math import cos, sin, atan, asin, pi, floor, ceil
 import gui
+import curses
 
 import rospy
 from sensor_msgs.msg import LaserScan
@@ -25,6 +26,7 @@ class LaserSubs(object):
     def __init__(self):
         scan = LaserScan()
         self.init_laser_range()
+        print("test", self.init_laser_range())
         rospy.Subscriber('/base_scan', LaserScan, self.LaserData)
 
     def LaserData(self,msg):
@@ -69,6 +71,7 @@ class LidarProcessor(object):
 
     def __init__(self,settings):
         self.laser_subs_object = LaserSubs()
+        print("test", self.laser_subs_object)
         self.init_distance(settings)
 
     def init_distance(self, settings):
@@ -158,40 +161,43 @@ class JoystickProcessor(object):
         print("speed fast:", self.speed_fast)
 
     def callback(self, data):
-        global clamp
-        print('left_flag:', self.lidar.flag_l,
-              'frontleft_flag:', self.lidar.flag_fl,
-              'front_flag:', self.lidar.flag_f,
-              'frontright_flag:', self.lidar.flag_fr,
-              'right_flag:', self.lidar.flag_r)
-        print('clamp: ' + str(clamp))
         print(["{:0.3f}".format(x) for x in self.lidar.dist])
-        self.move(data)
+        if(override == False):
+            self.move(data)
+
 
     def move(self, data):
         twist = Twist()
+        # print(data)
 
         # Data.axis[1] = joystick moving front and back, data.axis[0] = joystick moving left and right
         speed = data.axes[1] * 2
-        if data.axes[3] == -1.0:
+        angular_speed = data.axes[0]
+        # angular_speed = angular_speed * -1 # for small joystick, inverted
+        if abs(data.axes[1]) < abs(data.axes[0]):
+            speed = 0
+            angular_speed = data.axes[0]
+        elif abs(data.axes[1]) >= abs(data.axes[0]):
+            speed = data.axes[1] * 2
+            angular_speed = 0
+        
+        if data.axes[3] == -1.0: #Toggle to disable obstacle lock
             twist = self.move_forward(1, 1, 1, speed, twist)
         else:
-            if speed > 0:  # Joystick is indicating to move forward
+            if speed > 0.2:  # Joystick is indicating to move forward
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
             if speed < 0:  # Joystick is indicating to move in a reverse direction
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
-                twist = self.move_forward(3, 3, 3, speed/2, twist)
+                twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
-        angular_speed = data.axes[0]
-        #angular_speed = angular_speed * -1 # for small joystick, inverted
-        if data.axes[3] == -1.0:
+        if data.axes[3] == -1.0: #Toggle to disable obstacle lock
             twist = self.move_sideway(angular_speed, 1, 1, twist)
         else:
-            if angular_speed > 0:
+            if angular_speed > 0.2:
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
-            if angular_speed < 0:
+            if angular_speed < -0.2:
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
         if clamp == False:
@@ -231,11 +237,12 @@ class JoystickProcessor(object):
         print("z: ", angular_speed)
         return twist
 
+
 def get_gui(data = None):
     if data is None:
         settings = {
-            "platform_stop_dist": 1.0,
-            "platform_clear_dist": 1.6,
+            "platform_stop_dist": 1.2,
+            "platform_clear_dist": 0.7,
             "platform_normalSpeed": 0.2,
             "platform_slowDownSpeed": 0.1
         }
@@ -257,10 +264,18 @@ def controllerCallback(data):
     elif data.data//10 == 3 or data.data//10 == 4:
         clamp = True
 
+def overrideSettings(data):
+    global override
+    if data.data == 2:
+        override = True
+    elif data.data == 1:
+        override = False
+
 if __name__ == '__main__':
     rospy.init_node('controller_joystick')
 
-    clamp = True
+    clamp = False
+    override = False
     settings = get_gui()
     global lidar
     global joystick
@@ -269,6 +284,7 @@ if __name__ == '__main__':
 
     rospy.Subscriber('trigger_msgs', Int16, controllerCallback)
     rospy.Subscriber('gui_settings', String, get_gui)
+    rospy.Subscriber('override_msgs', Int16, overrideSettings)
 
     rate = rospy.Rate(10)
     while not rospy.is_shutdown():
