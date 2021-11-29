@@ -12,3 +12,4 @@ sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_
 sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python controller_joystick.py" &
 sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python keyboard_teleop.py" 
 # sleep 10; xterm -hold -e "cd catkin_ws; rosrun teleop_twist_joy joy_teleop.py"
+# sleep 1, xterm -hold -e "cd ; realsense-viewer"
