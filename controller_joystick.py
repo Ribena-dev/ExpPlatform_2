@@ -243,7 +243,7 @@ def get_gui(data = None):
         settings = {
             "platform_stop_dist": 1.2,
             "platform_clear_dist": 0.7,
-            "platform_normalSpeed": 0.2,
+            "platform_normalSpeed": 0.5,
             "platform_slowDownSpeed": 0.1
         }
         return settings
