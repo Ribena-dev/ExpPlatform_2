@@ -84,6 +84,7 @@ class JoyTestStrategy(BaseTestStrategy):
     def joy_callback(self, message):
         if (int(message.buttons[0]) == 1): #capture a sample
             self.publish_result(self.postProscessPoseObject.currentPosition, self.targetPositions[self.targetPosition])
+	    print(self.postProscessPoseObject.currentPosition, self.targetPositions[self.targetPosition])
         if (int(message.buttons[1] == 1)):
             print("change target")
             self.change_to_next_target(self.targetPosition)

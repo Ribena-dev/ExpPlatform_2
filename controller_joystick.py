@@ -135,6 +135,7 @@ class LidarProcessor(object):
 
     @staticmethod
     def calc_avg(values):
+        #values = values[~np.isnan(values)]
         return np.percentile(values,25)
 
 
@@ -173,32 +174,33 @@ class JoystickProcessor(object):
         # Data.axis[1] = joystick moving front and back, data.axis[0] = joystick moving left and right
         speed = data.axes[1] * 2
         angular_speed = data.axes[0]
-        # angular_speed = angular_speed * -1 # for small joystick, inverted
+        angular_speed = angular_speed * -1 # for small joystick, inverted
         if abs(data.axes[1]) < abs(data.axes[0]):
             speed = 0
             angular_speed = data.axes[0]
         elif abs(data.axes[1]) >= abs(data.axes[0]):
             speed = data.axes[1] * 2
             angular_speed = 0
-        
-        if data.axes[3] == -1.0: #Toggle to disable obstacle lock
-            twist = self.move_forward(1, 1, 1, speed, twist)
-        else:
-            if speed > 0.2:  # Joystick is indicating to move forward
-                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
-            if speed < 0:  # Joystick is indicating to move in a reverse direction
+        print ("speed", speed)
+	print ("angular", angular_speed)
+        ##if data.axes[3] == -1.0: #Toggle to disable obstacle lock
+          ##  twist = self.move_forward(1, 1, 1, speed, twist)
+        ##else:
+        if speed > 1.0:  # Joystick is indicating to move forward
+            twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
+        if speed < 0:  # Joystick is indicating to move in a reverse direction
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
-                twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
+            twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
-        if data.axes[3] == -1.0: #Toggle to disable obstacle lock
-            twist = self.move_sideway(angular_speed, 1, 1, twist)
-        else:
-            if angular_speed > 0.2:
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
-            if angular_speed < -0.2:
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
+        ##if data.axes[3] == -1.0: #Toggle to disable obstacle lock
+          ##  twist = self.move_sideway(angular_speed, 1, 1, twist)
+        #else:
+        if angular_speed > 0:
+            twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
+        if angular_speed < 0:
+            twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
         if clamp == False:
             self.pub.publish(twist)

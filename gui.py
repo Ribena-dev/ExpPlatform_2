@@ -44,6 +44,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.start_button.clicked.connect(self.start)
         #self.maze_startButton.clicked.connect(self.maze_start)
         self.load_button.clicked.connect(self.load)
+        self.stop_button.clicked.connect(self.stop)
         
         #RewardLocationCSV = '/home/sinapse/Desktop/MonkeyGUI-master/RewardData/rewardlocations.csv'
         #Rewardlocation = [[0, 0], [0, 0]] #pd.read_csv(RewardLocationCSV, index_col=0)
@@ -67,6 +68,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.fixation_buffer.setText("0.0")
         self.eyespot.setChecked(False)
         self.use_dummy.setChecked(True)
+        self.use_eyelink.setChecked(False)
         self.calibrate.setChecked(True)
         self.play_sound.setChecked(True)
         self.block_report.setChecked(False)
@@ -127,6 +129,9 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         self.platform_stop_dist.setText("0.5")  #need convert to metres default 0.7 [1.0 = 60cm stop]
         self.platform_slowDownSpeed.setText("0.1") 
         self.platform_normalSpeed.setText("0.2")
+        self.platform_move_front.setChecked(True)
+        self.platform_move_left.setChecked(True)
+        self.platform_move_right.setChecked(True)
 
         # saveas
         self.saveas_button.clicked.connect(self.saveas)
@@ -248,6 +253,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             self.calculate_flowrate()
             self.exp_plot.setChecked(exp_info.get("exp_plot", False))
             self.use_dummy.setChecked(exp_info.get("use_dummy", True))
+            self.use_eyelink.setChecked(exp_info.get("use_eyelink", True))
             self.eyespot.setChecked(exp_info.get("draw_eyespot", True))
             self.screen_width.setText(str(exp_info.get("screen_width", 1680)))
             self.screen_height.setText(str(exp_info.get("screen_height", 1080)))
@@ -361,10 +367,13 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             self.maze_ITI_Max.setText(str(exp_info.get("maze_ITI_Max", 5.0)))
 
             #Platform
-            self.platform_clear_dist.setText(str(exp_info.get("platform_clear_dist", 1.2)))
-            self.platform_stop_dist.setText(str(exp_info.get("platform_stop_dist", 0.7)))
+            self.platform_clear_dist.setText(str(exp_info.get("platform_clear_dist", 1.5)))
+            self.platform_stop_dist.setText(str(exp_info.get("platform_stop_dist", 0.5)))
             self.platform_normalSpeed.setText(str(exp_info.get("platform_normalSpeed", 0.2)))
             self.platform_slowDownSpeed.setText(str(exp_info.get("platform_slowDownSpeed", 0.1)))
+            self.platform_move_front.setChecked(exp_info.get("platform_move_front", True))
+            self.platform_move_left.setChecked(exp_info.get("platform_move_left", True))
+            self.platform_move_right.setChecked(exp_info.get("platform_move_right", True))
 
 
     def saveas(self):
@@ -412,6 +421,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         fixsize = float(self.fixation_size.text())
         fix_window = float(self.fixation_window.text())
         use_dummy = self.use_dummy.isChecked()
+        use_eyelink = self.use_eyelink.isChecked()
         play_sound = self.play_sound.isChecked()
         block_report = self.block_report.isChecked()
         use_eyespot = self.eyespot.isChecked()
@@ -445,6 +455,9 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         platform_stop_dist = float(self.platform_stop_dist.text())
         platform_normalSpeed = float(self.platform_normalSpeed.text())
         platform_slowDownSpeed = float(self.platform_slowDownSpeed.text())
+        platform_move_front = self.platform_move_front.isChecked()
+        platform_move_left = self.platform_move_left.isChecked()
+        platform_move_right = self.platform_move_right.isChecked()
 
         #combo selection
         allowed_combos = self.combos
@@ -475,6 +488,7 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
                     "mask_params": self.mask_params,
                     "draw_eyespot": use_eyespot,
                     "use_dummy": use_dummy,
+                    "use_eyelink": use_eyelink,
                     "play_sound": play_sound,
                     "block_report": block_report,
                     "calibrate": calibrate,
@@ -501,7 +515,10 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
                     "platform_stop_dist": platform_stop_dist,
                     "platform_clear_dist": platform_clear_dist,
                     "platform_normalSpeed": platform_normalSpeed,
-                    "platform_slowDownSpeed": platform_slowDownSpeed
+                    "platform_slowDownSpeed": platform_slowDownSpeed,
+                    "platform_move_front": platform_move_front,
+                    "platform_move_left": platform_move_left,
+                    "platform_move_right": platform_move_right
                 }
         return exp_info
 
@@ -514,7 +531,21 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         with open('eparams.pkl','wb') as handle:
             pickle.dump(exp_info, handle, protocol=pickle.HIGHEST_PROTOCOL)
         #call exp
-        subprocess.call(['xterm', '-e', 'cd ~/ExperimentPlatform && python Experiment.py'])
+        subprocess.call(['xterm', '-e', 'cd ~/ExperimentPlatform && python Experiment_Sam.py'])
+
+    def stop(self):
+        # exp_info = self.get_settings(1)
+        # self.gui_settings_publisher.publish(str(exp_info))
+        # print ("Starting experiment")
+        # #dump info
+        # with open('eparams.pkl','wb') as handle:
+        #     pickle.dump(exp_info, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        # #call exp
+        # subprocess.call(['xterm', '-e', 'cd ~/ExperimentPlatform && python Experiment_Sam.py'])
+        pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
+        print ("force stop")
+        twist = Twist() # force stop if needed
+        pub.publish(twist)
         
 
 if __name__ == "__main__":
