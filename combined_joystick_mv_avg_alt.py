@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-# adding a moving avg to reduce the change in input values
+# adding a moving avg to reduce the change in input values -> failed
+
 
 import os
 import cv2

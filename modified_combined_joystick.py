@@ -21,7 +21,7 @@ from sensor_msgs.msg import Joy
 import time
 import os
 import ast
-
+from collections import deque
 class LaserSubs(object):
     laser_ranges = 0
 
@@ -92,8 +92,8 @@ class LidarProcessor(object):
     def init_distance(self, settings):
         self.dist_stop = settings.get("platform_stop_dist")
         self.dist_slow  = settings.get("platform_clear_dist")
-        # self.dist_slow = 200
-        # self.dist_stop = 100
+        #self.dist_slow = 200
+        #self.dist_stop = 100
         print("dist stop:", self.dist_stop)
         print("dist slow:", self.dist_slow)        
 
@@ -136,9 +136,18 @@ class LidarProcessor(object):
         self.flag_r = self.update_flag(dist_r)
         self.flag_fl = self.update_flag(dist_fl)
         self.flag_fr = self.update_flag(dist_fr)
-        self.flag_bl = self.update_flag(dist_bl)
-        self.flag_br = self.update_flag(dist_br)
+        self.flag_bl = self.update_flag_back(dist_bl)
+        self.flag_br = self.update_flag_back(dist_br)
         self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,self.flag_bl,self.flag_br]
+    
+    def update_flag_back(self,dist):
+        if dist > 1:
+            flag = 1
+        elif ((dist <= 1) and (dist>=0.6)):
+            flag = 2
+        else:
+            flag = 3
+        return flag
 
     def update_flag(self, dist):
         if dist >= self.dist_slow:
@@ -194,7 +203,7 @@ class JoystickProcessor(object):
         self.move_right  = settings.get("platform_move_right")
 
     def callback(self, data):
-        print(["{:0.3f}".format(x) for x in self.lidar.dist])
+        #print(["{:0.3f}".format(x) for x in self.lidar.dist])
         if(override == False):
             self.move(data)
 
@@ -238,7 +247,7 @@ class JoystickProcessor(object):
             twist = self.move_forward(1, 1, 1, speed, twist)
         else: #whether toggle_check == 1.0 or 10, we apply the same constraints
             if speed > 0.6:  # Joystick is indicating to move forward, 0.2
-                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
+                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed/2, twist)
             if speed < 0:  # Joystick is indicating to move in a reverse direction
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
                 twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
@@ -246,12 +255,12 @@ class JoystickProcessor(object):
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
         if toggle_check == -1.0: #Toggle to disable obstacle lock
-            twist = self.move_sideway(angular_speed, 1, 1, twist)
+            twist = self.move_sideway(angular_speed, 1, 1,1, twist)
         else:
             if (angular_speed > 0.8) & (speed > -1): #0.2
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l,self.lidar.flag_br, twist)
             if (angular_speed < -0.8) & (speed > -1): #-0.2
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r,self.lidar.flag_bl, twist)
         global clamp
         if clamp == False:
             self.pub.publish(twist)
@@ -267,30 +276,36 @@ class JoystickProcessor(object):
         if (flag_front == 3) | (flag_frontside == 3):
             twist.linear.x = 0
             print("flag 3")
+            print("front",flag_front)
+            print("front_side",flag_frontside)
         elif (flag_front == 2):
             twist.linear.x = self.speed_fast * multiplier * slow_scale
             #twist.linear.x = self.speed_slow * multiplier
             print("flag 2")
         elif (flag_front == 1):
-            twist.linear.x = self.speed_fast * multiplier
+            #twist.linear.x = self.speed_fast * multiplier
+            twist.linear.x = self.moving_avg(multiplier)
             print("flag 1")
 
         #print("x: ", twist.linear.x)
         #print("x: ", multiplier)
+        #print(twist)
         return twist
 
-    def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
+    def move_sideway(self, angular_speed, flag_frontside, flag_side, flag_back_side, twist):
         
-        if (flag_side == 3) | (flag_frontside == 3):
+        if (flag_side == 3) | (flag_frontside == 3  ) | (flag_back_side == 3 ):
             twist.angular.z = 0
             print("flag 3")
-	    #print("frontside", flag_frontside)
-	    #print("side", flag_side)
+            print("frontside", flag_frontside)
+            print("side", flag_side)
+            print("back",flag_back_side)
             #twist.angular.z = self.speed_slow * angular_speed * -2.5
         elif ((flag_frontside <= 2) & (flag_side >= 2) | (flag_frontside >= 2) & (flag_side <= 2)):
-            twist.angular.z = self.speed_fast * angular_speed * 2.5
+            twist.angular.z = self.speed_slow * angular_speed * 2.5
             print("flag 2")
-        elif (flag_frontside <= 2) & (flag_side == 1):
+        elif (flag_frontside <= 2) & (flag_side == 1) & (flag_back_side ==1):
+
             twist.angular.z = self.speed_fast * angular_speed * 2.5
             print("flag 1")
 
@@ -298,14 +313,26 @@ class JoystickProcessor(object):
         print("z: ", angular_speed)
         return twist
 
+    # takes a moving average of the joy con valaues 
+    def moving_avg(self,speed):
+        avg_speed = 0
+        self.window_size = 10
+        self.speed_buffer = deque(maxlen=self.window_size)
+        #self.angular_speed_buffer = deque(maxlen=self.window_size)
+        self.speed_buffer.append(speed)
+        avg_speed = sum(self.speed_buffer)/self.window_size
+        print("current speed from moving avg:", avg_speed)
+        print("current array:",self.speed_buffer)
+        return avg_speed
+
 
 def get_gui(data = None):
     if data is None:
         settings = {
             "platform_stop_dist": 0.6,
             "platform_clear_dist": 1.5,
-            "platform_normalSpeed": 0.2,
-            "platform_slowDownSpeed": 0.1
+            "platform_normalSpeed": 0.3,
+            "platform_slowDownSpeed": 0.2
         }
         return settings
     global lidar
