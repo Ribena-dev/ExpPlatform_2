@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# adding a moving avg to reduce the change in input values
 
 import os
 import cv2
@@ -21,7 +20,7 @@ from sensor_msgs.msg import Joy
 import time
 import os
 import ast
-from collections import deque
+
 class LaserSubs(object):
     laser_ranges = 0
 
@@ -163,10 +162,6 @@ class JoystickProcessor(object):
         self.sub = rospy.Subscriber("joy", Joy, self.callback)
         self.lidar = lidar
         self.init_speed(settings)
-        #creating moving avg window
-        self.window_size = 10
-        self.speed_buffer = deque(maxlen=self.window_size)
-        self.angular_speed_buffer = deque(maxlen=self.window_size)
 
     def init_speed(self,settings):
         self.speed_fast = settings.get("platform_normalSpeed")
@@ -182,33 +177,16 @@ class JoystickProcessor(object):
 
     def callback(self, data):
         print(["{:0.3f}".format(x) for x in self.lidar.dist])
-        #moving average
         if(override == False):
-            raw_speed = data.axes[1] *2
-            raw_angular_speed = data.axes[0]
-            self.speed_buffer.append(raw_speed)
-            self.angular_speed_buffer.append(raw_angular_speed)
-            smoothed_speed = sum(self.speed_buffer)/self.window_size
-            smoothed_angular_speed = sum(self.angular_speed_buffer)/self.window_size
-            # preventing reversing 
-            if smoothed_speed < 0:
-                smoothed_speed = 0
-            # capping angular speed
-            if smoothed_angular_speed > 0.5:
-                smoothed_angular_speed = 0.5
-            if smoothed_angular_speed < -0.5:
-                smoothed_angular_speed = -0.5
-            print("avg_speed: ",smoothed_speed)
-            print("avg_angular_speed: ",smoothed_angular_speed)
-            self.move(smoothed_speed,smoothed_angular_speed,data)
+            self.move(data)
 
-    def move(self,smooth_speed,smooth_angular_speed, data):
+    def move(self, data):
         twist = Twist()
         # print(data)
 
         # Data.axis[1] = joystick moving front and back, data.axis[0] = joystick moving left and right
-        speed = smooth_speed
-        angular_speed = smooth_angular_speed
+        speed = data.axes[1] * 2
+        angular_speed = data.axes[0]
         try:
             toggle_check = data.axes[3]
         except:
@@ -222,13 +200,13 @@ class JoystickProcessor(object):
         #elif abs(data.axes[1]) >= abs(data.axes[0]):
             #speed = data.axes[1] * 2
             #angular_speed = 0
-  
+
         if toggle_check == 10:
-            angular_speed = smooth_angular_speed * -1 # for small joystick, inverted
+            angular_speed = angular_speed * -1 # for small joystick, inverted
         
         # Disable forward movement
         if self.move_front == 0:
-            smooth_speed = 0
+            speed = 0
 
         # Disable left movement
         if (self.move_left == 0) & (angular_speed > 0):
@@ -239,22 +217,22 @@ class JoystickProcessor(object):
             angular_speed = 0
         
         if toggle_check == -1.0: #Toggle to disable obstacle lock
-            twist = self.move_forward(1, 1, 1, smooth_speed, twist)
+            twist = self.move_forward(1, 1, 1, speed, twist)
         else: #whether toggle_check == 1.0 or 10, we apply the same constraints
-            if smooth_speed > 0.6:  # Joystick is indicating to move forward, 0.2
+            if speed > 0.6:  # Joystick is indicating to move forward, 0.2
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
-            if smooth_speed < 0:  # Joystick is indicating to move in a reverse direction
+            if speed < 0:  # Joystick is indicating to move in a reverse direction
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
-                twist = self.move_forward(3, 3, 3, smooth_speed/2, twist) # Disable reverse
+                twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
         if toggle_check == -1.0: #Toggle to disable obstacle lock
             twist = self.move_sideway(angular_speed, 1, 1, twist)
         else:
-            if (angular_speed > 0.2) & (smooth_speed > -1): #0.2
+            if (angular_speed > 0.8) & (speed > -1): #0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
-            if (angular_speed < -0.2) & (smooth_speed > -1): #-0.2
+            if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
         if clamp == False:
