@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-
+#this combinde joystick code is behing modified to include the back shelf when turning 
+#by sub to topic /sonar_min (pub from sonar_get_min.py) for [back_left_min,back_right_min]
 
 import os
 import cv2
@@ -12,10 +13,10 @@ import curses
 import pdb
 
 import rospy
-from sensor_msgs.msg import LaserScan
+from sensor_msgs.msg import LaserScan, Range, PointCloud
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from geometry_msgs.msg import Twist
-from std_msgs.msg import Int16, String
+from std_msgs.msg import Int16, String, Float32MultiArray
 from sensor_msgs.msg import Joy
 import time
 import os
@@ -32,6 +33,7 @@ class LaserSubs(object):
 
     def LaserData(self,msg):
         self.laser_ranges = msg.ranges
+        #print(msg.ranges)
 
     def init_laser_range(self):
         self.laser_ranges = None
@@ -45,7 +47,13 @@ class LaserSubs(object):
                 except:
                     print('Waiting for base_scan to be ready')
                     time.sleep(0.05)
-
+class sonar_get_min_sub(object):
+    sonar_min = [0,0,0,0]
+    def __init__(self):
+        rospy.Subscriber('/sonar_min',Float32MultiArray,self.sonar_data)
+    def sonar_data(self,msg):
+        self.sonar_min = msg.data
+        print("data from sonar_get_min_dist:",msg.data)
 
 class LidarProcessor(object):
     dist_slow = 0
@@ -56,8 +64,12 @@ class LidarProcessor(object):
     flag_r = 0
     flag_fl = 0
     flag_fr = 0
-    flag_old = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
-    flag_new = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
+    flag_blc = 0 # flag for bacl left center
+    flag_bls = 0 # flag for back left side
+    flag_brc = 0
+    flag_brs = 0
+    flag_old = [flag_f,flag_l,flag_r,flag_fl,flag_fr,flag_brc,flag_brs,flag_blc,flag_bls]
+    flag_new = [flag_f,flag_l,flag_r,flag_fl,flag_fr,flag_brc,flag_brs,flag_blc,flag_bls]
 
     dist_l = 0
     dist_fl = 0
@@ -66,13 +78,19 @@ class LidarProcessor(object):
     dist_r = 0
     dist_cl = 0
     dist_cr = 0
-    dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r]
+    dist_blc = 0
+    dist_bls = 0
+    dist_brc = 0
+    dist_brs = 0
+    dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r,dist_brc,dist_brs,dist_blc,dist_bls]
 
     pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
 
     def __init__(self,settings):
         self.laser_subs_object = LaserSubs()
+        self.sonar_object = sonar_get_min_sub()
         print("test", self.laser_subs_object)
+        print("test:",self.sonar_object)
         self.init_distance(settings)
 
     def init_distance(self, settings):
@@ -92,35 +110,67 @@ class LidarProcessor(object):
         self.dist_f = self.calc_avg(self.laser_subs_object.laser_ranges[386:579])
         self.dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
         self.dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:962])
-
+        #print("dam i wodner whats going on",self.sonar_object.sonar_min)
+        self.dist_brc = self.sonar_object.sonar_min[0] # back right center of sonnar array
+        self.dist_brs = self.sonar_object.sonar_min[1] # back right side of sonnar array
+        self.dist_blc = self.sonar_object.sonar_min[2] # back left center of sonnar array
+        self.dist_bls = self.sonar_object.sonar_min[3] # back left side of sonnar array
         #print ("right", self.dist_r)
         #print ("left", self.dist_l)
         #print ("front_right", self.dist_fr)
         #print ("front_left", self.dist_fl)
         #print ("front", self.dist_f)
 
-        self.dist = [self.dist_l, self.dist_fl, self.dist_f, self.dist_fr, self.dist_r]
+        self.dist = [self.dist_f,self.dist_l,self.dist_r,self.dist_fl,self.dist_fr,self.dist_brc,self.dist_brs,self.dist_blc,self.dist_bls]
 
         self.save_data((self.dist_f))
 
-        self.update_flags(self.dist_f,self.dist_l,self.dist_r,self.dist_fl,self.dist_fr)
+        self.update_flags(self.dist_f,self.dist_l,self.dist_r,self.dist_fl,self.dist_fr,self.dist_brc,self.dist_brs,self.dist_blc,self.dist_bls)
 
     def update_speed(self):
         if self.flag_old != self.flag_new:
-            if self.flag_f == 3 | self.flag_fl == 3 | self.flag_fr == 3:
+            if self.flag_f == 3 | self.flag_fl == 3 | self.flag_fr == 3 | self.flag_brc == 3 | self.flag_brs == 3 | self.flag_blc ==3 | self.flag_bls == 3:
                 print("force stop")
                 twist = Twist() # force stop if needed
                 self.pub.publish(twist)
         pass
 
-    def update_flags(self,dist_f,dist_l,dist_r,dist_fl,dist_fr):
-        self.flag_old = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr]
+    def update_flags(self,dist_f,dist_l,dist_r,dist_fl,dist_fr,dist_brc,dist_brs,dist_blc,dist_bls):
+        self.flag_old = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,dist_brc,dist_brs,dist_blc,dist_bls]
         self.flag_f = self.update_flag(dist_f)
         self.flag_l = self.update_flag(dist_l)
         self.flag_r = self.update_flag(dist_r)
         self.flag_fl = self.update_flag(dist_fl)
         self.flag_fr = self.update_flag(dist_fr)
-        self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr]
+<<<<<<< HEAD
+        self.flag_brc = self.update_flag_back_center(dist_brc)
+        self.flag_brs= self.update_flag_back_side(dist_brs)
+        self.flag_blc = self.update_flag_back_center(dist_blc)
+        self.flag_bls = self.update_flag_back_side(dist_bls)
+        self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,self.flag_brc,self.flag_brs,self.flag_blc,self.flag_bls]
+        print("dist back ", self.dist_brc,dist_brs,dist_blc,dist_bls)
+    def update_flag_back_side(self,dist):
+        if dist > 0.7:
+            flag = 1
+        elif ((dist <= 0.7) and (dist>=0.6)):
+            flag = 2
+        else:
+            flag = 3
+        return flag
+
+    def update_flag_back_center(self,dist):
+        if dist > 0.8:
+            flag = 1
+        elif ((dist <= 0.7) and (dist>=0.5)):
+            flag = 2
+        else:
+            flag = 3
+        return flag
+=======
+        self.flag_bl = self.update_flag(dist_bl)
+        self.flag_br = self.update_flag(dist_br)
+        self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,self.flag_bl,self.flag_br]
+>>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
 
     def update_flag(self, dist):
         if dist >= self.dist_slow:
@@ -220,20 +270,34 @@ class JoystickProcessor(object):
             twist = self.move_forward(1, 1, 1, speed, twist)
         else: #whether toggle_check == 1.0 or 10, we apply the same constraints
             if speed > 0.6:  # Joystick is indicating to move forward, 0.2
+<<<<<<< HEAD
+                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed/2, twist)
+            elif speed < 0:  # Joystick is indicating to move in a reverse direction
+=======
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
             if speed < 0:  # Joystick is indicating to move in a reverse direction
+>>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
                 twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
         if toggle_check == -1.0: #Toggle to disable obstacle lock
+<<<<<<< HEAD
+            twist = self.move_sideway(angular_speed, 1, 1,1,1, twist)
+        else:
+            if (angular_speed > 0.8) & (speed > -1): #0.2
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l,self.lidar.flag_brs,self.lidar.flag_brc, twist)
+            if (angular_speed < -0.8) & (speed > -1): #-0.2
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r,self.lidar.flag_bls,self.lidar.flag_blc, twist)
+=======
             twist = self.move_sideway(angular_speed, 1, 1, twist)
         else:
             if (angular_speed > 0.8) & (speed > -1): #0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
             if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
+>>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
         global clamp
         if clamp == False:
             self.pub.publish(twist)
@@ -255,12 +319,38 @@ class JoystickProcessor(object):
             print("flag 2")
         elif (flag_front == 1):
             twist.linear.x = self.speed_fast * multiplier
+<<<<<<< HEAD
+            #twist.linear.x = self.moving_avg(multiplier)
+=======
+>>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
             print("flag 1")
 
         #print("x: ", twist.linear.x)
         #print("x: ", multiplier)
         return twist
 
+<<<<<<< HEAD
+    def move_sideway(self, angular_speed, flag_frontside, flag_side, flag_back_side, flag_back_center, twist):
+        
+        if (flag_side == 3) | (flag_frontside == 3  ) | (flag_back_side == 3 ) | (flag_back_center == 3):
+            twist.angular.z = 0
+            print("flag 3")
+            print("frontside", flag_frontside)
+            print("side", flag_side)
+            print("backside",flag_back_side)
+            print("back center", flag_back_center)
+            #twist.angular.z = self.speed_slow * angular_speed * -2.5
+        elif ((flag_frontside <= 2) & (flag_side >= 2) | (flag_frontside >= 2) & (flag_side <= 2)) | (flag_back_center == 2):
+            twist.angular.z = self.speed_slow * angular_speed * 2.5
+            print("flag 2")
+            print("flag 3")
+            print("frontside", flag_frontside)
+            print("side", flag_side)
+            print("backside",flag_back_side)
+            print("back center", flag_back_center)
+        elif (flag_frontside <= 2) & (flag_side == 1):
+
+=======
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
         
         if (flag_side == 3) | (flag_frontside == 3):
@@ -273,7 +363,12 @@ class JoystickProcessor(object):
             twist.angular.z = self.speed_fast * angular_speed * 2.5
             print("flag 2")
         elif (flag_frontside <= 2) & (flag_side == 1):
+>>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
             twist.angular.z = self.speed_fast * angular_speed * 2.5
+            print("frontside", flag_frontside)
+            print("side", flag_side)
+            print("back sides",flag_back_side)
+            print("back center",flag_back_center)
             print("flag 1")
 
         #print("z: ", twist.angular.z)
