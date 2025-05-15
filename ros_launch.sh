@@ -7,10 +7,14 @@ sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun robot_se
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python map.py" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun rviz rviz" &
 <<<<<<< HEAD
+<<<<<<< HEAD
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/md2_blank_2.yaml" & 
 =======
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/maps/md2_new.yaml" &
 >>>>>>> fcfed2a67f74421251f3d961e1c962de7a726bcd
+=======
+sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/md2_new.yaml" &
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch AMCL.launch" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_node _autorepeat_rate:=10"
 #sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python combined_joystick.py" &
@@ -26,4 +30,8 @@ sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_
 #     approx_sync:=false \
 #     rviz:=true \
 #     rtabmapviz:=false \
+<<<<<<< HEAD
 #     localization:=true
+=======
+#     localization:=true
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5

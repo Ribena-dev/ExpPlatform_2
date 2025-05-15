@@ -249,12 +249,20 @@ if use_eyelink:
     mini_timer = core.Clock()
 
     # establish a connection to the tracker
+<<<<<<< HEAD
     tracker = eyelink.Eyelink(win, edffile)
     #try:
     #    tracker = eyelink.Eyelink(win, edffile)
     #except:
     #    tracker.stop_recording()
     #    tracker = eyelink.Eyelink(win, edffile)
+=======
+    try:
+        tracker = eyelink.Eyelink(win, edffile)
+    except:
+        tracker.stop_recording()
+        tracker = eyelink.Eyelink(win, edffile)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
     # start the recording
     tracker.start_recording()

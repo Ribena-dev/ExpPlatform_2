@@ -81,7 +81,11 @@ class LidarProcessor(object):
         # self.dist_slow = 200
         # self.dist_stop = 100
         print("dist stop:", self.dist_stop)
+<<<<<<< HEAD
         print("dist slow:", self.dist_slow)        
+=======
+        print("dist slow:", self.dist_slow)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
     def update_distance(self):
         # print (len(self.laser_subs_object.laser_ranges))
@@ -93,11 +97,19 @@ class LidarProcessor(object):
         self.dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
         self.dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:962])
 
+<<<<<<< HEAD
         #print ("right", self.dist_r)
         #print ("left", self.dist_l)
         #print ("front_right", self.dist_fr)
         #print ("front_left", self.dist_fl)
         #print ("front", self.dist_f)
+=======
+        print ("right", self.dist_r)
+        print ("left", self.dist_l)
+        print ("front_right", self.dist_fr)
+        print ("front_left", self.dist_fl)
+        print ("front", self.dist_f)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
         self.dist = [self.dist_l, self.dist_fl, self.dist_f, self.dist_fr, self.dist_r]
 
@@ -131,7 +143,11 @@ class LidarProcessor(object):
             flag = 3
         else:
             flag = 3
+<<<<<<< HEAD
         #flag = 3
+=======
+        #flag = 1
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
         return flag
 
     @staticmethod
@@ -143,7 +159,11 @@ class LidarProcessor(object):
 
     @staticmethod
     def calc_avg(values):
+<<<<<<< HEAD
         return np.percentile(values,50)
+=======
+        return np.percentile(values,25)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
 
 class JoystickProcessor(object):
@@ -152,9 +172,12 @@ class JoystickProcessor(object):
     
     speed_slow = 0
     speed_fast = 0
+<<<<<<< HEAD
     move_front = 1
     move_left = 1
     move_right = 0
+=======
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
     pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
 
@@ -168,18 +191,27 @@ class JoystickProcessor(object):
         self.speed_slow = settings.get("platform_slowDownSpeed")
         # self.speed_slow = 0
         # self.speed_fast = 0
+<<<<<<< HEAD
         #print("speed slow:", self.speed_slow)
         #print("speed fast:", self.speed_fast)
 
         self.move_front = settings.get("platform_move_front")
         self.move_left  = settings.get("platform_move_left")
         self.move_right  = settings.get("platform_move_right")
+=======
+        print("speed slow:", self.speed_slow)
+        print("speed fast:", self.speed_fast)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
 
     def callback(self, data):
         print(["{:0.3f}".format(x) for x in self.lidar.dist])
         if(override == False):
             self.move(data)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
     def move(self, data):
         twist = Twist()
         # print(data)
@@ -192,6 +224,7 @@ class JoystickProcessor(object):
         except:
             toggle_check = 10 #use 10 as value to signify small joystick
         # angular_speed = angular_speed * -1 # for small joystick, inverted
+<<<<<<< HEAD
 
         # Restrict robot to linear movements only
         #if abs(data.axes[1]) < abs(data.axes[0]):
@@ -215,13 +248,30 @@ class JoystickProcessor(object):
         # Disable right movement
         if (self.move_right == 0) & (angular_speed < 0):
             angular_speed = 0
+=======
+        if abs(data.axes[1]) < abs(data.axes[0]):
+            speed = 0
+            angular_speed = data.axes[0]
+        elif abs(data.axes[1]) >= abs(data.axes[0]):
+            speed = data.axes[1] * 2
+            angular_speed = 0
+
+        if toggle_check == 10:
+            angular_speed = angular_speed * -1 # for small joystick, inverted
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
         
         if toggle_check == -1.0: #Toggle to disable obstacle lock
             twist = self.move_forward(1, 1, 1, speed, twist)
         else: #whether toggle_check == 1.0 or 10, we apply the same constraints
+<<<<<<< HEAD
             if speed > 0.6:  # Joystick is indicating to move forward, 0.2
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
             if speed < 0:  # Joystick is indicating to move in a reverse direction
+=======
+            if speed > 0.2:  # Joystick is indicating to move forward
+                twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
+            if speed < 0:  # Joystick is indicating to move in a reverse directionmove_forwa
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
                 twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
@@ -230,9 +280,15 @@ class JoystickProcessor(object):
         if toggle_check == -1.0: #Toggle to disable obstacle lock
             twist = self.move_sideway(angular_speed, 1, 1, twist)
         else:
+<<<<<<< HEAD
             if (angular_speed > 0.8) & (speed > -1): #0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
             if (angular_speed < -0.8) & (speed > -1): #-0.2
+=======
+            if angular_speed > 0.2:
+                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
+            if angular_speed < -0.2:
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
         if clamp == False:
@@ -257,8 +313,13 @@ class JoystickProcessor(object):
             twist.linear.x = self.speed_fast * multiplier
             print("flag 1")
 
+<<<<<<< HEAD
         #print("x: ", twist.linear.x)
         #print("x: ", multiplier)
+=======
+        print("x: ", twist.linear.x)
+        print("x: ", multiplier)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
         return twist
 
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
@@ -276,7 +337,11 @@ class JoystickProcessor(object):
             twist.angular.z = self.speed_fast * angular_speed * 2.5
             print("flag 1")
 
+<<<<<<< HEAD
         #print("z: ", twist.angular.z)
+=======
+        print("z: ", twist.angular.z)
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
         print("z: ", angular_speed)
         return twist
 
@@ -318,7 +383,11 @@ def overrideSettings(data):
 if __name__ == '__main__':
     rospy.init_node('controller_joystick')
 
+<<<<<<< HEAD
     clamp = True
+=======
+    clamp = False
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
     emergency = False
     override = False
     settings = get_gui()

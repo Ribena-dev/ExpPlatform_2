@@ -270,7 +270,11 @@ border-radius: 5px;
       <property name="text">
        <string/>
       </property>
+<<<<<<< HEAD
       </widget>
+=======
+     </widget>
+>>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
