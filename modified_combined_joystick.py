@@ -290,13 +290,6 @@ class JoystickProcessor(object):
             if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r,self.lidar.flag_bls,self.lidar.flag_blc, twist)
 
-            twist = self.move_sideway(angular_speed, 1, 1, twist)
-        else:
-            if (angular_speed > 0.8) & (speed > -1): #0.2
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
-            if (angular_speed < -0.8) & (speed > -1): #-0.2
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
-
         global clamp
         if clamp == False:
             self.pub.publish(twist)
@@ -320,7 +313,6 @@ class JoystickProcessor(object):
             twist.linear.x = self.speed_fast * multiplier
 
             #twist.linear.x = self.moving_avg(multiplier)
-
 
             print("flag 1")
 
@@ -348,28 +340,7 @@ class JoystickProcessor(object):
             print("backside",flag_back_side)
             print("back center", flag_back_center)
         elif (flag_frontside <= 2) & (flag_side == 1):
-
-
-    def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
-        
-        if (flag_side == 3) | (flag_frontside == 3):
-            twist.angular.z = 0
-            print("flag 3")
-	    #print("frontside", flag_frontside)
-	    #print("side", flag_side)
-            #twist.angular.z = self.speed_slow * angular_speed * -2.5
-        elif ((flag_frontside <= 2) & (flag_side >= 2) | (flag_frontside >= 2) & (flag_side <= 2)):
-            twist.angular.z = self.speed_fast * angular_speed * 2.5
-            print("flag 2")
-        elif (flag_frontside <= 2) & (flag_side == 1):
-
-            twist.angular.z = self.speed_fast * angular_speed * 2.5
-            print("frontside", flag_frontside)
-            print("side", flag_side)
-            print("back sides",flag_back_side)
-            print("back center",flag_back_center)
-            print("flag 1")
-
+            twist.angular.z = self.speed_slow * angular_speed * 2.5
         #print("z: ", twist.angular.z)
         print("z: ", angular_speed)
         return twist

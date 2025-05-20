@@ -68,7 +68,7 @@ class LidarProcessor(object):
     dist_cr = 0
     dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r]
 
-    pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
+    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 
     def __init__(self,settings):
         self.laser_subs_object = LaserSubs()
@@ -235,7 +235,9 @@ class JoystickProcessor(object):
             if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
         global clamp
+        print("gloabal clamp value",clamp)
         if clamp == False:
+            print(twist)
             self.pub.publish(twist)
 
     def move_forward(self, flag_front, flag_frontleft, flag_frontright, multiplier, twist):        
