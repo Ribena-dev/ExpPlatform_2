@@ -1,4 +1,4 @@
-image: /home/sinapse/ExperimentPlatform/MD2_3.pgm
+image: /home/sinapse/ExperimentPlatform/maps/testmap_md2_3.pgm
 resolution: 0.025000
 origin: [-12.200000, -13.800000, 0.000000]
 negate: 0

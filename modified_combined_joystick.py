@@ -142,7 +142,6 @@ class LidarProcessor(object):
         self.flag_r = self.update_flag(dist_r)
         self.flag_fl = self.update_flag(dist_fl)
         self.flag_fr = self.update_flag(dist_fr)
-<<<<<<< HEAD
         self.flag_brc = self.update_flag_back_center(dist_brc)
         self.flag_brs= self.update_flag_back_side(dist_brs)
         self.flag_blc = self.update_flag_back_center(dist_blc)
@@ -166,11 +165,11 @@ class LidarProcessor(object):
         else:
             flag = 3
         return flag
-=======
+
         self.flag_bl = self.update_flag(dist_bl)
         self.flag_br = self.update_flag(dist_br)
         self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,self.flag_bl,self.flag_br]
->>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
+
 
     def update_flag(self, dist):
         if dist >= self.dist_slow:
@@ -270,34 +269,34 @@ class JoystickProcessor(object):
             twist = self.move_forward(1, 1, 1, speed, twist)
         else: #whether toggle_check == 1.0 or 10, we apply the same constraints
             if speed > 0.6:  # Joystick is indicating to move forward, 0.2
-<<<<<<< HEAD
+
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed/2, twist)
             elif speed < 0:  # Joystick is indicating to move in a reverse direction
-=======
+
                 twist =  self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
             if speed < 0:  # Joystick is indicating to move in a reverse direction
->>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
+
                 #twist = self.move_forward(1, 1, 1, speed/2, twist)
                 twist = self.move_forward(3, 3, 3, speed/2, twist) # Disable reverse
 
         # turn left twist.angular.z is positive, turn right twist.angular.z is negative
         # turn left data.axes[0] is positive, turn right, data.axes[0] is negative
         if toggle_check == -1.0: #Toggle to disable obstacle lock
-<<<<<<< HEAD
+
             twist = self.move_sideway(angular_speed, 1, 1,1,1, twist)
         else:
             if (angular_speed > 0.8) & (speed > -1): #0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l,self.lidar.flag_brs,self.lidar.flag_brc, twist)
             if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r,self.lidar.flag_bls,self.lidar.flag_blc, twist)
-=======
+
             twist = self.move_sideway(angular_speed, 1, 1, twist)
         else:
             if (angular_speed > 0.8) & (speed > -1): #0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, twist)
             if (angular_speed < -0.8) & (speed > -1): #-0.2
                 twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r, twist)
->>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
+
         global clamp
         if clamp == False:
             self.pub.publish(twist)
@@ -319,17 +318,17 @@ class JoystickProcessor(object):
             print("flag 2")
         elif (flag_front == 1):
             twist.linear.x = self.speed_fast * multiplier
-<<<<<<< HEAD
+
             #twist.linear.x = self.moving_avg(multiplier)
-=======
->>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
+
+
             print("flag 1")
 
         #print("x: ", twist.linear.x)
         #print("x: ", multiplier)
         return twist
 
-<<<<<<< HEAD
+
     def move_sideway(self, angular_speed, flag_frontside, flag_side, flag_back_side, flag_back_center, twist):
         
         if (flag_side == 3) | (flag_frontside == 3  ) | (flag_back_side == 3 ) | (flag_back_center == 3):
@@ -350,7 +349,7 @@ class JoystickProcessor(object):
             print("back center", flag_back_center)
         elif (flag_frontside <= 2) & (flag_side == 1):
 
-=======
+
     def move_sideway(self, angular_speed, flag_frontside, flag_side, twist):
         
         if (flag_side == 3) | (flag_frontside == 3):
@@ -363,7 +362,7 @@ class JoystickProcessor(object):
             twist.angular.z = self.speed_fast * angular_speed * 2.5
             print("flag 2")
         elif (flag_frontside <= 2) & (flag_side == 1):
->>>>>>> parent of 798d688... modified_combined_joystick.py has a bug where is randomly doesn't allow side movements
+
             twist.angular.z = self.speed_fast * angular_speed * 2.5
             print("frontside", flag_frontside)
             print("side", flag_side)

@@ -5,20 +5,13 @@ sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch robot
 sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch hokuyo.launch" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun robot_setup_tf tf_broadcaster" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python map.py" &
-sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun rviz rviz" &
-<<<<<<< HEAD
-<<<<<<< HEAD
-sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/md2_blank_2.yaml" & 
-=======
-sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/maps/md2_new.yaml" &
->>>>>>> fcfed2a67f74421251f3d961e1c962de7a726bcd
-=======
-sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/md2_new.yaml" &
->>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
+sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun rviz rviz"  &
+sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/maps/testmap_md2_3.yaml" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch AMCL.launch" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_node _autorepeat_rate:=10"
-#sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python combined_joystick.py" &
-#sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python keyboard_teleop.py" 
+
+# sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python combined_joystick.py" &
+# sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python keyboard_teleop.py" 
 # sleep 10; xterm -hold -e "cd catkin_ws; rosrun teleop_twist_joy joy_teleop.py"
 # sleep 1, xterm -hold -e "cd ; realsense-viewer"
 # roslaunch realsense2_camera rs_camera.launch filters:=pointcloud
@@ -30,8 +23,4 @@ sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_
 #     approx_sync:=false \
 #     rviz:=true \
 #     rtabmapviz:=false \
-<<<<<<< HEAD
 #     localization:=true
-=======
-#     localization:=true
->>>>>>> bf2f882a3579f14a9377cbc078fb039af28a97b5
