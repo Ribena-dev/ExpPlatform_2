@@ -111,7 +111,7 @@ class DualLidarProcessor:
         
         # Create and publish combined distance array
         # Format: [front, left, right, back]
-        combined_distances = [front_distances,rear_distances]
+        combined_distances = front_distances + rear_distances
         self.publish_distances(combined_distances, self.distance_pub, 
                              ['front', 'back'])
         

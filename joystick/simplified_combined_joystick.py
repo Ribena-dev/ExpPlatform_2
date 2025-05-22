@@ -1,341 +1,144 @@
 #!/usr/bin/env python
-# simplified combined joystick where lidar data is from lidar_process.py
-
-import os
-import cv2
-import csv
-import numpy as np
-import sys
-from math import cos, sin, atan, asin, pi, floor, ceil
-import gui
-import curses
-import pdb
-
+#simplified version of the combined joystick that sub to /lidar_distance 
+#lidar_process.py 
+# broke turning left, right and going straight into seperate fucntions
 import rospy
-from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import PoseWithCovarianceStamped
 from geometry_msgs.msg import Twist
-from std_msgs.msg import Int16, String
+from std_msgs.msg import Int16, String, Float32MultiArray
 from sensor_msgs.msg import Joy
 import time
-import os
 import ast
+import numpy as np
 
-class LaserSubs(object):
-    laser_ranges = 0
-    rear_laser_ranges = 0
+class ObstacleFlags:
+    """Class to manage obstacle detection flags"""
+    def __init__(self, dist_stop=0.6, dist_slow=1.5):
+        self.dist_stop = dist_stop
+        self.dist_slow = dist_slow
+        
+        # Front lidar distances: [left, front-left, front, front-right, right]
+        self.front_left = 0.0
+        self.front_front_left = 0.0
+        self.front_front = 0.0
+        self.front_front_right = 0.0
+        self.front_right = 0.0
+        
+        # Rear lidar distances: [rear-left, back-left, back, back-right, rear-right]
+        self.rear_left = 0.0
+        self.rear_back_left = 0.0
+        self.rear_back = 0.0
+        self.rear_back_right = 0.0
+        self.rear_right = 0.0
+        
+        # Combined side distances (minimum of front and rear for safety)
+        self.combined_left = 0.0
+        self.combined_right = 0.0
+        
+        # Flags (1=clear, 2=slow, 3=stop)
+        self.flag_front = 1
+        self.flag_left = 1
+        self.flag_right = 1
+        self.flag_back = 1
+        self.flag_front_left = 1
+        self.flag_front_right = 1
+        self.flag_back_left = 1
+        self.flag_back_right = 1
+        
+    def update_distances(self, combined_distances):
+        """Update distances from lidar processor
+        Expected format: [front_left, front_front_left, front_front, front_front_right, front_right,
+                         rear_left, rear_back_left, rear_back, rear_back_right, rear_right]
+        """
+        if len(combined_distances) >= 10:
+            # Front lidar distances
+            self.front_left = combined_distances[0]
+            self.front_front_left = combined_distances[1]
+            self.front_front = combined_distances[2]
+            self.front_front_right = combined_distances[3]
+            self.front_right = combined_distances[4]
+            
+            # Rear lidar distances
+            self.rear_left = combined_distances[5]
+            self.rear_back_left = combined_distances[6]
+            self.rear_back = combined_distances[7]
+            self.rear_back_right = combined_distances[8]
+            self.rear_right = combined_distances[9]
+            
+            # Combine left and right sides (take minimum for safety)
+            self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
+            self.combined_right = min(self.front_right, self.rear_right) if self.front_right > 0 and self.rear_right > 0 else max(self.front_right, self.rear_right)
+            
+            # Update all flags
+            self.update_flags()
+        else:
+            rospy.logwarn(f"Expected 10 distance values, got {len(combined_distances)}")
+        
+    def update_flags(self):
+        """Update obstacle flags based on distances"""
+        self.flag_front = self.calc_flag(self.front_front)
+        self.flag_left = self.calc_flag(self.combined_left)
+        self.flag_right = self.calc_flag(self.combined_right)
+        self.flag_back = self.calc_flag(self.rear_back)
+        self.flag_front_left = self.calc_flag(self.front_front_left)
+        self.flag_front_right = self.calc_flag(self.front_front_right)
+        self.flag_back_left = self.calc_flag(self.rear_back_left)
+        self.flag_back_right = self.calc_flag(self.rear_back_right)
+        
+    def calc_flag(self, distance):
+        """Calculate flag based on distance thresholds"""
+        if distance >= self.dist_slow:
+            return 1  # Clear
+        elif distance >= self.dist_stop:
+            return 2  # Slow down
+        else:
+            return 3  # Stop
+            
+    def update_thresholds(self, dist_stop, dist_slow):
+        #Update distance thresholds
+        self.dist_stop = dist_stop
+        self.dist_slow = dist_slow
+        self.update_flags()
 
+
+class JoystickController:
     def __init__(self):
-        scan = LaserScan()
-        self.init_laser_range()
-        print("test", self.init_laser_range())
-        rospy.Subscriber('/base_scan', LaserScan, self.LaserData)
-        rospy.Subscriber('/rear_scan', LaserScan, self.RearLaserData)  # New rear lidar subscriber
-
-    def LaserData(self, msg):
-        self.laser_ranges = msg.ranges
-
-    def RearLaserData(self, msg):
-        self.rear_laser_ranges = msg.ranges
-
-    def init_laser_range(self):
-        self.laser_ranges = None
-        self.rear_laser_ranges = None
+        rospy.init_node('joystick_controller', anonymous=True)
         
-        # Initialize front lidar
-        for i in range(3):
-            if self.laser_ranges is None:
-                try:
-                    laser_data = rospy.wait_for_message('/base_scan', LaserScan, timeout=5)
-                    self.laser_ranges = laser_data.ranges
-                    time.sleep(0.05)
-                except:
-                    print('Waiting for base_scan to be ready')
-                    time.sleep(0.05)
+        # Movement settings
+        self.speed_fast = 0.2
+        self.speed_slow = 0.1
+        self.move_front = 1
+        self.move_left = 1
+        self.move_right = 1
         
-        # Initialize rear lidar
-        for i in range(3):
-            if self.rear_laser_ranges is None:
-                try:
-                    rear_laser_data = rospy.wait_for_message('/rear_scan', LaserScan, timeout=5)
-                    self.rear_laser_ranges = rear_laser_data.ranges
-                    time.sleep(0.05)
-                except:
-                    print('Waiting for rear_scan to be ready')
-                    time.sleep(0.05)
-
-
-class LidarProcessor(object):
-    dist_slow = 0
-    dist_stop = 0
-
-    # Front lidar flags
-    flag_f = 0
-    flag_l = 0
-    flag_r = 0
-    flag_fl = 0
-    flag_fr = 0
-    
-    # Rear lidar flags
-    flag_rl = 0  # rear left
-    flag_rr = 0  # rear right
-    flag_rb = 0  # rear back (center)
-    
-    flag_old = [flag_f, flag_l, flag_r, flag_fl, flag_fr, flag_rl, flag_rr, flag_rb]
-    flag_new = [flag_f, flag_l, flag_r, flag_fl, flag_fr, flag_rl, flag_rr, flag_rb]
-
-    # Front distances
-    dist_l = 0
-    dist_fl = 0
-    dist_f = 0
-    dist_fr = 0
-    dist_r = 0
-    dist_cl = 0
-    dist_cr = 0
-    
-    # Rear distances
-    dist_rl = 0  # rear left
-    dist_rr = 0  # rear right
-    dist_rb = 0  # rear back
-    
-    dist = [dist_l, dist_fl, dist_f, dist_fr, dist_r]
-    rear_dist = [dist_rl, dist_rb, dist_rr]
-
-    pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-
-    def __init__(self, settings):
-        self.laser_subs_object = LaserSubs()
-        print("test", self.laser_subs_object)
-        self.init_distance(settings)
-
-    def init_distance(self, settings):
-        self.dist_stop = settings.get("platform_stop_dist")
-        self.dist_slow = settings.get("platform_clear_dist")
-        print("dist stop:", self.dist_stop)
-        print("dist slow:", self.dist_slow)        
-
-    def update_distance(self):
-        # Front lidar processing (existing code)
-        if self.laser_subs_object.laser_ranges is not None:
-            self.dist_r = self.calc_avg(self.laser_subs_object.laser_ranges[0:193])
-            self.dist_fr = self.calc_avg(self.laser_subs_object.laser_ranges[193:386])
-            self.dist_f = self.calc_avg(self.laser_subs_object.laser_ranges[386:579])
-            self.dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
-            self.dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:962])
-
-        # Rear lidar processing (new)
-        if self.laser_subs_object.rear_laser_ranges is not None:
-            # Adjust these ranges based on your rear lidar orientation and shelf clearance
-            # You may need to mask out the shelf area
-            rear_ranges = self.filter_shelf_points(self.laser_subs_object.rear_laser_ranges)
-            
-            # Assuming rear lidar has similar 270-degree coverage
-            # Adjust sectors based on your specific mounting and requirements
-            self.dist_rl = self.calc_avg(rear_ranges[0:320])     # rear left
-            self.dist_rb = self.calc_avg(rear_ranges[320:640])   # rear back
-            self.dist_rr = self.calc_avg(rear_ranges[640:961])   # rear right
-
-        self.dist = [self.dist_l, self.dist_fl, self.dist_f, self.dist_fr, self.dist_r]
-        self.rear_dist = [self.dist_rl, self.dist_rb, self.dist_rr]
-
-        self.save_data((self.dist_f))
-        self.update_flags(self.dist_f, self.dist_l, self.dist_r, self.dist_fl, self.dist_fr,
-                         self.dist_rl, self.dist_rr, self.dist_rb)
-
-    def filter_shelf_points(self, rear_ranges):
-        """
-        Filter out points that correspond to the shelf structure
-        Adjust these parameters based on your shelf geometry and lidar mounting
-        """
-        filtered_ranges = list(rear_ranges)
+        # Global control flags
+        self.clamp = True
+        self.override = False
         
-        # Example: If shelf blocks certain angles, set those to max range
-        # You'll need to determine these angles based on your setup
-        shelf_start_angle = 100  # example indices where shelf blocks view
-        shelf_end_angle = 200
+        # Obstacle detection
+        self.obstacles = ObstacleFlags()
         
-        for i in range(shelf_start_angle, min(shelf_end_angle, len(filtered_ranges))):
-            filtered_ranges[i] = 10.0  # Set to max safe distance or filter out
-            
-        return filtered_ranges
-
-    def update_speed(self):
-        if self.flag_old != self.flag_new:
-            if (self.flag_f == 3 | self.flag_fl == 3 | self.flag_fr == 3 | 
-                self.flag_rl == 3 | self.flag_rr == 3 | self.flag_rb == 3):
-                print("force stop")
-                twist = Twist()  # force stop if needed
-                self.pub.publish(twist)
-
-    def update_flags(self, dist_f, dist_l, dist_r, dist_fl, dist_fr, dist_rl, dist_rr, dist_rb):
-        self.flag_old = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,
-                        self.flag_rl, self.flag_rr, self.flag_rb]
+        # Publishers
+        self.cmd_pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
+        self.emergency_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         
-        # Front flags (existing)
-        self.flag_f = self.update_flag(dist_f)
-        self.flag_l = self.update_flag(dist_l)
-        self.flag_r = self.update_flag(dist_r)
-        self.flag_fl = self.update_flag(dist_fl)
-        self.flag_fr = self.update_flag(dist_fr)
+        # Subscribers
+        self.joy_sub = rospy.Subscriber("joy", Joy, self.joystick_callback)
+        self.distance_sub = rospy.Subscriber('/lidar_distances', Float32MultiArray, self.distance_callback)
         
-        # Rear flags (new)
-        self.flag_rl = self.update_flag(dist_rl)
-        self.flag_rr = self.update_flag(dist_rr)
-        self.flag_rb = self.update_flag(dist_rb)
+        # Control subscribers
+        self.trigger_sub = rospy.Subscriber('trigger_msgs', Int16, self.trigger_callback)
+        self.settings_sub = rospy.Subscriber('gui_settings', String, self.settings_callback)
+        self.override_sub = rospy.Subscriber('override_msgs', Int16, self.override_callback)
         
-        self.flag_new = [self.flag_f, self.flag_l, self.flag_r, self.flag_fl, self.flag_fr,
-                        self.flag_rl, self.flag_rr, self.flag_rb]
-
-    def update_flag(self, dist):
-        if dist >= self.dist_slow:
-            flag = 1
-        elif (dist >= self.dist_stop) & (dist <= self.dist_slow):
-            flag = 2
-        elif dist <= self.dist_stop:
-            flag = 3
-        else:
-            flag = 3
-        return flag
-
-    @staticmethod
-    def save_data(data):
-        append_file = open("/home/sinapse/Desktop/MonkeyGUI-master/RewardData/LIDARData.txt", "a")
-        np.savetxt(append_file, [data], fmt="%f", delimiter=",")
-        append_file.close()
-
-    @staticmethod
-    def calc_avg(values):
-        return np.percentile(values, 50)
-
-
-class JoystickProcessor(object):
-    speed_slow = 0
-    speed_fast = 0
-    move_front = 1
-    move_left = 1
-    move_right = 0
-
-    pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
-
-    def __init__(self, settings, lidar):
-        self.sub = rospy.Subscriber("joy", Joy, self.callback)
-        self.lidar = lidar
-        self.init_speed(settings)
-
-    def init_speed(self, settings):
-        self.speed_fast = settings.get("platform_normalSpeed")
-        self.speed_slow = settings.get("platform_slowDownSpeed")
-        self.move_front = settings.get("platform_move_front")
-        self.move_left = settings.get("platform_move_left")
-        self.move_right = settings.get("platform_move_right")
-
-    def callback(self, data):
-        print("Front: " + str(["{:0.3f}".format(x) for x in self.lidar.dist]))
-        print("Rear:  " + str(["{:0.3f}".format(x) for x in self.lidar.rear_dist]))
-        if(override == False):
-            self.move(data)
-
-    def move(self, data):
-        twist = Twist()
-        speed = data.axes[1] * 2
-        angular_speed = data.axes[0]
+        # Initialize with default settings
+        self.init_settings()
         
-        try:
-            toggle_check = data.axes[3]
-        except:
-            toggle_check = 10
-
-        if toggle_check == 10:
-            angular_speed = angular_speed * -1
-
-        # Disable movements based on settings
-        if self.move_front == 0:
-            speed = 0
-        if (self.move_left == 0) & (angular_speed > 0):
-            angular_speed = 0
-        if (self.move_right == 0) & (angular_speed < 0):
-            angular_speed = 0
+        rospy.loginfo("Joystick Controller initialized")
+        rospy.loginfo("Waiting for lidar distance data...")
         
-        if toggle_check == -1.0:  # Toggle to disable obstacle lock
-            twist = self.move_forward(1, 1, 1, speed, twist)
-        else:
-            if speed > 0.6:  # Forward movement
-                twist = self.move_forward(self.lidar.flag_f, self.lidar.flag_fl, self.lidar.flag_fr, speed, twist)
-            if speed < 0:  # Reverse movement
-                twist = self.move_forward(3, 3, 3, speed/2, twist)  # Disable reverse
-
-        # Enhanced turning with rear obstacle avoidance
-        if toggle_check == -1.0:  # Toggle to disable obstacle lock
-            twist = self.move_sideway(angular_speed, 1, 1, 1, 1, twist)
-        else:
-            if (angular_speed > 0.8) & (speed > -1):  # Turn left
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fl, self.lidar.flag_l, 
-                                        self.lidar.flag_rl, self.lidar.flag_rb, twist)
-            if (angular_speed < -0.8) & (speed > -1):  # Turn right
-                twist = self.move_sideway(angular_speed, self.lidar.flag_fr, self.lidar.flag_r,
-                                        self.lidar.flag_rr, self.lidar.flag_rb, twist)
-        
-        global clamp
-        print("global clamp value", clamp)
-        if clamp == False:
-            print(twist)
-            self.pub.publish(twist)
-
-    def move_forward(self, flag_front, flag_frontleft, flag_frontright, multiplier, twist):        
-        flag_frontside = max(flag_frontleft, flag_frontright)
-        slow_scale_factor = (self.lidar.dist_f - self.lidar.dist_stop) / (self.lidar.dist_slow - self.lidar.dist_stop)
-        slow_scale = (6 * slow_scale_factor) / (1 + (6 * slow_scale_factor))
-
-        if (flag_front == 3) | (flag_frontside == 3):
-            twist.linear.x = 0
-            print("flag 3")
-        elif (flag_front == 2):
-            twist.linear.x = self.speed_fast * multiplier * slow_scale
-            print("flag 2")
-        elif (flag_front == 1):
-            twist.linear.x = self.speed_fast * multiplier
-            print("flag 1")
-
-        return twist
-
-    def move_sideway(self, angular_speed, flag_frontside, flag_side, flag_rear_side, flag_rear_back, twist):
-        """
-        Enhanced turning with rear obstacle consideration
-        
-        Args:
-            angular_speed: Joystick angular input
-            flag_frontside: Front side obstacle flag (fl for left turn, fr for right turn)
-            flag_side: Side obstacle flag (l for left turn, r for right turn)  
-            flag_rear_side: Rear side obstacle flag (rl for left turn, rr for right turn)
-            flag_rear_back: Rear back obstacle flag
-        """
-        
-        # Check if any critical obstacle is detected
-        critical_obstacle = (flag_side == 3) | (flag_frontside == 3) | (flag_rear_side == 3) | (flag_rear_back == 3)
-        
-        # Check if any obstacle is in slow zone
-        slow_zone_obstacle = (flag_side == 2) | (flag_frontside == 2) | (flag_rear_side == 2) | (flag_rear_back == 2)
-        
-        if critical_obstacle:
-            twist.angular.z = 0
-            print("Turning blocked - critical obstacle detected")
-            print(f"Side: {flag_side}, Front-side: {flag_frontside}, Rear-side: {flag_rear_side}, Rear-back: {flag_rear_back}")
-        elif slow_zone_obstacle:
-            # Reduce turning speed when obstacles are in slow zone
-            twist.angular.z = self.speed_slow * angular_speed * 2.5
-            print("Turning slowed - obstacle in slow zone")
-        else:
-            # Normal turning speed
-            twist.angular.z = self.speed_fast * angular_speed * 2.5
-            print("Normal turning speed")
-
-        print("Angular speed input:", angular_speed)
-        return twist
-
-
-# Rest of the functions remain the same
-def get_gui(data=None):
-    if data is None:
+    def init_settings(self):
+        """Initialize default settings"""
         settings = {
             "platform_stop_dist": 0.6,
             "platform_clear_dist": 1.5,
@@ -345,50 +148,201 @@ def get_gui(data=None):
             "platform_move_left": 1,
             "platform_move_right": 1
         }
-        return settings
-    global lidar
-    global joystick
-    settings = ast.literal_eval(data.data)
-    try:
-        lidar.init_distance(settings)
-        joystick.init_speed(settings)
-    except Exception as e:
-        print('Error:', e)
-
-def controllerCallback(data):
-    global clamp
-    print('triggered')
-    if data.data//10 == 2:
-        clamp = False
-    elif data.data//10 == 3 or data.data//10 == 4:
-        clamp = True
-    print("clamp", clamp)
-
-def overrideSettings(data):
-    global override
-    if data.data == 2:
-        override = True
-    elif data.data == 1:
-        override = False
+        self.update_settings(settings)
+        
+    def update_settings(self, settings):
+        """Update movement settings"""
+        self.speed_fast = settings.get("platform_normalSpeed", 0.2)
+        self.speed_slow = settings.get("platform_slowDownSpeed", 0.1)
+        self.move_front = settings.get("platform_move_front", 1)
+        self.move_left = settings.get("platform_move_left", 1)
+        self.move_right = settings.get("platform_move_right", 1)
+        
+        # Update obstacle thresholds
+        stop_dist = settings.get("platform_stop_dist", 0.6)
+        slow_dist = settings.get("platform_clear_dist", 1.5)
+        self.obstacles.update_thresholds(stop_dist, slow_dist)
+        
+        rospy.loginfo(f"Settings updated - Fast: {self.speed_fast}, Slow: {self.speed_slow}")
+        rospy.loginfo(f"Stop distance: {stop_dist}, Slow distance: {slow_dist}")
+        
+    def distance_callback(self, msg):
+        """Callback for lidar distances"""
+        self.obstacles.update_distances(list(msg.data))
+        
+    def joystick_callback(self, data):
+        """Main joystick callback"""
+        # Print current distances for debugging
+        rospy.loginfo_throttle(1.0, 
+            f"Distances - F:{self.obstacles.front_front:.2f} "
+            f"L:{self.obstacles.combined_left:.2f} R:{self.obstacles.combined_right:.2f} "
+            f"B:{self.obstacles.rear_back:.2f}")
+            
+        if not self.override:
+            self.process_movement(data)
+            
+    def process_movement(self, joy_data):
+        """Process joystick input and generate movement commands"""
+        twist = Twist()
+        
+        # Get joystick inputs
+        linear_input = joy_data.axes[1] * 2  # Forward/backward
+        angular_input = joy_data.axes[0]     # Left/right turning
+        
+        # Check for toggle (small vs large joystick)
+        try:
+            toggle_check = joy_data.axes[3]
+        except:
+            toggle_check = 10  # Default for small joystick
+            
+        if toggle_check == 10:
+            angular_input = angular_input * -1  # Invert for small joystick
+            
+        # Apply movement restrictions
+        if self.move_front == 0:
+            linear_input = 0
+        if (self.move_left == 0) and (angular_input > 0):
+            angular_input = 0
+        if (self.move_right == 0) and (angular_input < 0):
+            angular_input = 0
+            
+        # Process movement based on toggle state
+        if toggle_check == -1.0:  # Override mode - disable obstacle avoidance
+            twist = self.move_without_obstacles(linear_input, angular_input, twist)
+        else:  # Normal mode - with obstacle avoidance
+            twist = self.move_with_obstacles(linear_input, angular_input, twist)
+            
+        # Publish command if not clamped
+        if not self.clamp:
+            rospy.loginfo_throttle(2.0, f"Twist: linear={twist.linear.x:.2f}, angular={twist.angular.z:.2f}")
+            self.cmd_pub.publish(twist)
+        else:
+            rospy.loginfo_throttle(2.0, "Movement clamped")
+            
+    def move_without_obstacles(self, linear_input, angular_input, twist):
+        """Movement without obstacle avoidance (override mode)"""
+        twist.linear.x = self.speed_fast * linear_input
+        twist.angular.z = self.speed_fast * angular_input * 2.5
+        return twist
+        
+    def move_with_obstacles(self, linear_input, angular_input, twist):
+        """Movement with obstacle avoidance"""
+        # Forward movement
+        if linear_input > 0.6:  # Moving forward
+            twist = self.move_forward(linear_input, twist)
+        elif linear_input < 0:  # Moving backward  
+            twist.linear.x = 0
+            twist.angular.z = 0
+            
+        # Turning movement
+        if angular_input > 0.8:  # Turning left
+            twist = self.turn_left(angular_input, twist)
+        elif angular_input < -0.8:  # Turning right
+            twist = self.turn_right(angular_input, twist)
+            
+        return twist
+        
+    def move_forward(self, speed_input, twist):
+        """Forward movement with front obstacle avoidance"""
+        front_clear = (self.obstacles.flag_front != 3)
+        front_sides_clear = (self.obstacles.flag_front_left != 3 and 
+                           self.obstacles.flag_front_right != 3)
+        
+        if not front_clear or not front_sides_clear:
+            twist.linear.x = 0
+            rospy.loginfo_throttle(1.0, "Forward blocked by obstacle")
+        elif self.obstacles.flag_front == 2:  # Slow zone
+            # Gradual slowdown based on distance
+            slow_factor = (self.obstacles.front_front - self.obstacles.dist_stop) / \
+                         (self.obstacles.dist_slow - self.obstacles.dist_stop)
+            slow_scale = (6 * slow_factor) / (1 + (6 * slow_factor))
+            twist.linear.x = self.speed_fast * speed_input * slow_scale
+            rospy.loginfo_throttle(1.0, f"Forward slowed: factor={slow_scale:.2f}")
+        else:  # Clear
+            twist.linear.x = self.speed_fast * speed_input
+            
+        return twist
+        
+        
+    def turn_left(self, angular_input, twist):
+        """Left turn with obstacle avoidance"""
+        # Check obstacles on left side and rear during turning
+        left_clear = (self.obstacles.flag_left != 3 and 
+                     self.obstacles.flag_front_left != 3)
+        rear_left_clear = (self.obstacles.flag_back_left != 3)
+        
+        if not left_clear or not rear_left_clear:
+            twist.angular.z = 0
+            rospy.loginfo_throttle(1.0, "Left turn blocked")
+        elif (self.obstacles.flag_left == 2 or self.obstacles.flag_front_left == 2 or 
+              self.obstacles.flag_back_left == 2):
+            twist.angular.z = self.speed_slow * angular_input * 2.5
+            rospy.loginfo_throttle(1.0, "Left turn slowed")
+        else:
+            twist.angular.z = self.speed_fast * angular_input * 2.5
+            
+        return twist
+        
+    def turn_right(self, angular_input, twist):
+        """Right turn with obstacle avoidance"""
+        # Check obstacles on right side and rear during turning
+        right_clear = (self.obstacles.flag_right != 3 and 
+                      self.obstacles.flag_front_right != 3)
+        rear_right_clear = (self.obstacles.flag_back_right != 3)
+        
+        if not right_clear or not rear_right_clear:
+            twist.angular.z = 0
+            rospy.loginfo_throttle(1.0, "Right turn blocked")
+        elif (self.obstacles.flag_right == 2 or self.obstacles.flag_front_right == 2 or 
+              self.obstacles.flag_back_right == 2):
+            twist.angular.z = self.speed_slow * angular_input * 2.5
+            rospy.loginfo_throttle(1.0, "Right turn slowed")
+        else:
+            twist.angular.z = self.speed_fast * angular_input * 2.5
+            
+        return twist
+        
+    def emergency_stop(self):
+        """Emergency stop function"""
+        twist = Twist()  # All zeros
+        self.cmd_pub.publish(twist)
+        self.emergency_pub.publish(twist)
+        rospy.logwarn("Emergency stop activated")
+        
+    def trigger_callback(self, data):
+        """Handle trigger messages for clamping"""
+        if data.data // 10 == 2:
+            self.clamp = False
+            rospy.loginfo("Movement enabled")
+        elif data.data // 10 == 3 or data.data // 10 == 4:
+            self.clamp = True
+            rospy.loginfo("Movement clamped")
+            
+    def settings_callback(self, data):
+        """Handle settings updates from GUI"""
+        try:
+            settings = ast.literal_eval(data.data)
+            self.update_settings(settings)
+        except Exception as e:
+            rospy.logerr(f"Settings update error: {e}")
+            
+    def override_callback(self, data):
+        """Handle override messages"""
+        if data.data == 2:
+            self.override = True
+            rospy.logwarn("Override mode enabled")
+        elif data.data == 1:
+            self.override = False
+            rospy.loginfo("Override mode disabled")
+            
+    def run(self):
+        """Main run loop"""
+        rospy.loginfo("Joystick controller running...")
+        rospy.spin()
 
 if __name__ == '__main__':
-    rospy.init_node('controller_joystick')
-
-    clamp = True
-    emergency = False
-    override = False
-    settings = get_gui()
-    global lidar
-    global joystick
-    lidar = LidarProcessor(settings)
-    joystick = JoystickProcessor(settings, lidar)
-
-    rospy.Subscriber('trigger_msgs', Int16, controllerCallback)
-    rospy.Subscriber('gui_settings', String, get_gui)
-    rospy.Subscriber('override_msgs', Int16, overrideSettings)
-
-    rate = rospy.Rate(10)
-    while not rospy.is_shutdown():
-        lidar.update_distance()
-        lidar.update_speed()
-        rate.sleep()
+    try:
+        controller = JoystickController()
+        controller.run()
+    except rospy.ROSInterruptException:
+        rospy.loginfo("Joystick Controller shutting down")
