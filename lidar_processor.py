@@ -27,39 +27,27 @@ class DualLidarProcessor:
         # Publisher for distance array
         self.distance_pub = rospy.Publisher('/lidar_distances', Float32MultiArray, queue_size=1)
         
-        # Publisher for individual distances (optional)
-        self.front_pub = rospy.Publisher('/distance_front', Float32MultiArray, queue_size=1)
-        self.rear_pub = rospy.Publisher('/distance_rear', Float32MultiArray, queue_size=1)
         
         # Timer for processing and publishing
         self.timer = rospy.Timer(rospy.Duration(0.1), self.process_and_publish)  # 10 Hz
         
         rospy.loginfo("Dual Lidar Processor initialized")
-        rospy.loginfo("Publishing combined distances to: /lidar_distances")
-        rospy.loginfo("Publishing front distances to: /distance_front") 
-        rospy.loginfo("Publishing rear distances to: /distance_rear")
         
     def front_lidar_callback(self, msg):
-        """Callback for front lidar data"""
         self.front_ranges = np.array(msg.ranges)
         
     def rear_lidar_callback(self, msg):
-        """Callback for rear lidar data"""
         self.rear_ranges = np.array(msg.ranges)
         
     def calc_avg_distance(self, ranges):
-        """Calculate average distance using percentile method (same as original code)"""
+        """Calculate average distance """
         if ranges is None or len(ranges) == 0:
             return 0.0
         
         # Filter out invalid readings (inf, nan, 0)
-        valid_ranges = ranges[(ranges > 0.1) & (ranges < 30.0) & np.isfinite(ranges)]
-        
-        if len(valid_ranges) == 0:
-            return 0.0
-            
-        # Use 50th percentile (median) same as original code
-        return float(np.percentile(valid_ranges, 50))
+        #ranges = ranges[(ranges > 0.1) & (ranges < 30.0) & np.isfinite(ranges)]
+        # Use 50th percentile (median)
+        return float(np.percentile(ranges, 50))
     
     def process_front_lidar(self):
         """Process front lidar data to get front, left, and right distances"""
@@ -67,8 +55,6 @@ class DualLidarProcessor:
             return [0.0, 0.0, 0.0, 0.0, 0.0]  # [left, front-left, front, front-right, right]
             
         total_points = len(self.front_ranges)
-        
-        # Divide into 5 sections like original code
         # Assuming 270° coverage divided into 5 sectors
         sector_size = total_points // 5
         
@@ -125,22 +111,15 @@ class DualLidarProcessor:
         
         # Create and publish combined distance array
         # Format: [front, left, right, back]
-        combined_distances = [self.dist_front, self.dist_left, self.dist_right, self.dist_back]
+        combined_distances = [front_distances,rear_distances]
         self.publish_distances(combined_distances, self.distance_pub, 
-                             ['front', 'left', 'right', 'back'])
+                             ['front', 'back'])
         
         # Publish detailed front distances
-        self.publish_distances(front_distances, self.front_pub,
-                             ['left', 'front_left', 'front', 'front_right', 'right'])
-        
-        # Publish detailed rear distances  
-        self.publish_distances(rear_distances, self.rear_pub,
-                             ['rear_left', 'back_left', 'back', 'back_right', 'rear_right'])
         
         # Print for debugging
         rospy.loginfo_throttle(1.0, 
-            f"Distances - Front: {self.dist_front:.2f}m, Left: {self.dist_left:.2f}m, "
-            f"Right: {self.dist_right:.2f}m, Back: {self.dist_back:.2f}m")
+            f"Distances - Front: {self.dist_front:.2f}m, Back: {self.dist_back:.2f}m")
     
     def publish_distances(self, distances, publisher, labels):
         """Publish distance array with labels"""

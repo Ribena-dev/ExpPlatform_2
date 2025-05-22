@@ -192,8 +192,7 @@ class JoystickProcessor(object):
         except:
             toggle_check = 10 #use 10 as value to signify small joystick
         # angular_speed = angular_speed * -1 # for small joystick, inverted
-	
-	print("axes: ", data.axes[0], data.axes[1])
+        print("axes: ", data.axes[0], data.axes[1])
 
         if abs(data.axes[1]) < abs(data.axes[0]):
             speed = 0
