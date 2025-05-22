@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# script restricts robots movements linearly only
+
 
 import os
 import cv2
