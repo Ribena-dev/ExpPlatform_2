@@ -31,7 +31,7 @@ class DualLidarProcessor:
         # Timer for processing and publishing
         self.timer = rospy.Timer(rospy.Duration(0.1), self.process_and_publish)  # 10 Hz
         
-        rospy.loginfo("Dual Lidar Processor initialized")
+        print("Dual Lidar Processor initialized")
         
     def front_lidar_callback(self, msg):
         self.front_ranges = np.array(msg.ranges)
@@ -117,9 +117,8 @@ class DualLidarProcessor:
         
         # Publish detailed front distances
         
-        # Print for debugging
-        rospy.loginfo_throttle(1.0, 
-            f"Distances - Front: {self.dist_front:.2f}m, Back: {self.dist_back:.2f}m")
+        # Print for debugging - using regular string formatting
+        print("Distances - Front: %.2fm, Back: %.2fm" % (self.dist_front, self.dist_back))
     
     def publish_distances(self, distances, publisher, labels):
         """Publish distance array with labels"""
@@ -140,7 +139,7 @@ class DualLidarProcessor:
 
     def run(self):
         """Main run loop"""
-        rospy.loginfo("Starting dual lidar processor...")
+        print("Starting dual lidar processor...")
         rospy.spin()
 
 if __name__ == '__main__':
@@ -148,4 +147,4 @@ if __name__ == '__main__':
         processor = DualLidarProcessor()
         processor.run()
     except rospy.ROSInterruptException:
-        rospy.loginfo("Dual Lidar Processor shutting down")
+        print("Dual Lidar Processor shutting down")
