@@ -83,8 +83,8 @@ class ObstacleFlags:
     def update_flags(self):
         """Update obstacle flags based on distances"""
         self.flag_front = self.calc_flag(self.front_front)
-        #self.flag_left = self.calc_flag(self.combined_left)
-        #self.flag_right = self.calc_flag(self.combined_right)
+        self.flag_left = self.calc_flag(self.front_left)
+        self.flag_right = self.calc_flag(self.front_right)
         self.flag_back = self.calc_flag(self.rear_back)
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
@@ -318,7 +318,7 @@ class JoystickController:
         
     def trigger_callback(self, data):
         """Handle trigger messages for clamping"""
-	self.clamp = False
+        self.clamp = False
     #    if data.data // 10 == 2:
     #       self.clamp = False
     #        

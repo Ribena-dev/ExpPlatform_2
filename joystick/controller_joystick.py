@@ -182,7 +182,7 @@ class JoystickProcessor(object):
             speed = data.axes[1] * 2
             angular_speed = 0
         print ("speed", speed)
-	print ("angular", angular_speed)
+        print ("angular", angular_speed)
         ##if data.axes[3] == -1.0: #Toggle to disable obstacle lock
           ##  twist = self.move_forward(1, 1, 1, speed, twist)
         ##else:
