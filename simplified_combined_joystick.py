@@ -69,7 +69,8 @@ class ObstacleFlags:
             # Combine left and right sides (take minimum for safety)
             #self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
             #self.combined_right = min(self.front_right, self.rear_right) if self.front_right > 0 and self.rear_right > 0 else max(self.front_right, self.rear_right)
-            
+          
+	    #print(combined_distances) 
             # Update all flags
             self.update_flags()
         else:
@@ -82,8 +83,8 @@ class ObstacleFlags:
     def update_flags(self):
         """Update obstacle flags based on distances"""
         self.flag_front = self.calc_flag(self.front_front)
-        self.flag_left = self.calc_flag(self.combined_left)
-        self.flag_right = self.calc_flag(self.combined_right)
+        #self.flag_left = self.calc_flag(self.combined_left)
+        #self.flag_right = self.calc_flag(self.combined_right)
         self.flag_back = self.calc_flag(self.rear_back)
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
@@ -118,7 +119,7 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        self.clamp = True
+        self.clamp = False # change to true when using gui.py
         self.override = False
         
         # Obstacle detection
@@ -182,7 +183,7 @@ class JoystickController:
         """Main joystick callback"""
         # Print current distances for debugging
 
-        print(self.obstacles)
+        #print(self.obstacles)
 
             
         if not self.override:
@@ -223,7 +224,7 @@ class JoystickController:
         if not self.clamp:
             self.cmd_pub.publish(twist)
         else:
-            print("clamped") 
+            print("changed to see clamped") 
             
     def move_without_obstacles(self, linear_input, angular_input, twist):
         """Movement without obstacle avoidance (override mode)"""
@@ -274,9 +275,8 @@ class JoystickController:
     def turn_left(self, angular_input, twist):
         """Left turn with obstacle avoidance"""
         # Check obstacles on left side and rear during turning
-        left_clear = (self.obstacles.flag_left != 3 and 
-                     self.obstacles.flag_front_left != 3)
-        rear_right_clear = (self.obstacles.flag_back_right != 3)
+        left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_left)
+        rear_right_clear = (self.obstacles.flag_back_right != 3 )
         
         if not left_clear or not rear_right_clear:
             twist.angular.z = 0
@@ -318,11 +318,12 @@ class JoystickController:
         
     def trigger_callback(self, data):
         """Handle trigger messages for clamping"""
-        if data.data // 10 == 2:
-            self.clamp = False
-            
-        elif data.data // 10 == 3 or data.data // 10 == 4:
-            self.clamp = True
+	self.clamp = False
+    #    if data.data // 10 == 2:
+    #       self.clamp = False
+    #        
+    #    elif data.data // 10 == 3 or data.data // 10 == 4:
+    #        self.clamp = True
            
     # def settings_callback(self, data):
     #     """Handle settings updates from GUI"""
