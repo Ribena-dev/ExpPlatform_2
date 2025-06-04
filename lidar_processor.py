@@ -105,8 +105,8 @@ class DualLidarProcessor:
         rear_right = rear_distances[4]        # right side from rear lidar
         
         # Combine left and right measurements (take minimum for safety)
-        self.dist_left = min(front_left, rear_left) if front_left > 0 and rear_left > 0 else max(front_left, rear_left)
-        self.dist_right = min(front_right, rear_right) if front_right > 0 and rear_right > 0 else max(front_right, rear_right)
+       # self.dist_left = min(front_left, rear_left) if front_left > 0 and rear_left > 0 else max(front_left, rear_left)
+       # self.dist_right = min(front_right, rear_right) if front_right > 0 and rear_right > 0 else max(front_right, rear_right)
         
         # Create and publish combined distance array
         # Format: [front, left, right, back]
@@ -117,7 +117,7 @@ class DualLidarProcessor:
         # Publish detailed front distances
         
         # Print for debugging - using regular string formatting
-        print("Distances - Front: %.2fm, Back: %.2fm" % (self.dist_front, self.dist_back))
+        print(front_distances, rear_distances)
     
     def publish_distances(self, distances, publisher, labels):
         """Publish distance array with labels"""
