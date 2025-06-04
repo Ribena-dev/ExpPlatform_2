@@ -67,13 +67,17 @@ class ObstacleFlags:
             self.rear_right = combined_distances[9]
             
             # Combine left and right sides (take minimum for safety)
-            self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
-            self.combined_right = min(self.front_right, self.rear_right) if self.front_right > 0 and self.rear_right > 0 else max(self.front_right, self.rear_right)
+            #self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
+            #self.combined_right = min(self.front_right, self.rear_right) if self.front_right > 0 and self.rear_right > 0 else max(self.front_right, self.rear_right)
             
             # Update all flags
             self.update_flags()
         else:
+<<<<<<< HEAD:simplified_combined_joystick.py
            print("Expected 10 distance values, got", {len(combined_distances)})
+=======
+           print("failed to update distances")
+>>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
         
     def update_flags(self):
         """Update obstacle flags based on distances"""
@@ -130,7 +134,7 @@ class JoystickController:
         
         # Control subscribers
         self.trigger_sub = rospy.Subscriber('trigger_msgs', Int16, self.trigger_callback)
-        self.settings_sub = rospy.Subscriber('gui_settings', String, self.settings_callback)
+        #self.settings_sub = rospy.Subscriber('gui_settings', String, self.settings_callback)
         self.override_sub = rospy.Subscriber('override_msgs', Int16, self.override_callback)
         
         # Initialize with default settings
@@ -165,8 +169,13 @@ class JoystickController:
         slow_dist = settings.get("platform_clear_dist", 1.5)
         self.obstacles.update_thresholds(stop_dist, slow_dist)
         
+<<<<<<< HEAD:simplified_combined_joystick.py
         print("Settings updated - Fast:", {self.speed_fast}," Slow:", {self.speed_slow})
         print("Stop distance:", {stop_dist}, "Slow distance:", {slow_dist})
+=======
+    #     rospy.loginfo(f"Settings updated - Fast: {self.speed_fast}, Slow: {self.speed_slow}")
+    #     rospy.loginfo(f"Stop distance: {stop_dist}, Slow distance: {slow_dist}")
+>>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
         
     def distance_callback(self, msg):
         """Callback for lidar distances"""
@@ -175,10 +184,14 @@ class JoystickController:
     def joystick_callback(self, data):
         """Main joystick callback"""
         # Print current distances for debugging
+<<<<<<< HEAD:simplified_combined_joystick.py
        # rospy.loginfo_throttle(1.0, 
         #    f"Distances - F:{self.obstacles.front_front:.2f} "
          #   f"L:{self.obstacles.combined_left:.2f} R:{self.obstacles.combined_right:.2f} "
           #  f"B:{self.obstacles.rear_back:.2f}")
+=======
+        print(self.obstacles)
+>>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
             
         if not self.override:
             self.process_movement(data)
@@ -271,15 +284,15 @@ class JoystickController:
         # Check obstacles on left side and rear during turning
         left_clear = (self.obstacles.flag_left != 3 and 
                      self.obstacles.flag_front_left != 3)
-        rear_left_clear = (self.obstacles.flag_back_left != 3)
+        rear_right_clear = (self.obstacles.flag_back_right != 3)
         
-        if not left_clear or not rear_left_clear:
+        if not left_clear or not rear_right_clear:
             twist.angular.z = 0
-            rospy.loginfo_throttle(1.0, "Left turn blocked")
+            print("left turn blocked")
         elif (self.obstacles.flag_left == 2 or self.obstacles.flag_front_left == 2 or 
-              self.obstacles.flag_back_left == 2):
+              self.obstacles.flag_back_right == 2):
             twist.angular.z = self.speed_slow * angular_input * 2.5
-            rospy.loginfo_throttle(1.0, "Left turn slowed")
+            print("Left turn slowed")
         else:
             twist.angular.z = self.speed_fast * angular_input * 2.5
             
@@ -290,9 +303,9 @@ class JoystickController:
         # Check obstacles on right side and rear during turning
         right_clear = (self.obstacles.flag_right != 3 and 
                       self.obstacles.flag_front_right != 3)
-        rear_right_clear = (self.obstacles.flag_back_right != 3)
+        rear_left_clear = (self.obstacles.flag_back_left != 3)
         
-        if not right_clear or not rear_right_clear:
+        if not right_clear or not rear_left_clear:
             twist.angular.z = 0
             rospy.loginfo_throttle(1.0, "Right turn blocked")
         elif (self.obstacles.flag_right == 2 or self.obstacles.flag_front_right == 2 or 
@@ -309,17 +322,17 @@ class JoystickController:
         twist = Twist()  # All zeros
         self.cmd_pub.publish(twist)
         self.emergency_pub.publish(twist)
-        rospy.logwarn("Emergency stop activated")
+        print("Emergency stop activated")
         
     def trigger_callback(self, data):
         """Handle trigger messages for clamping"""
         if data.data // 10 == 2:
             self.clamp = False
-            rospy.loginfo("Movement enabled")
+            
         elif data.data // 10 == 3 or data.data // 10 == 4:
             self.clamp = True
-            rospy.loginfo("Movement clamped")
             
+<<<<<<< HEAD:simplified_combined_joystick.py
     def settings_callback(self, data):
         """Handle settings updates from GUI"""
         try:
@@ -327,19 +340,29 @@ class JoystickController:
             self.update_settings(settings)
         except Exception as e:
             print("Settings update error:", {e})
+=======
+            
+    # def settings_callback(self, data):
+    #     """Handle settings updates from GUI"""
+    #     try:
+    #         settings = ast.literal_eval(data.data)
+    #         self.update_settings(settings)
+    #     except Exception as e:
+    #         rospy.logerr(f"Settings update error: {e}")
+>>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
             
     def override_callback(self, data):
         """Handle override messages"""
         if data.data == 2:
             self.override = True
-            rospy.logwarn("Override mode enabled")
+            
         elif data.data == 1:
             self.override = False
-            rospy.loginfo("Override mode disabled")
+            
             
     def run(self):
         """Main run loop"""
-        rospy.loginfo("Joystick controller running...")
+
         rospy.spin()
 
 if __name__ == '__main__':
