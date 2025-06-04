@@ -55,7 +55,6 @@ class DualLidarProcessor:
             return [0.0, 0.0, 0.0, 0.0, 0.0]  # [left, front-left, front, front-right, right]
             
         total_points = len(self.front_ranges)
-        # Assuming 270° coverage divided into 5 sectors
         sector_size = total_points // 5
         
         # Calculate distances for each sector

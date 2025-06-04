@@ -73,11 +73,11 @@ class ObstacleFlags:
             # Update all flags
             self.update_flags()
         else:
-<<<<<<< HEAD:simplified_combined_joystick.py
+
            print("Expected 10 distance values, got", {len(combined_distances)})
-=======
+
            print("failed to update distances")
->>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
+
         
     def update_flags(self):
         """Update obstacle flags based on distances"""
@@ -169,13 +169,10 @@ class JoystickController:
         slow_dist = settings.get("platform_clear_dist", 1.5)
         self.obstacles.update_thresholds(stop_dist, slow_dist)
         
-<<<<<<< HEAD:simplified_combined_joystick.py
+
         print("Settings updated - Fast:", {self.speed_fast}," Slow:", {self.speed_slow})
         print("Stop distance:", {stop_dist}, "Slow distance:", {slow_dist})
-=======
-    #     rospy.loginfo(f"Settings updated - Fast: {self.speed_fast}, Slow: {self.speed_slow}")
-    #     rospy.loginfo(f"Stop distance: {stop_dist}, Slow distance: {slow_dist}")
->>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
+
         
     def distance_callback(self, msg):
         """Callback for lidar distances"""
@@ -184,14 +181,9 @@ class JoystickController:
     def joystick_callback(self, data):
         """Main joystick callback"""
         # Print current distances for debugging
-<<<<<<< HEAD:simplified_combined_joystick.py
-       # rospy.loginfo_throttle(1.0, 
-        #    f"Distances - F:{self.obstacles.front_front:.2f} "
-         #   f"L:{self.obstacles.combined_left:.2f} R:{self.obstacles.combined_right:.2f} "
-          #  f"B:{self.obstacles.rear_back:.2f}")
-=======
+
         print(self.obstacles)
->>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
+
             
         if not self.override:
             self.process_movement(data)
@@ -229,10 +221,9 @@ class JoystickController:
             
         # Publish command if not clamped
         if not self.clamp:
-            print(2.0,"Twist:", {twist.linear.x:.2f}, {twist.angular.z:.2f})
             self.cmd_pub.publish(twist)
         else:
-            rospy.loginfo_throttle(2.0, "Movement clamped")
+            print("clamped") 
             
     def move_without_obstacles(self, linear_input, angular_input, twist):
         """Movement without obstacle avoidance (override mode)"""
@@ -272,7 +263,7 @@ class JoystickController:
                          (self.obstacles.dist_slow - self.obstacles.dist_stop)
             slow_scale = (6 * slow_factor) / (1 + (6 * slow_factor))
             twist.linear.x = self.speed_fast * speed_input * slow_scale
-            print(1.0, "Forward slowed:", factor={slow_scale:.2f})
+         
         else:  # Clear
             twist.linear.x = self.speed_fast * speed_input
             
@@ -331,17 +322,7 @@ class JoystickController:
             
         elif data.data // 10 == 3 or data.data // 10 == 4:
             self.clamp = True
-            
-<<<<<<< HEAD:simplified_combined_joystick.py
-    def settings_callback(self, data):
-        """Handle settings updates from GUI"""
-        try:
-            settings = ast.literal_eval(data.data)
-            self.update_settings(settings)
-        except Exception as e:
-            print("Settings update error:", {e})
-=======
-            
+           
     # def settings_callback(self, data):
     #     """Handle settings updates from GUI"""
     #     try:
@@ -349,7 +330,7 @@ class JoystickController:
     #         self.update_settings(settings)
     #     except Exception as e:
     #         rospy.logerr(f"Settings update error: {e}")
->>>>>>> 2a9d606e8f30e9829907b8df5fa8e5926d23d997:joystick/simplified_combined_joystick.py
+
             
     def override_callback(self, data):
         """Handle override messages"""

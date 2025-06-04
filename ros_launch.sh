@@ -2,7 +2,7 @@
 
 xterm -iconic -hold -e "roscore" &
 sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch robot.launch" & #RosAria
-sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch hokuyo.launch" &
+sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch hokuyo_2.launch" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun robot_setup_tf tf_broadcaster" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python map.py" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun rviz rviz"  &
