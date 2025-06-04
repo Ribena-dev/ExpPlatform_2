@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
     """Class to manage obstacle detection flags"""
-    def __init__(self, dist_stop=0.6, dist_slow=1.5):
+    def __init__(self, dist_stop=0.6, dist_slow=1.0):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         
@@ -265,6 +265,7 @@ class JoystickController:
             twist.linear.x = self.speed_fast * speed_input * slow_scale
          
         else:  # Clear
+
             twist.linear.x = self.speed_fast * speed_input
             
         return twist
