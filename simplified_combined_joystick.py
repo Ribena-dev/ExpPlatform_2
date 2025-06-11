@@ -287,7 +287,7 @@ class JoystickController:
             twist.angular.z = self.speed_slow * angular_input * 2.5
             print("Left turn slowed")
         else:
-            twist.angular.z = self.speed_fast * angular_input * 2.5
+            twist.angular.z = self.speed_slow * angular_input * 2.5
             
         return twist
         
@@ -306,7 +306,7 @@ class JoystickController:
             twist.angular.z = self.speed_slow * angular_input * 2.5
             rospy.loginfo_throttle(1.0, "Right turn slowed")
         else:
-            twist.angular.z = self.speed_fast * angular_input * 2.5
+            twist.angular.z = self.speed_slow * angular_input * 2.5
             
         return twist
         
