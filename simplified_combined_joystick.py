@@ -119,8 +119,6 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        self.clamp = True
-        self.override = False
         
         # Obstacle detection
         self.obstacles = ObstacleFlags()
@@ -318,13 +316,13 @@ class JoystickController:
         print("Emergency stop activated")
         
     def trigger_callback(self, data):
-        
-        self.clamp = False
+        global clamp
         if data.data // 10 == 2:
           self.clamp = False
            
         elif data.data // 10 == 3 or data.data // 10 == 4:
            self.clamp = True
+           print("clamped:",clamp)
            
     def settings_callback(self, data):
         
@@ -350,6 +348,9 @@ class JoystickController:
         rospy.spin()
 
 if __name__ == '__main__':
+    clamp = True
+    emergency = False
+    override = False
     try:
         controller = JoystickController()
         controller.run()
