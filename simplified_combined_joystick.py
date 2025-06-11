@@ -118,7 +118,8 @@ class JoystickController:
         self.move_left = 1
         self.move_right = 1
         
-        
+        self.override = False
+	self.clamp = False
         # Obstacle detection
         self.obstacles = ObstacleFlags()
         
