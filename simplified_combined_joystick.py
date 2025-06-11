@@ -119,7 +119,7 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        self.clamp = True
+        self.clamp = False
         self.override = False
         
         # Obstacle detection
@@ -224,8 +224,9 @@ class JoystickController:
         # Publish command if not clamped
         if not self.clamp:
             self.cmd_pub.publish(twist)
+	    
         else:
-            print("changed to see clamped") 
+            print("is clamped") 
             
     def move_without_obstacles(self, linear_input, angular_input, twist):
         
@@ -327,12 +328,8 @@ class JoystickController:
            self.clamp = True
            
     def settings_callback(self, data):
-        
-        try:
-            settings = ast.literal_eval(data.data)
-            self.update_settings(settings)
-        except Exception as e:
-            rospy.logerr(f"Settings update error: {e}")
+        settings = ast.literal_eval(data.data)
+        self.update_settings(settings)
 
             
     def override_callback(self, data):
