@@ -66,7 +66,11 @@ class LidarProcessor(object):
     dist_r = 0
     dist_cl = 0
     dist_cr = 0
-    dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r]
+    dist_b = 0
+    dist_bl = 0
+    dist_br = 0
+
+    dist = [dist_l,dist_fl,dist_f,dist_fr,dist_r,dist_b]
 
     pub = rospy.Publisher('RosAria/cmd_vel', Twist, queue_size=1)
 

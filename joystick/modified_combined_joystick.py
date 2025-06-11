@@ -30,13 +30,13 @@ class LaserSubs(object):
         print("test", self.init_laser_range())
         
         self.front_ranges = rospy.Subscriber('/base_scan', LaserScan, self.front_lidar_callback)
-        self.rear_sub = rospy.Subscriber('/rear_scan', LaserScan, self.rear_lidar_callback)
+        self.back_ranges = rospy.Subscriber('/rear_scan', LaserScan, self.rear_lidar_callback)
 
     def front_lidar_callback(self, msg):
         self.front_ranges = np.array(msg.ranges)
         
     def rear_lidar_callback(self, msg):
-        self.rear_ranges = np.array(msg.ranges)
+        self.back_ranges = np.array(msg.ranges)
 
     def init_laser_range(self):
         self.front_laser_ranges = None
@@ -47,7 +47,7 @@ class LaserSubs(object):
                     front_laser_data = rospy.wait_for_message('/base_scan', LaserScan, timeout=5)
                     self.front_ranges = front_laser_data.ranges
                     back_laser_data = rospy.wait_for_message('/rear_scan', LaserScan, timeout=5)
-                    self.rear_ranges = back_laser_data.ranges
+                    self.back_ranges = back_laser_data.ranges
                     time.sleep(0.05)
                 except:
                     print('Waiting for base_scan to be ready')
@@ -63,8 +63,11 @@ class LidarProcessor(object):
     flag_r = 0
     flag_fl = 0
     flag_fr = 0
-    flag_old = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
-    flag_new = [flag_f,flag_l,flag_r,flag_fl,flag_fr]
+    flag_b = 0
+    flag_bl = 0 
+    flag_br = 0
+    flag_old = [flag_f,flag_l,flag_r,flag_fl,flag_fr,flag_b,flag_bl,flag_br]
+    flag_new = [flag_f,flag_l,flag_r,flag_fl,flag_fr,flag_b,flag_bl,flag_br]
 
     dist_l = 0
     dist_fl = 0
@@ -94,11 +97,11 @@ class LidarProcessor(object):
         # print (len(self.laser_subs_object.laser_ranges))
         # print (self.laser_subs_object)
         # Max array length [0:961]
-        self.dist_r = self.calc_avg(self.laser_subs_object.laser_ranges[0:193])
-        self.dist_fr = self.calc_avg(self.laser_subs_object.laser_ranges[193:386])
-        self.dist_f = self.calc_avg(self.laser_subs_object.laser_ranges[386:579])
-        self.dist_fl = self.calc_avg(self.laser_subs_object.laser_ranges[579:772])
-        self.dist_l = self.calc_avg(self.laser_subs_object.laser_ranges[772:962])
+        self.dist_r = self.calc_avg(self.laser_subs_object.front_laser_ranges[0:193])
+        self.dist_fr = self.calc_avg(self.laser_subs_object.front_laser_ranges[193:386])
+        self.dist_f = self.calc_avg(self.laser_subs_object.front_laser_ranges[386:579])
+        self.dist_fl = self.calc_avg(self.laser_subs_object.front_laser_ranges[579:772])
+        self.dist_l = self.calc_avg(self.laser_subs_object.front_laser_ranges[772:962])
 
         #print ("right", self.dist_r)
         #print ("left", self.dist_l)
