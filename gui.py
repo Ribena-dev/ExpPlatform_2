@@ -376,8 +376,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
             self.platform_move_front.setChecked(exp_info.get("platform_move_front", True))
             self.platform_move_left.setChecked(exp_info.get("platform_move_left", True))
             self.platform_move_right.setChecked(exp_info.get("platform_move_right", True))
-            self.platform_back_slow_dist.setText(str(exp_info.get("platform_shelf_slow_dist", 1.5)))
-            self.platform_back_stop_dist.setText(str(exp_info.get("platform_shelf_stop_dist", 1.0)))
+            # self.platform_back_slow_dist.setText(str(exp_info.get("platform_shelf_slow_dist", 1.5)))
+            # self.platform_back_stop_dist.setText(str(exp_info.get("platform_shelf_stop_dist", 1.0)))
 
 
     def saveas(self):
@@ -462,8 +462,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
         platform_move_front = self.platform_move_front.isChecked()
         platform_move_left = self.platform_move_left.isChecked()
         platform_move_right = self.platform_move_right.isChecked()
-        platform_shelf_slow_dist = float(self.platform_back_slow_dist.text())
-        platform_shelf_stop_dist = float(self.platform_back_stop_dist.text())
+        # platform_shelf_slow_dist = float(self.platform_back_slow_dist.text())
+        # platform_shelf_stop_dist = float(self.platform_back_stop_dist.text())
 
         #combo selection
         allowed_combos = self.combos
@@ -525,8 +525,8 @@ class Main(QtWidgets.QMainWindow, Ui_MainWindow):
                     "platform_move_front": platform_move_front,
                     "platform_move_left": platform_move_left,
                     "platform_move_right": platform_move_right,
-                    "platform_shelf_slow_dist": platform_shelf_slow_dist,
-                    "platform_shelf_stop_dist" : platform_shelf_stop_dist
+                    # "platform_shelf_slow_dist": platform_shelf_slow_dist,
+                    # "platform_shelf_stop_dist" : platform_shelf_stop_dist
                 }
         return exp_info
 

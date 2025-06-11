@@ -13,7 +13,7 @@ import ast
 import numpy as np
 
 class ObstacleFlags:
-    """Class to manage obstacle detection flags"""
+   
     def __init__(self, dist_stop=0.6, dist_slow=1.0):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
@@ -47,10 +47,10 @@ class ObstacleFlags:
         self.flag_back_right = 1
         
     def update_distances(self, combined_distances):
-        """Update distances from lidar processor
-        Expected format: [front_left, front_front_left, front_front, front_front_right, front_right,
-                         rear_left, rear_back_left, rear_back, rear_back_right, rear_right]
-        """
+        # Update distances from lidar processor
+        # Expected format: [front_left, front_front_left, front_front, front_front_right, front_right,
+        #                  rear_left, rear_back_left, rear_back, rear_back_right, rear_right]
+        
         if len(combined_distances) >= 10:
             # Front lidar distances
             self.front_left = combined_distances[0]
@@ -81,7 +81,7 @@ class ObstacleFlags:
 
         
     def update_flags(self):
-        """Update obstacle flags based on distances"""
+        
         self.flag_front = self.calc_flag(self.front_front)
         self.flag_left = self.calc_flag(self.front_left)
         self.flag_right = self.calc_flag(self.front_right)
@@ -92,7 +92,7 @@ class ObstacleFlags:
         self.flag_back_right = self.calc_flag(self.rear_back_right)
         
     def calc_flag(self, distance):
-        """Calculate flag based on distance thresholds"""
+        
         if distance >= self.dist_slow:
             return 1  # Clear
         elif distance >= self.dist_stop:
@@ -119,7 +119,7 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        self.clamp = False # change to true when using gui.py
+        self.clamp = True
         self.override = False
         
         # Obstacle detection
@@ -135,7 +135,7 @@ class JoystickController:
         
         # Control subscribers
         self.trigger_sub = rospy.Subscriber('trigger_msgs', Int16, self.trigger_callback)
-        #self.settings_sub = rospy.Subscriber('gui_settings', String, self.settings_callback)
+        
         self.override_sub = rospy.Subscriber('override_msgs', Int16, self.override_callback)
         
         # Initialize with default settings
@@ -145,9 +145,11 @@ class JoystickController:
         rospy.loginfo("Waiting for lidar distance data...")
         
     def init_settings(self):
-        """Initialize default settings"""
+        
         settings = {
             "platform_stop_dist": 0.6,
+            # "platfom_shelf_stop_dist":0.6,
+            # "platform_shelf_slow_dist":1.5,
             "platform_clear_dist": 1.5,
             "platform_normalSpeed": 0.2,
             "platform_slowDownSpeed": 0.1,
@@ -158,7 +160,7 @@ class JoystickController:
         self.update_settings(settings)
         
     def update_settings(self, settings):
-        """Update movement settings"""
+        
         self.speed_fast = settings.get("platform_normalSpeed", 0.2)
         self.speed_slow = settings.get("platform_slowDownSpeed", 0.1)
         self.move_front = settings.get("platform_move_front", 1)
@@ -176,11 +178,11 @@ class JoystickController:
 
         
     def distance_callback(self, msg):
-        """Callback for lidar distances"""
+        
         self.obstacles.update_distances(list(msg.data))
         
     def joystick_callback(self, data):
-        """Main joystick callback"""
+        
         # Print current distances for debugging
 
         #print(self.obstacles)
@@ -190,7 +192,6 @@ class JoystickController:
             self.process_movement(data)
             
     def process_movement(self, joy_data):
-        """Process joystick input and generate movement commands"""
         twist = Twist()
         
         # Get joystick inputs
@@ -227,13 +228,13 @@ class JoystickController:
             print("changed to see clamped") 
             
     def move_without_obstacles(self, linear_input, angular_input, twist):
-        """Movement without obstacle avoidance (override mode)"""
+        
         twist.linear.x = self.speed_fast * linear_input
         twist.angular.z = self.speed_fast * angular_input * 2.5
         return twist
         
     def move_with_obstacles(self, linear_input, angular_input, twist):
-        """Movement with obstacle avoidance"""
+        
         # Forward movement
         if linear_input > 0.6:  # Moving forward
             twist = self.move_forward(linear_input, twist)
@@ -250,7 +251,7 @@ class JoystickController:
         return twist
         
     def move_forward(self, speed_input, twist):
-        """Forward movement with front obstacle avoidance"""
+        
         front_clear = (self.obstacles.flag_front != 3)
         front_sides_clear = (self.obstacles.flag_front_left != 3 and 
                            self.obstacles.flag_front_right != 3)
@@ -273,7 +274,7 @@ class JoystickController:
         
         
     def turn_left(self, angular_input, twist):
-        """Left turn with obstacle avoidance"""
+        
         # Check obstacles on left side and rear during turning
         left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_left)
         rear_right_clear = (self.obstacles.flag_back_right != 3 )
@@ -291,7 +292,7 @@ class JoystickController:
         return twist
         
     def turn_right(self, angular_input, twist):
-        """Right turn with obstacle avoidance"""
+        
         # Check obstacles on right side and rear during turning
         right_clear = (self.obstacles.flag_right != 3 and 
                       self.obstacles.flag_front_right != 3)
@@ -310,32 +311,32 @@ class JoystickController:
         return twist
         
     def emergency_stop(self):
-        """Emergency stop function"""
+       
         twist = Twist()  # All zeros
         self.cmd_pub.publish(twist)
         self.emergency_pub.publish(twist)
         print("Emergency stop activated")
         
     def trigger_callback(self, data):
-        """Handle trigger messages for clamping"""
+        
         self.clamp = False
-    #    if data.data // 10 == 2:
-    #       self.clamp = False
-    #        
-    #    elif data.data // 10 == 3 or data.data // 10 == 4:
-    #        self.clamp = True
+        if data.data // 10 == 2:
+          self.clamp = False
            
-    # def settings_callback(self, data):
-    #     """Handle settings updates from GUI"""
-    #     try:
-    #         settings = ast.literal_eval(data.data)
-    #         self.update_settings(settings)
-    #     except Exception as e:
-    #         rospy.logerr(f"Settings update error: {e}")
+        elif data.data // 10 == 3 or data.data // 10 == 4:
+           self.clamp = True
+           
+    def settings_callback(self, data):
+        
+        try:
+            settings = ast.literal_eval(data.data)
+            self.update_settings(settings)
+        except Exception as e:
+            rospy.logerr(f"Settings update error: {e}")
 
             
     def override_callback(self, data):
-        """Handle override messages"""
+        
         if data.data == 2:
             self.override = True
             
