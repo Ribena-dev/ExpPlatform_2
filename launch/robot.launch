@@ -1,3 +1,4 @@
+
 <launch>
 	<!-- Run rosaria -->
 	<node name="RosAria" pkg="rosaria" type="RosAria">

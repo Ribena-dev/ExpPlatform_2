@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.6, dist_slow=1.0):
+    def __init__(self, dist_stop=0.3, dist_slow=1.3):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         

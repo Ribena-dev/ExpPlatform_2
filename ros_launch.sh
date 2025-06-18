@@ -6,7 +6,7 @@ sleep 1; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch hokuy
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun robot_setup_tf tf_broadcaster" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/; python map.py" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun rviz rviz"  &
-sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/maps/testmap_md2_3.yaml" &
+sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun map_server map_server ~/ExperimentPlatform/maps/monkey_room_4.yaml" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; roslaunch AMCL.launch" &
 sleep 2; xterm -iconic -hold -e "cd ~/ExperimentPlatform/launch; rosrun joy joy_node _autorepeat_rate:=10"
 
