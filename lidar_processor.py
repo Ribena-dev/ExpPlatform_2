@@ -104,9 +104,7 @@ class DualLidarProcessor:
         rear_left = rear_distances[0]         # left side from rear lidar
         rear_right = rear_distances[4]        # right side from rear lidar
         
-        # Combine left and right measurements (take minimum for safety)
-       # self.dist_left = min(front_left, rear_left) if front_left > 0 and rear_left > 0 else max(front_left, rear_left)
-       # self.dist_right = min(front_right, rear_right) if front_right > 0 and rear_right > 0 else max(front_right, rear_right)
+
         
         # Create and publish combined distance array
         # Format: [front, left, right, back]
