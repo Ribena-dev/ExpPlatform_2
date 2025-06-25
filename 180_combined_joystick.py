@@ -126,7 +126,8 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        
+        self.overide=False
+        self.clamp = False
         # Obstacle detection
         self.obstacles = ObstacleFlags()
         
@@ -187,10 +188,7 @@ class JoystickController:
         self.obstacles.update_distances(list(msg.data))
         
     def joystick_callback(self, data):
-        
-        # Print current distances for debugging
-
-        #print(self.obstacles)
+         #print(self.obstacles)
 
             
         if not self.override:
@@ -339,7 +337,7 @@ class JoystickController:
             settings = ast.literal_eval(data.data)
             self.update_settings(settings)
         except Exception as e:
-            rospy.logerr(f"Settings update error: {e}")
+            rospy.logerr("Settings update error: {e}")
 
             
     def override_callback(self, data):
@@ -352,7 +350,7 @@ class JoystickController:
             
             
     def run(self):
-        """Main run loop"""
+       
 
         rospy.spin()
 
