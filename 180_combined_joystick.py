@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.6, dist_slow=1.0, dist_rear_slow=1.5, dist_rear_stop=1.0):
+    def __init__(self, dist_stop=0.6, dist_slow=1.0, dist_rear_slow= 2, dist_rear_stop=1.0):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         self.dist_rear_slow = dist_rear_slow
@@ -126,7 +126,7 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
-        self.overide=False
+        self.override=False
         self.clamp = False
         # Obstacle detection
         self.obstacles = ObstacleFlags()
@@ -288,7 +288,7 @@ class JoystickController:
             rospy.loginfo_throttle(1.0, "Left turn blocked")
         elif (self.obstacles.flag_left == 2 or self.obstacles.flag_front_left == 2 or 
               self.obstacles.flag_back_right == 2 or self.obstacles.flag_back_left == 2):
-            twist.angular.z = self.speed_slow * angular_input 
+            twist.angular.z = self.speed_slow * angular_input * 1.5
             rospy.loginfo_throttle(1.0, "left turn slowed")
         else:
             twist.angular.z = self.speed_slow * angular_input * 2.5
@@ -308,7 +308,7 @@ class JoystickController:
             rospy.loginfo_throttle(1.0, "Right turn blocked")
         elif (self.obstacles.flag_right == 2 or self.obstacles.flag_front_right == 2 or 
               self.obstacles.flag_back_right == 2 or self.obstacles.flag_back_left == 2):
-            twist.angular.z = self.speed_slow * angular_input
+            twist.angular.z = self.speed_slow * angular_input *1.5
             rospy.loginfo_throttle(1.0, "Right turn slowed")
         else:
             twist.angular.z = self.speed_slow * angular_input * 2.5
