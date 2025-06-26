@@ -79,7 +79,7 @@ class DualLidarProcessor:
         
         # Set up the dimensions
         msg.layout.dim.append(MultiArrayDimension())
-        msg.layout.dim[0].label = labels
+        msg.layout.dim[0].label = "distances"
         msg.layout.dim[0].size = len(distances)
         msg.layout.dim[0].stride = len(distances)
         msg.layout.data_offset = 0
