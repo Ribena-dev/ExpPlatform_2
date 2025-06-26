@@ -63,10 +63,7 @@ class ObstacleFlags:
             self.rear_back_right = combined_distances[8]
             self.rear_right = combined_distances[9]
             
-            # Combine left and right sides (take minimum for safety)
-            #self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
-            #self.combined_right = min(self.front_right, self.rear_right) if self.front_right > 0 and self.rear_right > 0 else max(self.front_right, self.rear_right)
-          
+         
 	    #print(combined_distances) 
             # Update all flags
             self.update_flags()
@@ -87,7 +84,7 @@ class ObstacleFlags:
         self.flag_back_left = self.calc_flag(self.rear_back_left)
         self.flag_back_right = self.calc_flag(self.rear_back_right)
         self.flags=[self.flag_front,self.flag_left,self.flag_right,self.flag_front_left,self.flag_front_right,self.flag_back_left,self.flag_back_right]
-        
+        print(self.flags)  
 
     def calc_flag(self, distance):
     
