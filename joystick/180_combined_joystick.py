@@ -14,11 +14,9 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.6, dist_slow=1.0, dist_rear_slow=1.5, dist_rear_stop=1.0):
+    def __init__(self, dist_stop=0.6, dist_slow=1.5):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
-        self.dist_rear_slow = dist_rear_slow
-        self.dist_rear_stop = dist_rear_stop
         
         # Front lidar distances: [left, front-left, front, front-right, right]
         self.front_left = 0.0
@@ -87,17 +85,11 @@ class ObstacleFlags:
         self.flag_back = 3
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
-        self.flag_back_left = self.calc_flag_rear(self.rear_back_left)
-        self.flag_back_right = self.calc_flag_rear(self.rear_back_right)
+        self.flag_back_left = self.calc_flag(self.rear_back_left)
+        self.flag_back_right = self.calc_flag(self.rear_back_right)
+        self.flags=[self.flag_front,self.flag_left,self.flag_right,self.flag_front_left,self.flag_front_right,self.flag_back_left,self.flag_back_right]
         
-    def calc_flag_rear(self, distance):
-        
-        if distance >= self.dist_slow or distance>= self.dist_rear_slow:
-            return 1  # Clear
-        elif distance >= self.dist_stop or distance>= self.dist_rear_stop:
-            return 2  # Slow down
-        else:
-            return 3  # Stop
+
     def calc_flag(self, distance):
     
         if distance >= self.dist_slow :
@@ -241,80 +233,28 @@ class JoystickController:
     def move_with_obstacles(self, linear_input, angular_input, twist):
         
         # Forward movement
-        if linear_input > 0.6:  # Moving forward
-            twist = self.move_forward(linear_input, twist)
+        if linear_input > 0.6 or abs(angular_input) > 0.8:  # Moving forward
+            twist = self.move(linear_input,angular_input, twist)
         elif linear_input < 0:  # Moving backward  
             twist.linear.x = 0
             twist.angular.z = 0
             
-        # Turning movement
-        if angular_input > 0.8:  # Turning left
-            twist = self.turn_left(angular_input, twist)
-        elif angular_input < -0.8:  # Turning right
-            twist = self.turn_right(angular_input, twist)
-            
         return twist
         
-    def move_forward(self, speed_input, twist):
+    def move(self, speed_input,angular_input, twist):
         
-        front_clear = (self.obstacles.flag_front != 3)
-        front_sides_clear = (self.obstacles.flag_front_left != 3 and 
-                           self.obstacles.flag_front_right != 3)
-        
-        if not front_clear or not front_sides_clear:
+        if any in self.obstacles.flags == 3:
             twist.linear.x = 0
-            rospy.loginfo_throttle(1.0, "Forward blocked by obstacle")
-        elif self.obstacles.flag_front == 2:  # Slow zone
-            # Gradual slowdown based on distance
+            twist.angular.z = 0
+        elif any in self.obstacles.flags == 2:
             slow_factor = (self.obstacles.front_front - self.obstacles.dist_stop) / \
                          (self.obstacles.dist_slow - self.obstacles.dist_stop)
             slow_scale = (6 * slow_factor) / (1 + (6 * slow_factor))
             twist.linear.x = self.speed_fast * speed_input * slow_scale
-         
-        else:  # Clear
-
+            twist.angular.z = self.speed_slow * angular_input * 2.0
+        else:
             twist.linear.x = self.speed_fast * speed_input
-            
-        return twist
-        
-        
-    def turn_left(self, angular_input, twist):
-        
-        # Check obstacles on left side and rear during turning
-        left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_left !=3)
-        rear_right_clear = (self.obstacles.flag_back_right != 3 )
-        rear_left_clear = (self.obstacles.flag_back_left !=3)
-        
-        if not left_clear or not rear_right_clear or not rear_left_clear:
-            twist.angular.z = 0
-            rospy.loginfo_throttle(1.0, "Left turn blocked")
-        elif (self.obstacles.flag_left == 2 or self.obstacles.flag_front_left == 2 or 
-              self.obstacles.flag_back_right == 2 or self.obstacles.flag_back_left == 2):
-            twist.angular.z = self.speed_slow * angular_input 
-            rospy.loginfo_throttle(1.0, "left turn slowed")
-        else:
             twist.angular.z = self.speed_slow * angular_input * 2.5
-            
-        return twist
-        
-    def turn_right(self, angular_input, twist):
-        
-        # Check obstacles on right side and rear during turning
-        right_clear = (self.obstacles.flag_right != 3 and 
-                      self.obstacles.flag_front_right != 3)
-        rear_left_clear = (self.obstacles.flag_back_left != 3)
-        rear_right_clear = (self.obstacles.flag_back_right != 3 )
-        
-        if not right_clear or not rear_left_clear or not rear_right_clear:
-            twist.angular.z = 0
-            rospy.loginfo_throttle(1.0, "Right turn blocked")
-        elif (self.obstacles.flag_right == 2 or self.obstacles.flag_front_right == 2 or 
-              self.obstacles.flag_back_right == 2 or self.obstacles.flag_back_left == 2):
-            twist.angular.z = self.speed_slow * angular_input
-            rospy.loginfo_throttle(1.0, "Right turn slowed")
-        else:
-            twist.angular.z = self.speed_slow * angular_input * 2.5
-            
         return twist
         
     def emergency_stop(self):
@@ -339,7 +279,7 @@ class JoystickController:
             settings = ast.literal_eval(data.data)
             self.update_settings(settings)
         except Exception as e:
-            rospy.logerr(f"Settings update error: {e}")
+            rospy.logerr("Settings update error: {e}")
 
             
     def override_callback(self, data):
