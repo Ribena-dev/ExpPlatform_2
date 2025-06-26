@@ -37,7 +37,7 @@ class ObstacleFlags:
         self.flag_front = 1
         self.flag_left = 1
         self.flag_right = 1
-        self.flag_back = 1
+        self.flag_back = 3
         self.flag_front_left = 1
         self.flag_front_right = 1
         self.flag_back_left = 1
@@ -82,7 +82,6 @@ class ObstacleFlags:
         self.flag_front = self.calc_flag(self.front_front)
         self.flag_left = self.calc_flag(self.front_left)
         self.flag_right = self.calc_flag(self.front_right)
-        self.flag_back = 3
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
         self.flag_back_left = self.calc_flag(self.rear_back_left)
@@ -118,6 +117,8 @@ class JoystickController:
         self.move_right = 1
         
         # Global control flags
+        self.clamp = False
+        self.override = False
         
         # Obstacle detection
         self.obstacles = ObstacleFlags()
@@ -145,8 +146,6 @@ class JoystickController:
         
         settings = {
             "platform_stop_dist": 0.6,
-            # "platfom_shelf_stop_dist":0.6,
-            # "platform_shelf_slow_dist":1.5,
             "platform_clear_dist": 1.5,
             "platform_normalSpeed": 0.2,
             "platform_slowDownSpeed": 0.1,

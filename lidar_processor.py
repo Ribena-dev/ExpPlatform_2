@@ -39,91 +39,47 @@ class DualLidarProcessor:
     def rear_lidar_callback(self, msg):
         self.rear_ranges = np.array(msg.ranges)
         
-    def calc_avg_distance(self, ranges):
-        """Calculate average distance """
-        if ranges is None or len(ranges) == 0:
-            return 0.0
+    # def calc_avg_distance(self, ranges):
+    #     """Calculate average distance """
+    #     if ranges is None or len(ranges) == 0:
+    #         return 0.0
         
-        # Filter out invalid readings (inf, nan, 0)
-        #ranges = ranges[(ranges > 0.1) & (ranges < 30.0) & np.isfinite(ranges)]
-        # Use 50th percentile (median)
-        return float(np.percentile(ranges, 50))
+    #     return float(np.percentile(ranges, 50))
     
-    def process_front_lidar(self):
-        """Process front lidar data to get front, left, and right distances"""
-        if self.front_ranges is None:
+    def process_lidar(self,ranges):
+        if ranges is None:
             return [0.0, 0.0, 0.0, 0.0, 0.0]  # [left, front-left, front, front-right, right]
-            
-        total_points = len(self.front_ranges)
+        ranges = ranges[(ranges > 0.1) & (ranges < 30.0) & np.isfinite(ranges)]   
+        total_points = len(ranges)
         sector_size = total_points // 5
         
         # Calculate distances for each sector
-        dist_right = self.calc_avg_distance(self.front_ranges[0:sector_size])
-        dist_front_right = self.calc_avg_distance(self.front_ranges[sector_size:2*sector_size])
-        dist_front = self.calc_avg_distance(self.front_ranges[2*sector_size:3*sector_size])
-        dist_front_left = self.calc_avg_distance(self.front_ranges[3*sector_size:4*sector_size])
-        dist_left = self.calc_avg_distance(self.front_ranges[4*sector_size:])
+        dist_right = self.calc_avg_distance(ranges[0:sector_size])
+        dist_front_right = self.calc_avg_distance(ranges[sector_size:2*sector_size])
+        dist_front = self.calc_avg_distance(ranges[2*sector_size:3*sector_size])
+        dist_front_left = self.calc_avg_distance(ranges[3*sector_size:4*sector_size])
+        dist_left = self.calc_avg_distance(ranges[4*sector_size:])
         
         return [dist_left, dist_front_left, dist_front, dist_front_right, dist_right]
     
-    def process_rear_lidar(self):
-        """Process rear lidar data to get back, left, and right distances"""
-        if self.rear_ranges is None:
-            return [0.0, 0.0, 0.0, 0.0, 0.0]  # [left, back-left, back, back-right, right]
-            
-        total_points = len(self.rear_ranges)
-        
-        # Divide into 5 sections
-        sector_size = total_points // 5
-        
-        # For rear lidar, the orientation might be different
-        # Adjust these based on your rear lidar mounting orientation
-        dist_rear_left = self.calc_avg_distance(self.rear_ranges[0:sector_size])
-        dist_back_left = self.calc_avg_distance(self.rear_ranges[sector_size:2*sector_size])
-        dist_back = self.calc_avg_distance(self.rear_ranges[2*sector_size:3*sector_size])
-        dist_back_right = self.calc_avg_distance(self.rear_ranges[3*sector_size:4*sector_size])
-        dist_rear_right = self.calc_avg_distance(self.rear_ranges[4*sector_size:])
-        
-        return [dist_rear_left, dist_back_left, dist_back, dist_back_right, dist_rear_right]
     
-    def process_and_publish(self, event):
-        """Main processing function called by timer"""
-        
+    def process_and_publish(self, event):        
         # Process both lidars
-        front_distances = self.process_front_lidar()
-        rear_distances = self.process_rear_lidar()
+        front_distances = self.process_lidar(self.front_ranges)
+        rear_distances = self.process_lidar(self.rear_ranges)
         
-        # Extract key distances
-        # Front lidar: [left, front-left, front, front-right, right]
-        self.dist_front = front_distances[2]  # center front
-        front_left = front_distances[0]       # left side from front lidar
-        front_right = front_distances[4]      # right side from front lidar
-        
-        # Rear lidar: [rear-left, back-left, back, back-right, rear-right]  
-        self.dist_back = rear_distances[2]    # center back
-        rear_left = rear_distances[0]         # left side from rear lidar
-        rear_right = rear_distances[4]        # right side from rear lidar
-        
-
-        
-        # Create and publish combined distance array
-        # Format: [front, left, right, back]
         combined_distances = front_distances + rear_distances
         self.publish_distances(combined_distances, self.distance_pub, 
                              ['front', 'back'])
         
-        # Publish detailed front distances
-        
-        # Print for debugging - using regular string formatting
         print(front_distances, rear_distances)
     
     def publish_distances(self, distances, publisher, labels):
-        """Publish distance array with labels"""
         msg = Float32MultiArray()
         
         # Set up the dimensions
         msg.layout.dim.append(MultiArrayDimension())
-        msg.layout.dim[0].label = "distances"
+        msg.layout.dim[0].label = labels
         msg.layout.dim[0].size = len(distances)
         msg.layout.dim[0].stride = len(distances)
         msg.layout.data_offset = 0
@@ -135,7 +91,6 @@ class DualLidarProcessor:
         publisher.publish(msg)
 
     def run(self):
-        """Main run loop"""
         print("Starting dual lidar processor...")
         rospy.spin()
 
