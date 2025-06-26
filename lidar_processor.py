@@ -54,11 +54,11 @@ class DualLidarProcessor:
         sector_size = total_points // 5
         
         # Calculate distances for each sector
-        dist_right = self.calc_avg_distance(ranges[0:sector_size])
-        dist_front_right = self.calc_avg_distance(ranges[sector_size:2*sector_size])
-        dist_front = self.calc_avg_distance(ranges[2*sector_size:3*sector_size])
-        dist_front_left = self.calc_avg_distance(ranges[3*sector_size:4*sector_size])
-        dist_left = self.calc_avg_distance(ranges[4*sector_size:])
+        dist_right = min(ranges[0:sector_size])
+        dist_front_right = min(ranges[sector_size:2*sector_size])
+        dist_front = min(ranges[2*sector_size:3*sector_size])
+        dist_front_left = min(ranges[3*sector_size:4*sector_size])
+        dist_left = min(ranges[4*sector_size:])
         
         return [dist_left, dist_front_left, dist_front, dist_front_right, dist_right]
     
