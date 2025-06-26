@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.6, dist_slow=1.5):
+    def __init__(self, dist_stop=0.5, dist_slow=1.5):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         
@@ -42,6 +42,8 @@ class ObstacleFlags:
         self.flag_front_right = 1
         self.flag_back_left = 1
         self.flag_back_right = 1
+        self.flag_b_right = 1
+        self.flag_b_left = 1
         
     def update_distances(self, combined_distances):
         # Update distances from lidar processor
@@ -83,12 +85,12 @@ class ObstacleFlags:
         self.flag_front_right = self.calc_flag(self.front_front_right)
         self.flag_back_left = self.calc_flag(self.rear_back_left)
         self.flag_back_right = self.calc_flag(self.rear_back_right)
-        self.flags=[self.flag_front,self.flag_left,self.flag_right,self.flag_front_left,self.flag_front_right,self.flag_back_left,self.flag_back_right]
-<<<<<<< HEAD
-        print(self.flags)  
-=======
+        self.flag_b_right = self.calc_flag(self.rear_right)
+        self.flag_b_left = self.calc_flag(self.rear_left)
+        self.flags=[self.flag_front,self.flag_left,self.flag_right,self.flag_front_left,self.flag_front_right,self.flag_back_left,self.flag_back_right,self.flag_b_left,self.flag_b_left]
+        print("front,left,right,front_left.front_right,back_back_left,back_back_right,back left, back right")
         print(self.flags)
->>>>>>> 9ee311e1373b0ad968b2a48091bc1fe4c21414ad
+        print(self.front_front,self.front_left,self.front_right,self.front_front_left,self.front_front_right,self.rear_back_left,self.rear_back_right,self.rear_left,self.rear_right)
 
     def calc_flag(self, distance):
     
@@ -146,7 +148,7 @@ class JoystickController:
     def init_settings(self):
         
         settings = {
-            "platform_stop_dist": 0.6,
+            "platform_stop_dist": 0.5,
             "platform_clear_dist": 1.5,
             "platform_normalSpeed": 0.2,
             "platform_slowDownSpeed": 0.1,
@@ -165,7 +167,7 @@ class JoystickController:
         self.move_right = settings.get("platform_move_right", 1)
         
         # Update obstacle thresholds
-        stop_dist = settings.get("platform_stop_dist", 0.6)
+        stop_dist = settings.get("platform_stop_dist", 0.5)
         slow_dist = settings.get("platform_clear_dist", 1.5)
         self.obstacles.update_thresholds(stop_dist, slow_dist)
         
@@ -236,17 +238,18 @@ class JoystickController:
         if linear_input > 0.6 or abs(angular_input) > 0.8:  # Moving forward
             twist = self.move(linear_input,angular_input, twist)
 
-        elif linear_input < 0:  # Moving backward  
+        if linear_input < 0:  # Moving backward  
             twist.linear.x = 0
-            twist.angular.z = 0
+    
             
         return twist
         
     def move(self, speed_input,angular_input, twist):
         
         if 3 in self.obstacles.flags :
+            
+            twist.angular.z = self.move_rotate(angular_input)
             twist.linear.x = 0
-            twist.angular.z = 0
         elif 2 in self.obstacles.flags :
             slow_factor = (self.obstacles.front_front - self.obstacles.dist_stop) / \
                          (self.obstacles.dist_slow - self.obstacles.dist_stop)
@@ -256,9 +259,21 @@ class JoystickController:
         else:
             twist.linear.x = self.speed_fast * speed_input
             twist.angular.z = self.speed_slow * angular_input * 2.5
-        print(twist)
+        #print(twist)
         return twist
-        
+    def move_rotate(self,angular_input):
+        left_clear = [self.obstacles.flag_back_right,self.obstacles.flag_b_left]
+        right_clear = [self.obstacles.flag_back_left,self.obstacles.flag_b_right]
+    
+        if angular_input < -0.8 and (3 not in left_clear):
+            print("left clear:", left_clear)
+            ang_z = self.speed_slow*angular_input*2.0
+        if angular_input > 0.8 and (3 not in right_clear):
+            print("right clear:", right_clear)
+            ang_z = self.speed_slow*angular_input*2.0
+        else:
+            ang_z = 0
+        return ang_z
     def emergency_stop(self):
        
         twist = Twist()  # All zeros

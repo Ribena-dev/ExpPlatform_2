@@ -39,12 +39,12 @@ class DualLidarProcessor:
     def rear_lidar_callback(self, msg):
         self.rear_ranges = np.array(msg.ranges)
         
-    # def calc_avg_distance(self, ranges):
-    #     """Calculate average distance """
-    #     if ranges is None or len(ranges) == 0:
-    #         return 0.0
-        
-    #     return float(np.percentile(ranges, 50))
+    def calc_avg_distance(self, ranges):
+  
+        if ranges is None or len(ranges) == 0:
+            return 0.0
+       
+        return float(np.percentile(ranges, 50))
     
     def process_lidar(self,ranges):
         if ranges is None:
@@ -54,11 +54,11 @@ class DualLidarProcessor:
         sector_size = total_points // 5
         
         # Calculate distances for each sector
-        dist_right = min(ranges[0:sector_size])
-        dist_front_right = min(ranges[sector_size:2*sector_size])
-        dist_front = min(ranges[2*sector_size:3*sector_size])
-        dist_front_left = min(ranges[3*sector_size:4*sector_size])
-        dist_left = min(ranges[4*sector_size:])
+        dist_right = self.calc_avg_distance(ranges[0:sector_size])
+        dist_front_right = self.calc_avg_distance(ranges[sector_size:2*sector_size])
+        dist_front = self.calc_avg_distance(ranges[2*sector_size:3*sector_size])
+        dist_front_left = self.calc_avg_distance(ranges[3*sector_size:4*sector_size])
+        dist_left = self.calc_avg_distance(ranges[4*sector_size:])
         
         return [dist_left, dist_front_left, dist_front, dist_front_right, dist_right]
     
