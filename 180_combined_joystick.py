@@ -84,7 +84,11 @@ class ObstacleFlags:
         self.flag_back_left = self.calc_flag(self.rear_back_left)
         self.flag_back_right = self.calc_flag(self.rear_back_right)
         self.flags=[self.flag_front,self.flag_left,self.flag_right,self.flag_front_left,self.flag_front_right,self.flag_back_left,self.flag_back_right]
+<<<<<<< HEAD
         print(self.flags)  
+=======
+        print(self.flags)
+>>>>>>> 9ee311e1373b0ad968b2a48091bc1fe4c21414ad
 
     def calc_flag(self, distance):
     
@@ -231,6 +235,7 @@ class JoystickController:
         # Forward movement
         if linear_input > 0.6 or abs(angular_input) > 0.8:  # Moving forward
             twist = self.move(linear_input,angular_input, twist)
+
         elif linear_input < 0:  # Moving backward  
             twist.linear.x = 0
             twist.angular.z = 0
@@ -239,10 +244,10 @@ class JoystickController:
         
     def move(self, speed_input,angular_input, twist):
         
-        if any in self.obstacles.flags == 3:
+        if 3 in self.obstacles.flags :
             twist.linear.x = 0
             twist.angular.z = 0
-        elif any in self.obstacles.flags == 2:
+        elif 2 in self.obstacles.flags :
             slow_factor = (self.obstacles.front_front - self.obstacles.dist_stop) / \
                          (self.obstacles.dist_slow - self.obstacles.dist_stop)
             slow_scale = (6 * slow_factor) / (1 + (6 * slow_factor))
@@ -251,6 +256,7 @@ class JoystickController:
         else:
             twist.linear.x = self.speed_fast * speed_input
             twist.angular.z = self.speed_slow * angular_input * 2.5
+        print(twist)
         return twist
         
     def emergency_stop(self):
