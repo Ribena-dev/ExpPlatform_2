@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 
 xterm -iconic -hold -e "python postercombiner.py" &
 sleep 3; xterm -iconic -hold -e "python gui.py" &
