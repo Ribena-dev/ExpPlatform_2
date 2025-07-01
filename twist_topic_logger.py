@@ -32,52 +32,51 @@ class TwistTopicLogger:
         rospy.loginfo("Commands: 'start', 'stop', 'status', 'quit'")
         
     def twist_callback(self, msg):
-        """Log twist messages when logging is active"""
+       
         if not self.logging or not self.csv_writer:
             return
             
-        try:
-            current_time = rospy.Time.now().to_sec() - self.start_time
-            self.csv_writer.writerow([current_time, msg.linear.x, msg.angular.z])
-            self.csv_file.flush()  # Ensure data is written immediately
-        except Exception as e:
-            rospy.logerr(f"Error logging twist: {e}")
+        current_time = rospy.Time.now().to_sec() - self.start_time
+        self.csv_writer.writerow([current_time, msg.linear.x, msg.angular.z])
+        self.csv_file.flush()  # Ensure data is written immediately
+    
+  
         
     def trigger_callback(self, msg):
-        """Auto start/stop logging based on trigger messages"""
+
         if msg.data // 10 == 2:  # Experiment start
             self.start_logging()
         elif msg.data // 10 == 3 or msg.data // 10 == 4:  # Experiment end
             self.stop_logging()
         
     def start_logging(self, filename=None):
-        """Start logging to CSV file"""
+
         if self.logging:
             print("Already logging!")
             return
             
         if not filename:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"twist_data_{timestamp}.csv"
+            filename = str(timestamp)+ ".csv"
             
-        try:
-            self.csv_file = open(filename, 'w', newline='')
-            self.csv_writer = csv.writer(self.csv_file)
+
+        self.csv_file = open(filename, 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+          
+        # Write header
+        self.csv_writer.writerow(['time', 'linear_x', 'angular_z'])
+         
+        self.logging = True
+        self.start_time = rospy.Time.now().to_sec()
+        self.filename = filename
+        print("start")
+        #rospy.loginfo("Started logging twist commands to {filename}")
             
-            # Write header
-            self.csv_writer.writerow(['time', 'linear_x', 'angular_z'])
-            
-            self.logging = True
-            self.start_time = rospy.Time.now().to_sec()
-            self.filename = filename
-            print(f"Started logging to {filename}")
-            rospy.loginfo(f"Started logging twist commands to {filename}")
-            
-        except Exception as e:
-            rospy.logerr(f"Error starting logging: {e}")
+
+
         
     def stop_logging(self):
-        """Stop logging and close file"""
+     
         if not self.logging:
             print("Not currently logging!")
             return
@@ -86,19 +85,17 @@ class TwistTopicLogger:
             self.logging = False
             if self.csv_file:
                 self.csv_file.close()
-                print(f"Stopped logging. Data saved to {self.filename}")
-                rospy.loginfo(f"Stopped logging. Data saved to {self.filename}")
             self.csv_file = None
             self.csv_writer = None
             self.filename = None
         except Exception as e:
-            rospy.logerr(f"Error stopping logging: {e}")
+            print("oops not working")
             
     def get_status(self):
-        """Get current logging status"""
+ 
         if self.logging:
             duration = rospy.Time.now().to_sec() - self.start_time
-            print(f"Currently logging to {self.filename} (duration: {duration:.1f}s)")
+            
         else:
             print("Not currently logging")
             

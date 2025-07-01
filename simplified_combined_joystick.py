@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.6, dist_slow=1.0):
+    def __init__(self, dist_stop=0.3, dist_slow=1.3):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         
@@ -118,8 +118,8 @@ class JoystickController:
         self.move_left = 1
         self.move_right = 1
         
-        # Global control flags
-        
+        self.override = False
+        self.clamp = False
         # Obstacle detection
         self.obstacles = ObstacleFlags()
         
@@ -222,8 +222,9 @@ class JoystickController:
         # Publish command if not clamped
         if not self.clamp:
             self.cmd_pub.publish(twist)
+	    
         else:
-            print("changed to see clamped") 
+            print("is clamped") 
             
     def move_without_obstacles(self, linear_input, angular_input, twist):
         
@@ -325,12 +326,8 @@ class JoystickController:
            print("clamped:",clamp)
            
     def settings_callback(self, data):
-        
-        try:
-            settings = ast.literal_eval(data.data)
-            self.update_settings(settings)
-        except Exception as e:
-            rospy.logerr(f"Settings update error: {e}")
+        settings = ast.literal_eval(data.data)
+        self.update_settings(settings)
 
             
     def override_callback(self, data):
@@ -343,7 +340,7 @@ class JoystickController:
             
             
     def run(self):
-        """Main run loop"""
+
 
         rospy.spin()
 

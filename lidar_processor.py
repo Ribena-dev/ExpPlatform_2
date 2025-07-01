@@ -40,9 +40,10 @@ class DualLidarProcessor:
         self.rear_ranges = np.array(msg.ranges)
         
     def calc_avg_distance(self, ranges):
+  
         if ranges is None or len(ranges) == 0:
             return 0.0
-        
+       
         return float(np.percentile(ranges, 50))
     
     def process_lidar(self,ranges):
@@ -78,7 +79,7 @@ class DualLidarProcessor:
         
         # Set up the dimensions
         msg.layout.dim.append(MultiArrayDimension())
-        msg.layout.dim[0].label = labels
+        msg.layout.dim[0].label = "distances"
         msg.layout.dim[0].size = len(distances)
         msg.layout.dim[0].stride = len(distances)
         msg.layout.data_offset = 0
