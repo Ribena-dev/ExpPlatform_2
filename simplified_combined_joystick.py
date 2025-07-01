@@ -133,10 +133,10 @@ class JoystickController:
         
         # Control subscribers
         self.trigger_sub = rospy.Subscriber('trigger_msgs', Int16, self.trigger_callback)
-        
+        self.settings_sub = rospy.Subscriber('gui_settings', String, self.settings_callback)
         self.override_sub = rospy.Subscriber('override_msgs', Int16, self.override_callback)
         
-        # Initialize with default settings
+        # Initialize with default settings for fallback sfaety
         self.init_settings()
         
         rospy.loginfo("Joystick Controller initialized")
@@ -149,7 +149,7 @@ class JoystickController:
             # "platfom_shelf_stop_dist":0.6,
             # "platform_shelf_slow_dist":1.5,
             "platform_clear_dist": 1.5,
-            "platform_normalSpeed": 0.2,
+            "platform_normalSpeed": 0.15,
             "platform_slowDownSpeed": 0.1,
             "platform_move_front": 1,
             "platform_move_left": 1,
@@ -158,8 +158,8 @@ class JoystickController:
         self.update_settings(settings)
         
     def update_settings(self, settings):
-        
-        self.speed_fast = settings.get("platform_normalSpeed", 0.2)
+        # added  default values for fallback
+        self.speed_fast = settings.get("platform_normalSpeed", 0.15)
         self.speed_slow = settings.get("platform_slowDownSpeed", 0.1)
         self.move_front = settings.get("platform_move_front", 1)
         self.move_left = settings.get("platform_move_left", 1)
@@ -280,11 +280,11 @@ class JoystickController:
         
         if not left_clear or not rear_right_clear:
             twist.angular.z = 0
-            print("left turn blocked")
+            rospy.loginfo_throttle(1.0, "Left turn blocked")
         elif (self.obstacles.flag_left == 2 or self.obstacles.flag_front_left == 2 or 
               self.obstacles.flag_back_right == 2):
             twist.angular.z = self.speed_slow * angular_input * 2.5
-            print("Left turn slowed")
+            rospy.loginfo_throttle(1.0, "Left turn slowed")
         else:
             twist.angular.z = self.speed_slow * angular_input * 2.5
             
