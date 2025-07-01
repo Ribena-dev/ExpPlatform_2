@@ -182,7 +182,6 @@ class JoystickController:
         # Print current distances for debugging
 
         #print(self.obstacles)
-
             
         if not self.override:
             self.process_movement(data)
@@ -231,8 +230,10 @@ class JoystickController:
         
     def move_with_obstacles(self, linear_input, angular_input, twist):
         
-        # Forward movement
-        if linear_input > 0.6 or abs(angular_input) > 0.8:  # Moving forward
+        if (linear_input > 0.6 or abs(angular_input) > 0.8) and 3 in self.flags:
+            twist = self.move_blocked(linear_input,angular_input,twist)
+
+        elif linear_input > 0.6 or abs(angular_input) > 0.8:  
             twist = self.move(linear_input,angular_input, twist)
 
         elif linear_input < 0:  # Moving backward  
@@ -241,7 +242,7 @@ class JoystickController:
             
         return twist
         
-    def move(self, speed_input,angular_input, twist):
+    def move_foward(self, speed_input,angular_input, twist):
         
         if 3 in self.obstacles.flags :
             twist.linear.x = 0
@@ -255,8 +256,12 @@ class JoystickController:
         else:
             twist.linear.x = self.speed_fast * speed_input
             twist.angular.z = self.speed_slow * angular_input * 2.5
-        print(twist)
+        #print(twist)
         return twist
+    
+    def move_blocked(self, speed_input,angular_input,twist):
+        return twist
+        
         
     def emergency_stop(self):
        
