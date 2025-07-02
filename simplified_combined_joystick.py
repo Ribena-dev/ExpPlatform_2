@@ -83,11 +83,13 @@ class ObstacleFlags:
     def update_flags(self):
         
         self.flag_front = self.calc_flag(self.front_front)
-        self.flag_left = self.calc_flag(self.front_left)
-        self.flag_right = self.calc_flag(self.front_right)
+        self.flag_fleft = self.calc_flag(self.front_left)
+        self.flag_fright = self.calc_flag(self.front_right)
         self.flag_back = self.calc_flag(self.rear_back)
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
+        self.flag_bleft = self.calc_flag(self.rear_back_left)
+        self.flag_bright = self.calc_flag(self.rear_right)
         self.flag_back_left = self.calc_flag(self.rear_back_left)
         self.flag_back_right = self.calc_flag(self.rear_back_right)
         
@@ -253,7 +255,7 @@ class JoystickController:
         
         front_clear = (self.obstacles.flag_front != 3)
         front_sides_clear = (self.obstacles.flag_front_left != 3 and 
-                           self.obstacles.flag_front_right != 3)
+                           self.obstacles.flag_front_right != 3 )
         
         if not front_clear or not front_sides_clear:
             twist.linear.x = 0
@@ -275,8 +277,8 @@ class JoystickController:
     def turn_left(self, angular_input, twist):
         
         # Check obstacles on left side and rear during turning
-        left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_left)
-        rear_right_clear = (self.obstacles.flag_back_right != 3 )
+        left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_fleft!=3)
+        rear_right_clear = (self.obstacles.flag_back_right != 3 and self.obstacles.flag_bright !=3 )
         
         if not left_clear or not rear_right_clear:
             twist.angular.z = 0
@@ -293,9 +295,9 @@ class JoystickController:
     def turn_right(self, angular_input, twist):
         
         # Check obstacles on right side and rear during turning
-        right_clear = (self.obstacles.flag_right != 3 and 
+        right_clear = (self.obstacles.flag_fright != 3 and 
                       self.obstacles.flag_front_right != 3)
-        rear_left_clear = (self.obstacles.flag_back_left != 3)
+        rear_left_clear = (self.obstacles.flag_back_left != 3 and self.obstacles.flag_bleft!=3)
         
         if not right_clear or not rear_left_clear:
             twist.angular.z = 0
@@ -322,7 +324,7 @@ class JoystickController:
            
         elif data.data // 10 == 3 or data.data // 10 == 4:
            self.clamp = True
-           print("clamped:",clamp)
+           print("clamped:",self.clamp)
            
     def settings_callback(self, data):
         settings = ast.literal_eval(data.data)
