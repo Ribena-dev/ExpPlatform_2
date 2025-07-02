@@ -127,7 +127,7 @@ while True:
     if 0 not in check_consec_repeat and check_adjacent == False:
         break
 
-full_targets = reward_sequence.copy()
+full_targets = reward_sequence
 
 # Generate additional blocks until we reach num_trials
 while len(full_targets) < num_trials:
@@ -164,7 +164,8 @@ while len(full_targets) < num_trials:
             reward_sequence[reward_sequence >= poster_count] = reward_sequence[reward_sequence >= poster_count] - poster_count
     
     full_targets = np.hstack((full_targets, reward_sequence))
-
+    full_targets = np.transpose(full_targets)
+    targets = full_targets.tolist()
 # setting up communication methods  
 
 target_location = [0, 0, 0]
