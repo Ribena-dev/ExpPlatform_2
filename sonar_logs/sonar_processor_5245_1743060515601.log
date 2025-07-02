@@ -1,0 +1,893 @@
+[rospy.client][INFO] 2025-03-27 14:28:35,613: init_node, name[/sonar_processor_5245_1743060515601], pid[5245]
+[xmlrpc][INFO] 2025-03-27 14:28:35,613: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:28:35,613: Started XML-RPC server [http://localhost:45311/]
+[rospy.init][INFO] 2025-03-27 14:28:35,613: ROS Slave URI: [http://localhost:45311/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:28:35,613: _ready: http://localhost:45311/
+[rospy.registration][INFO] 2025-03-27 14:28:35,614: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:28:35,614: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:28:35,713: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:28:35,714: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:28:35,720: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:28:35,723: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:28:35,736: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:28:35,781: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:28:35,854: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:35,959: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rospy.internal][INFO] 2025-03-27 14:28:35,983: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:28:36,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,359: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,456: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,559: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,759: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:36,959: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,159: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,359: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,456: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,559: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,759: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:37,960: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,360: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,560: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,760: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:38,960: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,360: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,560: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,760: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:39,960: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,361: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,561: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,761: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:40,961: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,161: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,361: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,458: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,561: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,761: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:41,961: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,161: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,361: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,459: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,561: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,762: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,859: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:42,962: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,162: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,259: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,362: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,459: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,562: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,659: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,762: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,859: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:43,962: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:44,059: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:44,162: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:44,259: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rosout][ERROR] 2025-03-27 14:28:44,362: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f0702cd31b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists.pub.publish(bl_min)
+AttributeError: 'function' object has no attribute 'pub'
+
+[rospy.core][INFO] 2025-03-27 14:28:44,389: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:28:44,396: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:28:44,397: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.topics][ERROR] 2025-03-27 14:28:44,399: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][WARNING] 2025-03-27 14:28:44,400: Unknown error initiating TCP/IP socket to localhost:60417 (http://localhost:37299/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.impl.masterslave][INFO] 2025-03-27 14:28:44,400: signal-2
+[rospy.core][INFO] 2025-03-27 14:28:44,501: signal_shutdown [atexit]

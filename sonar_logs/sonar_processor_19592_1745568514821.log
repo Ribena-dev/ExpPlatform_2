@@ -1,0 +1,18 @@
+[rospy.client][INFO] 2025-04-25 15:08:34,858: init_node, name[/sonar_processor_19592_1745568514821], pid[19592]
+[xmlrpc][INFO] 2025-04-25 15:08:34,859: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-04-25 15:08:34,859: Started XML-RPC server [http://localhost:35507/]
+[rospy.impl.masterslave][INFO] 2025-04-25 15:08:34,859: _ready: http://localhost:35507/
+[rospy.registration][INFO] 2025-04-25 15:08:34,860: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2025-04-25 15:08:34,862: ROS Slave URI: [http://localhost:35507/]
+[rospy.init][INFO] 2025-04-25 15:08:34,862: registered with master
+[rospy.rosout][INFO] 2025-04-25 15:08:34,862: initializing /rosout core topic
+[xmlrpc][INFO] 2025-04-25 15:08:34,864: xml rpc node: starting XML-RPC server
+[rospy.rosout][INFO] 2025-04-25 15:08:34,866: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-25 15:08:34,868: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-04-25 15:08:34,875: Sonar processor initialized
+[rospy.internal][INFO] 2025-04-25 15:08:34,883: topic[/RosAria/sonar] adding connection to [http://localhost:38351/], count 0
+[rospy.internal][INFO] 2025-04-25 15:08:35,112: topic[/sonar_min] adding connection to [/controller_joystick], count 0
+[rospy.internal][INFO] 2025-04-25 15:08:35,166: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-04-25 15:14:48,941: topic[/sonar_min] adding connection to [/controller_joystick], count 1
+[rospy.internal][INFO] 2025-04-25 15:14:48,942: topic[/sonar_min] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-04-25 15:14:49,080: topic[/sonar_min] removing connection to /controller_joystick

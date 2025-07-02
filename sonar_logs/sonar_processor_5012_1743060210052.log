@@ -1,0 +1,921 @@
+[rospy.client][INFO] 2025-03-27 14:23:30,064: init_node, name[/sonar_processor_5012_1743060210052], pid[5012]
+[xmlrpc][INFO] 2025-03-27 14:23:30,064: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:23:30,064: Started XML-RPC server [http://localhost:37587/]
+[rospy.init][INFO] 2025-03-27 14:23:30,064: ROS Slave URI: [http://localhost:37587/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:23:30,065: _ready: http://localhost:37587/
+[rospy.registration][INFO] 2025-03-27 14:23:30,065: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:23:30,065: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:23:30,165: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:23:30,165: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:23:30,171: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:23:30,174: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:23:30,188: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:23:30,232: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:23:30,333: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rospy.internal][INFO] 2025-03-27 14:23:30,412: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:23:30,435: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:30,532: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:30,635: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:30,732: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:30,836: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:30,932: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,036: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,133: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,236: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,333: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,436: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,533: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,636: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,733: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,836: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:31,933: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,036: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,133: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,236: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,333: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,436: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,533: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,636: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,733: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,836: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:32,933: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,036: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,133: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,237: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,334: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,437: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,534: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,637: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,734: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,837: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:33,934: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,037: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,134: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,237: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,334: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,437: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,534: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,637: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,734: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,837: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:34,934: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,037: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,134: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,237: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,334: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,437: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,534: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,637: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,734: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,838: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:35,934: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,038: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,134: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,238: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,335: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,438: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,535: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,638: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,735: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,838: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:36,935: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,038: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,135: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,238: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,335: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,438: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,535: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:37,638: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f78a5c101b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 70, in pub_dists
+    pub = rospy.Publisher('sonar_min',Float32multiArray, queue_size=10)
+NameError: global name 'Float32multiArray' is not defined
+
+[rospy.core][INFO] 2025-03-27 14:23:37,683: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:23:37,690: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:23:37,691: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.topics][ERROR] 2025-03-27 14:23:37,693: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][WARNING] 2025-03-27 14:23:37,693: Unknown error initiating TCP/IP socket to localhost:60417 (http://localhost:37299/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.impl.masterslave][INFO] 2025-03-27 14:23:37,694: signal-2
+[rospy.core][INFO] 2025-03-27 14:23:37,802: signal_shutdown [atexit]

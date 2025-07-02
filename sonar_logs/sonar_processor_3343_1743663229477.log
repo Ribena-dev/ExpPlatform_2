@@ -1,0 +1,33 @@
+[rospy.client][INFO] 2025-04-03 13:53:49,489: init_node, name[/sonar_processor_3343_1743663229477], pid[3343]
+[xmlrpc][INFO] 2025-04-03 13:53:49,489: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-04-03 13:53:49,489: Started XML-RPC server [http://localhost:41263/]
+[rospy.init][INFO] 2025-04-03 13:53:49,489: ROS Slave URI: [http://localhost:41263/]
+[rospy.impl.masterslave][INFO] 2025-04-03 13:53:49,489: _ready: http://localhost:41263/
+[rospy.registration][INFO] 2025-04-03 13:53:49,490: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-04-03 13:53:49,490: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-04-03 13:53:49,590: registered with master
+[rospy.rosout][INFO] 2025-04-03 13:53:49,590: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-04-03 13:53:49,591: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-03 13:53:49,591: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-04-03 13:53:49,594: Sonar processor initialized
+[rospy.internal][INFO] 2025-04-03 13:53:49,604: topic[/RosAria/sonar] adding connection to [http://localhost:38985/], count 0
+[rospy.internal][INFO] 2025-04-03 13:53:49,841: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2025-04-03 13:53:52,294: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-04-03 13:53:52,296: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-04-03 13:53:52,296: topic[/RosAria/sonar] removing connection to http://localhost:38985/
+[rospy.internal][WARNING] 2025-04-03 13:53:52,310: Unknown error initiating TCP/IP socket to localhost:47163 (http://localhost:38985/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2025-04-03 13:53:52,310: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2025-04-03 13:53:52,311: signal-2
+[rospy.core][INFO] 2025-04-03 13:53:52,426: signal_shutdown [atexit]

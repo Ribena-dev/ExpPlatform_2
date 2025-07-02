@@ -1,0 +1,595 @@
+[rospy.client][INFO] 2025-03-27 14:23:51,141: init_node, name[/sonar_processor_5047_1743060231115], pid[5047]
+[xmlrpc][INFO] 2025-03-27 14:23:51,142: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:23:51,142: Started XML-RPC server [http://localhost:39077/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:23:51,142: _ready: http://localhost:39077/
+[rospy.init][INFO] 2025-03-27 14:23:51,142: ROS Slave URI: [http://localhost:39077/]
+[rospy.registration][INFO] 2025-03-27 14:23:51,142: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:23:51,143: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:23:51,242: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:23:51,243: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:23:51,249: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:23:51,253: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:23:51,266: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:23:51,310: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:23:51,339: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:51,444: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rospy.internal][INFO] 2025-03-27 14:23:51,453: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:23:51,541: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:51,644: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:51,741: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:51,844: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:51,941: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,044: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,141: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,244: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,341: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,444: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,541: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,645: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,741: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,845: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:52,942: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,045: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,142: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,245: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,342: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,445: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,542: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,645: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,742: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,845: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:53,942: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,045: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,142: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,245: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,342: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,446: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,542: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,645: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,742: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,845: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:54,942: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,046: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,142: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,246: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,342: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,446: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,542: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,646: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,743: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,846: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:55,943: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rosout][ERROR] 2025-03-27 14:23:56,046: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f79bda5e1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists([bl_min,br_min])
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(msg)
+NameError: global name 'msg' is not defined
+
+[rospy.core][INFO] 2025-03-27 14:23:56,064: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:23:56,072: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:23:56,072: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.impl.masterslave][INFO] 2025-03-27 14:23:56,073: signal-2
+[rospy.core][INFO] 2025-03-27 14:23:56,177: signal_shutdown [atexit]

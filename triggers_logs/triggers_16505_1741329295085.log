@@ -1,0 +1,33 @@
+[rospy.client][INFO] 2025-03-07 13:34:55,104: init_node, name[/triggers_16505_1741329295085], pid[16505]
+[xmlrpc][INFO] 2025-03-07 13:34:55,105: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-07 13:34:55,105: Started XML-RPC server [http://localhost:37829/]
+[rospy.init][INFO] 2025-03-07 13:34:55,105: ROS Slave URI: [http://localhost:37829/]
+[rospy.impl.masterslave][INFO] 2025-03-07 13:34:55,105: _ready: http://localhost:37829/
+[rospy.registration][INFO] 2025-03-07 13:34:55,106: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-07 13:34:55,106: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-03-07 13:34:55,106: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-03-07 13:34:55,108: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2025-03-07 13:34:55,157: topic[/trigger_msgs] adding connection to [/controller_joystick], count 0
+[rospy.internal][INFO] 2025-03-07 13:34:55,159: topic[/trigger_msgs] adding connection to [/curr_posters_16202_1741329285556], count 1
+[rospy.init][INFO] 2025-03-07 13:34:55,206: registered with master
+[rospy.rosout][INFO] 2025-03-07 13:34:55,206: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-07 13:34:55,207: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-07 13:34:55,208: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-03-07 13:34:55,224: topic[/amcl_pose] adding connection to [http://localhost:39819/], count 0
+[rospy.internal][INFO] 2025-03-07 13:34:55,336: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2025-03-07 13:34:55,336: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-03-07 13:34:55,447: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-03-07 13:34:55,460: topic[/trigger_msgs] adding connection to [/my_bag], count 4
+[rospy.internal][INFO] 2025-03-07 13:34:55,461: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:34:55,462: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:34:55,547: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-03-07 13:36:39,269: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:36:39,269: topic[/trigger_msgs] removing connection to /curr_posters_16202_1741329285556
+[rospy.internal][INFO] 2025-03-07 13:37:06,771: topic[/trigger_msgs] adding connection to [/curr_posters_19351_1741329426742], count 2
+[rospy.core][INFO] 2025-03-07 13:37:08,217: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-03-07 13:37:08,220: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:37:08,220: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:37:08,220: topic[/trigger_msgs] removing connection to /curr_posters_19351_1741329426742
+[rospy.internal][INFO] 2025-03-07 13:37:08,220: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-07 13:37:08,220: topic[/amcl_pose] removing connection to http://localhost:39819/
+[rospy.impl.masterslave][INFO] 2025-03-07 13:37:08,220: atexit

@@ -1,0 +1,1979 @@
+[rospy.client][INFO] 2025-03-27 14:29:04,123: init_node, name[/sonar_processor_5264_1743060544111], pid[5264]
+[xmlrpc][INFO] 2025-03-27 14:29:04,123: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:29:04,123: Started XML-RPC server [http://localhost:42917/]
+[rospy.init][INFO] 2025-03-27 14:29:04,123: ROS Slave URI: [http://localhost:42917/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:29:04,123: _ready: http://localhost:42917/
+[rospy.registration][INFO] 2025-03-27 14:29:04,124: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:29:04,124: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:29:04,224: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:29:04,224: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:29:04,230: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:29:04,233: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:29:04,246: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:29:04,291: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:29:04,372: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rospy.internal][INFO] 2025-03-27 14:29:04,437: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:29:04,467: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:04,571: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:04,668: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:04,771: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:04,868: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:04,971: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,068: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,171: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,268: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,371: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,468: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,571: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,668: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,771: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,868: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:05,971: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,068: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,171: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,268: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,371: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,468: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,571: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,668: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,772: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,868: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:06,972: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,068: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,172: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,269: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,372: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,469: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,572: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,669: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,772: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,869: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:07,972: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,069: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,172: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,269: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,372: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,469: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,572: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,669: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,772: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,869: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:08,972: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,069: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,172: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,269: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,373: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,469: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,573: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1666996408767687,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,670: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,773: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,870: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:09,973: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,070: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,173: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,270: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,373: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,470: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,573: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,670: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,773: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,870: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:10,973: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,070: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,173: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,270: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,373: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,470: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,574: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,670: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,774: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,870: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:11,974: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,071: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,174: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,271: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,374: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,471: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,574: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,671: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,774: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,871: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:12,974: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,071: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,174: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,271: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,374: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,471: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,574: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,671: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,774: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,871: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:13,974: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rosout][ERROR] 2025-03-27 14:29:14,071: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fee7a3771b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 56, in process_sonar_data
+    self.pub_dists(bl_min)
+  File "sonar_get_min_dist.py", line 72, in pub_dists
+    pub.publish(min_distances)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 879, in publish
+    data = args_kwds_to_message(self.data_class, args, kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/msg.py", line 122, in args_kwds_to_message
+    return data_class(*args)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 74, in __init__
+    super(Float32MultiArray, self).__init__(*args, **kwds)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/genpy/message.py", line 344, in __init__
+    raise TypeError('Invalid number of arguments, args should be %s' % str(self.__slots__) + ' args are' + str(args))
+TypeError: Invalid number of arguments, args should be ['layout', 'data'] args are(1.1676664285684515,)
+
+[rospy.core][INFO] 2025-03-27 14:29:14,075: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:29:14,083: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:29:14,084: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.impl.masterslave][INFO] 2025-03-27 14:29:14,084: signal-2
+[rospy.core][INFO] 2025-03-27 14:29:14,217: signal_shutdown [atexit]

@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2023-08-15 09:44:52,702: init_node, name[/triggers_8496_1692067492688], pid[8496]
+[xmlrpc][INFO] 2023-08-15 09:44:52,702: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2023-08-15 09:44:52,702: Started XML-RPC server [http://localhost:37625/]
+[rospy.init][INFO] 2023-08-15 09:44:52,703: ROS Slave URI: [http://localhost:37625/]
+[rospy.impl.masterslave][INFO] 2023-08-15 09:44:52,703: _ready: http://localhost:37625/
+[rospy.registration][INFO] 2023-08-15 09:44:52,703: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2023-08-15 09:44:52,703: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2023-08-15 09:44:52,703: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2023-08-15 09:44:52,705: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2023-08-15 09:44:52,750: topic[/trigger_msgs] adding connection to [/curr_posters_2997_1692067232465], count 0
+[rospy.internal][INFO] 2023-08-15 09:44:52,782: topic[/trigger_msgs] adding connection to [/controller_joystick], count 1
+[rospy.init][INFO] 2023-08-15 09:44:52,803: registered with master
+[rospy.rosout][INFO] 2023-08-15 09:44:52,803: initializing /rosout core topic
+[rospy.rosout][INFO] 2023-08-15 09:44:52,804: connected to core topic /rosout
+[rospy.simtime][INFO] 2023-08-15 09:44:52,805: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2023-08-15 09:44:52,821: topic[/amcl_pose] adding connection to [http://localhost:45525/], count 0
+[rospy.internal][INFO] 2023-08-15 09:44:52,940: topic[/current_poster] adding connection to [/rviz_1692067225069068900], count 0
+[rospy.internal][INFO] 2023-08-15 09:44:53,042: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2023-08-15 09:44:53,043: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2023-08-15 09:44:53,043: topic[/trigger_msgs] adding connection to [/my_bag2], count 3

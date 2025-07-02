@@ -1,0 +1,39 @@
+[rospy.client][INFO] 2025-04-25 15:05:49,414: init_node, name[/triggers_15754_1745568349233], pid[15754]
+[xmlrpc][INFO] 2025-04-25 15:05:49,438: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-04-25 15:05:49,439: Started XML-RPC server [http://localhost:43027/]
+[rospy.impl.masterslave][INFO] 2025-04-25 15:05:49,440: _ready: http://localhost:43027/
+[rospy.registration][INFO] 2025-04-25 15:05:49,446: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-04-25 15:05:49,447: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.init][INFO] 2025-04-25 15:05:49,449: ROS Slave URI: [http://localhost:43027/]
+[xmlrpc][INFO] 2025-04-25 15:05:49,450: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-04-25 15:05:49,452: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.init][INFO] 2025-04-25 15:05:49,550: registered with master
+[rospy.rosout][INFO] 2025-04-25 15:05:49,550: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-04-25 15:05:49,562: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-25 15:05:49,565: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-04-25 15:05:49,638: topic[/trigger_msgs] adding connection to [/curr_posters_15279_1745568338378], count 0
+[rospy.internal][INFO] 2025-04-25 15:05:49,715: topic[/amcl_pose] adding connection to [http://localhost:39275/], count 0
+[rospy.internal][INFO] 2025-04-25 15:05:49,747: topic[/trigger_msgs] adding connection to [/controller_joystick], count 1
+[rospy.internal][INFO] 2025-04-25 15:05:49,785: topic[/trigger_msgs] adding connection to [/my_bag2], count 2
+[rospy.internal][INFO] 2025-04-25 15:05:49,802: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-04-25 15:05:49,861: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-04-25 15:05:50,650: topic[/trigger_msgs] adding connection to [/my_bag2], count 4
+[rospy.internal][INFO] 2025-04-25 15:05:50,651: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-04-25 15:05:50,931: topic[/trigger_msgs] adding connection to [/my_bag], count 4
+[rospy.internal][INFO] 2025-04-25 15:05:50,932: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-25 15:08:28,329: topic[/trigger_msgs] removing connection to /curr_posters_15279_1745568338378
+[rospy.internal][INFO] 2025-04-25 15:08:28,329: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-04-25 15:08:30,915: topic[/trigger_msgs] adding connection to [/curr_posters_19320_1745568510550], count 2
+[rospy.internal][INFO] 2025-04-25 15:08:34,784: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-04-25 15:08:45,947: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-25 15:08:46,050: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-04-25 15:08:46,293: topic[/trigger_msgs] adding connection to [/my_bag2], count 4
+[rospy.internal][INFO] 2025-04-25 15:08:46,293: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-04-25 15:14:49,201: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-04-25 15:14:49,702: topic[/trigger_msgs] removing connection to /curr_posters_19320_1745568510550
+[rospy.internal][INFO] 2025-04-25 15:15:20,213: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-25 15:15:20,213: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.core][INFO] 2025-04-25 15:16:47,683: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-04-25 15:16:47,686: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-04-25 15:16:47,686: topic[/amcl_pose] removing connection to http://localhost:39275/
+[rospy.impl.masterslave][INFO] 2025-04-25 15:16:47,686: atexit

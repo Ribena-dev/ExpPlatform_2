@@ -1,0 +1,67 @@
+[rospy.client][INFO] 2025-03-07 13:43:12,002: init_node, name[/triggers_27394_1741329791987], pid[27394]
+[xmlrpc][INFO] 2025-03-07 13:43:12,003: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-07 13:43:12,003: Started XML-RPC server [http://localhost:44191/]
+[rospy.impl.masterslave][INFO] 2025-03-07 13:43:12,003: _ready: http://localhost:44191/
+[rospy.init][INFO] 2025-03-07 13:43:12,003: ROS Slave URI: [http://localhost:44191/]
+[xmlrpc][INFO] 2025-03-07 13:43:12,004: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-03-07 13:43:12,004: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-03-07 13:43:12,004: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-03-07 13:43:12,006: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2025-03-07 13:43:12,094: topic[/trigger_msgs] adding connection to [/controller_joystick], count 0
+[rospy.init][INFO] 2025-03-07 13:43:12,104: registered with master
+[rospy.rosout][INFO] 2025-03-07 13:43:12,104: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-07 13:43:12,105: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-07 13:43:12,106: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-03-07 13:43:12,106: topic[/trigger_msgs] adding connection to [/curr_posters_26795_1741329768099], count 1
+[rospy.internal][INFO] 2025-03-07 13:43:12,122: topic[/amcl_pose] adding connection to [http://localhost:39819/], count 0
+[rospy.internal][INFO] 2025-03-07 13:43:12,286: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-03-07 13:43:12,386: topic[/trigger_msgs] adding connection to [/my_bag2], count 2
+[rospy.internal][INFO] 2025-03-07 13:43:12,387: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 13:45:05,169: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:45:05,170: topic[/trigger_msgs] removing connection to /curr_posters_26795_1741329768099
+[rospy.internal][INFO] 2025-03-07 13:45:06,399: topic[/trigger_msgs] adding connection to [/curr_posters_29966_1741329906377], count 2
+[rospy.internal][INFO] 2025-03-07 13:45:10,741: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-03-07 13:45:14,570: topic[/trigger_msgs] adding connection to [/my_bag2], count 4
+[rospy.internal][INFO] 2025-03-07 13:45:14,570: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:45:14,571: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:45:14,572: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 13:46:21,704: topic[/trigger_msgs] removing connection to /curr_posters_29966_1741329906377
+[rospy.internal][INFO] 2025-03-07 13:46:21,705: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:46:23,453: topic[/trigger_msgs] adding connection to [/curr_posters_31826_1741329983424], count 2
+[rospy.internal][INFO] 2025-03-07 13:46:27,725: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-03-07 13:46:32,710: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:46:32,710: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:46:32,791: topic[/trigger_msgs] adding connection to [/my_bag2], count 2
+[rospy.internal][INFO] 2025-03-07 13:46:32,792: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 13:47:32,738: topic[/trigger_msgs] removing connection to /curr_posters_31826_1741329983424
+[rospy.internal][INFO] 2025-03-07 13:47:32,738: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:47:34,423: topic[/trigger_msgs] adding connection to [/curr_posters_1180_1741330054394], count 2
+[rospy.internal][INFO] 2025-03-07 13:47:38,707: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-03-07 13:47:43,743: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:47:43,744: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:47:43,813: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2025-03-07 13:47:43,814: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-03-07 13:48:29,265: topic[/trigger_msgs] removing connection to /curr_posters_1180_1741330054394
+[rospy.internal][INFO] 2025-03-07 13:48:29,266: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:48:40,492: topic[/trigger_msgs] adding connection to [/curr_posters_3318_1741330120432], count 2
+[rospy.internal][INFO] 2025-03-07 13:48:44,719: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-03-07 13:48:50,227: topic[/trigger_msgs] adding connection to [/my_bag], count 4
+[rospy.internal][INFO] 2025-03-07 13:48:50,228: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:48:50,228: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:48:50,328: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-03-07 13:49:45,298: topic[/trigger_msgs] removing connection to /curr_posters_3318_1741330120432
+[rospy.internal][INFO] 2025-03-07 13:49:45,299: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:49:47,281: topic[/trigger_msgs] adding connection to [/curr_posters_5063_1741330187228], count 2
+[rospy.internal][INFO] 2025-03-07 13:49:51,679: topic[/trigger_msgs] adding connection to [/controller_joystick], count 3
+[rospy.internal][INFO] 2025-03-07 13:49:57,747: topic[/trigger_msgs] adding connection to [/my_bag2], count 4
+[rospy.internal][INFO] 2025-03-07 13:49:57,759: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:49:57,759: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:49:57,760: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 13:51:04,333: topic[/trigger_msgs] removing connection to /curr_posters_5063_1741330187228
+[rospy.internal][INFO] 2025-03-07 13:51:04,334: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.core][INFO] 2025-03-07 13:52:06,127: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-03-07 13:52:06,130: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:52:06,130: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:52:06,130: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-07 13:52:06,130: topic[/amcl_pose] removing connection to http://localhost:39819/
+[rospy.impl.masterslave][INFO] 2025-03-07 13:52:06,131: atexit

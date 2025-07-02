@@ -1,0 +1,57 @@
+[rospy.client][INFO] 2025-04-11 15:39:23,422: init_node, name[/triggers_21497_1744360763408], pid[21497]
+[xmlrpc][INFO] 2025-04-11 15:39:23,424: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-04-11 15:39:23,424: Started XML-RPC server [http://localhost:37183/]
+[rospy.init][INFO] 2025-04-11 15:39:23,424: ROS Slave URI: [http://localhost:37183/]
+[rospy.impl.masterslave][INFO] 2025-04-11 15:39:23,424: _ready: http://localhost:37183/
+[xmlrpc][INFO] 2025-04-11 15:39:23,426: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-04-11 15:39:23,426: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-04-11 15:39:23,426: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-04-11 15:39:23,429: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.init][INFO] 2025-04-11 15:39:23,525: registered with master
+[rospy.rosout][INFO] 2025-04-11 15:39:23,525: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-04-11 15:39:23,526: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-11 15:39:23,527: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-04-11 15:39:23,531: topic[/trigger_msgs] adding connection to [/curr_posters_20937_1744360755780], count 0
+[rospy.internal][INFO] 2025-04-11 15:39:23,532: topic[/trigger_msgs] adding connection to [/controller_joystick], count 1
+[rospy.internal][INFO] 2025-04-11 15:39:23,544: topic[/amcl_pose] adding connection to [http://localhost:33639/], count 0
+[rospy.internal][INFO] 2025-04-11 15:39:23,800: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2025-04-11 15:39:23,800: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-04-11 15:39:23,801: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-04-11 15:39:45,354: topic[/current_poster] adding connection to [/record_1744360785047290477], count 0
+[rospy.internal][INFO] 2025-04-11 15:39:45,356: topic[/rosout] adding connection to [/record_1744360785047290477], count 1
+[rospy.internal][INFO] 2025-04-11 15:39:45,357: topic[/trigger_msgs] adding connection to [/record_1744360785047290477], count 4
+[rospy.internal][INFO] 2025-04-11 15:40:07,062: topic[/current_poster] removing connection to /record_1744360785047290477
+[rospy.internal][INFO] 2025-04-11 15:40:07,062: topic[/trigger_msgs] removing connection to /record_1744360785047290477
+[rospy.internal][INFO] 2025-04-11 15:40:07,062: topic[/rosout] removing connection to /record_1744360785047290477
+[rospy.internal][INFO] 2025-04-11 15:40:44,521: topic[/current_poster] adding connection to [/record_1744360844251194967], count 0
+[rospy.internal][INFO] 2025-04-11 15:40:44,524: topic[/rosout] adding connection to [/record_1744360844251194967], count 1
+[rospy.internal][INFO] 2025-04-11 15:40:44,525: topic[/trigger_msgs] adding connection to [/record_1744360844251194967], count 4
+[rospy.internal][INFO] 2025-04-11 15:41:10,088: topic[/current_poster] removing connection to /record_1744360844251194967
+[rospy.internal][INFO] 2025-04-11 15:41:10,088: topic[/trigger_msgs] removing connection to /record_1744360844251194967
+[rospy.internal][INFO] 2025-04-11 15:41:10,089: topic[/rosout] removing connection to /record_1744360844251194967
+[rospy.internal][INFO] 2025-04-11 15:42:00,721: topic[/current_poster] adding connection to [/record_1744360920499621555], count 0
+[rospy.internal][INFO] 2025-04-11 15:42:00,725: topic[/rosout] adding connection to [/record_1744360920499621555], count 1
+[rospy.internal][INFO] 2025-04-11 15:42:00,727: topic[/trigger_msgs] adding connection to [/record_1744360920499621555], count 4
+[rospy.internal][INFO] 2025-04-11 15:42:21,120: topic[/current_poster] removing connection to /record_1744360920499621555
+[rospy.internal][INFO] 2025-04-11 15:42:21,120: topic[/trigger_msgs] removing connection to /record_1744360920499621555
+[rospy.internal][INFO] 2025-04-11 15:42:21,120: topic[/rosout] removing connection to /record_1744360920499621555
+[rospy.internal][INFO] 2025-04-11 15:42:38,981: topic[/current_poster] adding connection to [/record_1744360958680919166], count 0
+[rospy.internal][INFO] 2025-04-11 15:42:38,984: topic[/rosout] adding connection to [/record_1744360958680919166], count 1
+[rospy.internal][INFO] 2025-04-11 15:42:38,985: topic[/trigger_msgs] adding connection to [/record_1744360958680919166], count 4
+[rospy.internal][INFO] 2025-04-11 15:43:00,636: topic[/current_poster] removing connection to /record_1744360958680919166
+[rospy.internal][INFO] 2025-04-11 15:43:00,636: topic[/trigger_msgs] removing connection to /record_1744360958680919166
+[rospy.internal][INFO] 2025-04-11 15:43:00,637: topic[/rosout] removing connection to /record_1744360958680919166
+[rospy.internal][INFO] 2025-04-11 15:43:02,309: topic[/current_poster] adding connection to [/record_1744360982082182369], count 0
+[rospy.internal][INFO] 2025-04-11 15:43:02,313: topic[/rosout] adding connection to [/record_1744360982082182369], count 1
+[rospy.internal][INFO] 2025-04-11 15:43:02,314: topic[/trigger_msgs] adding connection to [/record_1744360982082182369], count 4
+[rospy.internal][INFO] 2025-04-11 15:43:24,146: topic[/current_poster] removing connection to /record_1744360982082182369
+[rospy.internal][INFO] 2025-04-11 15:43:24,647: topic[/trigger_msgs] removing connection to /record_1744360982082182369
+[rospy.internal][INFO] 2025-04-11 15:43:24,648: topic[/rosout] removing connection to /record_1744360982082182369
+[rospy.internal][INFO] 2025-04-11 15:43:52,159: topic[/trigger_msgs] removing connection to /curr_posters_20937_1744360755780
+[rospy.internal][INFO] 2025-04-11 15:43:52,159: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.core][INFO] 2025-04-11 15:45:59,540: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-04-11 15:45:59,542: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-11 15:45:59,542: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-04-11 15:45:59,542: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-04-11 15:45:59,542: topic[/amcl_pose] removing connection to http://localhost:33639/
+[rospy.impl.masterslave][INFO] 2025-04-11 15:45:59,542: atexit

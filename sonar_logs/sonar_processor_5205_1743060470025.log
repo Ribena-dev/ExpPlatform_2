@@ -1,0 +1,49 @@
+[rospy.client][INFO] 2025-03-27 14:27:50,037: init_node, name[/sonar_processor_5205_1743060470025], pid[5205]
+[xmlrpc][INFO] 2025-03-27 14:27:50,038: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:27:50,038: Started XML-RPC server [http://localhost:45989/]
+[rospy.init][INFO] 2025-03-27 14:27:50,038: ROS Slave URI: [http://localhost:45989/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:27:50,038: _ready: http://localhost:45989/
+[rospy.registration][INFO] 2025-03-27 14:27:50,039: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:27:50,039: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:27:50,138: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:27:50,139: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:27:50,145: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:27:50,149: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:27:50,163: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:27:50,207: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][INFO] 2025-03-27 14:27:50,231: Back Left Min: 1.17, Back Right Min: 1.26
+[rosout][INFO] 2025-03-27 14:27:50,340: Back Left Min: 1.17, Back Right Min: 1.32
+[rospy.internal][INFO] 2025-03-27 14:27:50,396: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-03-27 14:27:50,437: Back Left Min: 1.17, Back Right Min: 1.32
+[rosout][INFO] 2025-03-27 14:27:50,540: Back Left Min: 0.72, Back Right Min: 1.32
+[rosout][INFO] 2025-03-27 14:27:50,637: Back Left Min: 0.72, Back Right Min: 1.28
+[rosout][INFO] 2025-03-27 14:27:50,740: Back Left Min: 0.72, Back Right Min: 1.28
+[rosout][INFO] 2025-03-27 14:27:50,837: Back Left Min: 1.17, Back Right Min: 1.28
+[rosout][INFO] 2025-03-27 14:27:50,940: Back Left Min: 1.17, Back Right Min: 1.27
+[rosout][INFO] 2025-03-27 14:27:51,037: Back Left Min: 1.17, Back Right Min: 1.27
+[rosout][INFO] 2025-03-27 14:27:51,140: Back Left Min: 1.17, Back Right Min: 1.29
+[rosout][INFO] 2025-03-27 14:27:51,238: Back Left Min: 1.17, Back Right Min: 1.29
+[rosout][INFO] 2025-03-27 14:27:51,340: Back Left Min: 1.17, Back Right Min: 1.29
+[rosout][INFO] 2025-03-27 14:27:51,437: Back Left Min: 1.17, Back Right Min: 1.27
+[rosout][INFO] 2025-03-27 14:27:51,541: Back Left Min: 1.17, Back Right Min: 1.27
+[rosout][INFO] 2025-03-27 14:27:51,637: Back Left Min: 1.17, Back Right Min: 1.27
+[rosout][INFO] 2025-03-27 14:27:51,741: Back Left Min: 1.17, Back Right Min: 1.26
+[rospy.core][INFO] 2025-03-27 14:27:51,783: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:27:51,791: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:27:51,792: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.internal][WARNING] 2025-03-27 14:27:51,794: Unknown error initiating TCP/IP socket to localhost:60417 (http://localhost:37299/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2025-03-27 14:27:51,795: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2025-03-27 14:27:51,795: signal-2
+[rospy.core][INFO] 2025-03-27 14:27:51,927: signal_shutdown [atexit]

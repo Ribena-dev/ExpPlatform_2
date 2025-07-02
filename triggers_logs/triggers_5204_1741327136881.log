@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2025-03-07 12:58:56,896: init_node, name[/triggers_5204_1741327136881], pid[5204]
+[xmlrpc][INFO] 2025-03-07 12:58:56,897: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-07 12:58:56,898: Started XML-RPC server [http://localhost:46275/]
+[rospy.init][INFO] 2025-03-07 12:58:56,898: ROS Slave URI: [http://localhost:46275/]
+[rospy.impl.masterslave][INFO] 2025-03-07 12:58:56,898: _ready: http://localhost:46275/
+[rospy.registration][INFO] 2025-03-07 12:58:56,899: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-07 12:58:56,899: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-03-07 12:58:56,899: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-03-07 12:58:56,902: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2025-03-07 12:58:56,930: topic[/trigger_msgs] adding connection to [/controller_joystick], count 0
+[rospy.internal][INFO] 2025-03-07 12:58:56,936: topic[/trigger_msgs] adding connection to [/curr_posters_4627_1741327126684], count 1
+[rospy.init][INFO] 2025-03-07 12:58:56,998: registered with master
+[rospy.rosout][INFO] 2025-03-07 12:58:56,998: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-07 12:58:57,000: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-07 12:58:57,000: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-03-07 12:58:57,019: topic[/amcl_pose] adding connection to [http://localhost:41089/], count 0
+[rospy.internal][INFO] 2025-03-07 12:58:57,230: topic[/trigger_msgs] adding connection to [/my_bag2], count 2
+[rospy.internal][INFO] 2025-03-07 12:58:57,231: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 12:58:57,232: topic[/rosout] adding connection to [/rosout], count 0

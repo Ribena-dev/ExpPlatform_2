@@ -1,0 +1,39 @@
+[rospy.client][INFO] 2025-03-21 14:44:56,153: init_node, name[/sonar_distance_monitor_3059_1742543096141], pid[3059]
+[xmlrpc][INFO] 2025-03-21 14:44:56,154: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-21 14:44:56,154: Started XML-RPC server [http://localhost:44389/]
+[rospy.init][INFO] 2025-03-21 14:44:56,154: ROS Slave URI: [http://localhost:44389/]
+[rospy.impl.masterslave][INFO] 2025-03-21 14:44:56,154: _ready: http://localhost:44389/
+[rospy.registration][INFO] 2025-03-21 14:44:56,154: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-21 14:44:56,154: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-21 14:44:56,254: registered with master
+[rospy.rosout][INFO] 2025-03-21 14:44:56,255: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-21 14:44:56,260: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-21 14:44:56,263: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-21 14:44:56,279: Sonar distance monitor initialized
+[rosout][INFO] 2025-03-21 14:44:56,280: Monitoring for the 5 closest sonar readings
+[rosout][INFO] 2025-03-21 14:44:56,281: Sonar distance monitor running. Press Ctrl+C to stop.
+[rospy.internal][INFO] 2025-03-21 14:44:56,322: topic[/RosAria/sonar] adding connection to [http://localhost:39253/], count 0
+[rospy.internal][INFO] 2025-03-21 14:44:56,557: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2025-03-21 14:44:56,782: 
+--- 5 Closest Sonar Readings ---
+[rosout][INFO] 2025-03-21 14:44:56,783: Rank | Sensor ID | Distance (m) | Angle (deg) | Position (x,y)
+[rosout][INFO] 2025-03-21 14:44:56,784: -------------------------------------------------
+[rospy.core][INFO] 2025-03-21 14:45:07,298: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-21 14:45:07,306: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-21 14:45:07,307: topic[/RosAria/sonar] removing connection to http://localhost:39253/
+[rospy.internal][WARNING] 2025-03-21 14:45:07,309: Unknown error initiating TCP/IP socket to localhost:44435 (http://localhost:39253/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.topics][ERROR] 2025-03-21 14:45:07,310: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2025-03-21 14:45:07,310: signal-2
+[rospy.core][INFO] 2025-03-21 14:45:07,427: signal_shutdown [atexit]

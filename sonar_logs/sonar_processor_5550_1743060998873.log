@@ -1,0 +1,1315 @@
+[rospy.client][INFO] 2025-03-27 14:36:38,885: init_node, name[/sonar_processor_5550_1743060998873], pid[5550]
+[xmlrpc][INFO] 2025-03-27 14:36:38,885: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:36:38,885: Started XML-RPC server [http://localhost:42755/]
+[rospy.init][INFO] 2025-03-27 14:36:38,885: ROS Slave URI: [http://localhost:42755/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:36:38,886: _ready: http://localhost:42755/
+[rospy.registration][INFO] 2025-03-27 14:36:38,886: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:36:38,886: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:36:38,986: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:36:38,986: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:36:38,992: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:36:38,995: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:36:39,008: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:36:39,053: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:36:39,156: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,252: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rospy.internal][INFO] 2025-03-27 14:36:39,272: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:36:39,355: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,452: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,555: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,652: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,755: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,852: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:39,955: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,052: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,155: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,252: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,355: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,452: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,556: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,652: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,756: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,852: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:40,956: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,053: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,156: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,253: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,356: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,453: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,556: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,653: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,756: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,853: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:41,956: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,053: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,156: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,253: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,356: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,453: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,556: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,653: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,756: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,853: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:42,957: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,053: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,157: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,254: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,357: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,454: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,557: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,654: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,757: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,854: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:43,957: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,054: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,157: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,254: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,357: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,454: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,557: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,654: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,757: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,854: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:44,957: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,054: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,157: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,254: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,358: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,454: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,558: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,654: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,758: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,855: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:45,958: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,055: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,158: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,255: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,358: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,455: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,558: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,655: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,758: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,855: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:46,958: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,055: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,158: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,255: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,358: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,455: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,559: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,655: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,759: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,855: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:47,959: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,159: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,359: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,456: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,559: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,759: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:48,959: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,159: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,359: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,456: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,559: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,759: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:49,959: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,360: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,560: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,760: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:50,960: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,360: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,560: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,760: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:51,960: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,160: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,360: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,561: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,761: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:52,961: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,161: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,361: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,458: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,561: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,761: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:53,961: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,161: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,361: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,458: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,562: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,761: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:54,961: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:55,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:55,161: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:36:55,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7fa667e9b1b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rospy.core][INFO] 2025-03-27 14:36:55,307: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:36:55,316: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:36:55,316: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.impl.masterslave][INFO] 2025-03-27 14:36:55,317: signal-2
+[rospy.core][INFO] 2025-03-27 14:36:55,434: signal_shutdown [atexit]

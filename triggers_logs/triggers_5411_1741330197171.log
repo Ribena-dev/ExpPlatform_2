@@ -1,0 +1,38 @@
+[rospy.client][INFO] 2025-03-07 13:49:57,206: init_node, name[/triggers_5411_1741330197171], pid[5411]
+[xmlrpc][INFO] 2025-03-07 13:49:57,207: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-07 13:49:57,208: Started XML-RPC server [http://localhost:33621/]
+[rospy.impl.masterslave][INFO] 2025-03-07 13:49:57,208: _ready: http://localhost:33621/
+[rospy.init][INFO] 2025-03-07 13:49:57,208: ROS Slave URI: [http://localhost:33621/]
+[xmlrpc][INFO] 2025-03-07 13:49:57,209: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-03-07 13:49:57,209: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-03-07 13:49:57,210: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-03-07 13:49:57,212: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2025-03-07 13:49:57,259: topic[/trigger_msgs] adding connection to [/controller_joystick], count 0
+[rospy.internal][INFO] 2025-03-07 13:49:57,267: topic[/trigger_msgs] adding connection to [/curr_posters_5063_1741330187228], count 1
+[rospy.init][INFO] 2025-03-07 13:49:57,310: registered with master
+[rospy.rosout][INFO] 2025-03-07 13:49:57,310: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-07 13:49:57,312: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-07 13:49:57,313: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-03-07 13:49:57,336: topic[/amcl_pose] adding connection to [http://localhost:39819/], count 0
+[rospy.internal][INFO] 2025-03-07 13:49:57,430: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2025-03-07 13:49:57,437: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-03-07 13:49:57,566: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-03-07 13:49:57,745: topic[/trigger_msgs] adding connection to [/my_bag2], count 4
+[rospy.internal][INFO] 2025-03-07 13:49:57,745: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:49:57,745: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:49:57,748: topic[/trigger_msgs] adding connection to [/my_bag], count 3
+[rospy.internal][INFO] 2025-03-07 13:51:04,363: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-03-07 13:51:04,364: topic[/trigger_msgs] removing connection to /curr_posters_5063_1741330187228
+[rospy.core][INFO] 2025-03-07 13:52:11,327: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-03-07 13:52:11,329: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-03-07 13:52:11,329: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-03-07 13:52:11,329: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-07 13:52:11,330: topic[/amcl_pose] removing connection to http://localhost:39819/
+[rospy.impl.masterslave][INFO] 2025-03-07 13:52:11,330: atexit
+[rospy.internal][WARNING] 2025-03-07 13:52:11,330: Unknown error initiating TCP/IP socket to localhost:53689 (http://localhost:39819/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

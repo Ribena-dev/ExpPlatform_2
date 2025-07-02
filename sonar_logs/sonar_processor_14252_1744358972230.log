@@ -1,0 +1,25 @@
+[rospy.client][INFO] 2025-04-11 15:09:32,254: init_node, name[/sonar_processor_14252_1744358972230], pid[14252]
+[xmlrpc][INFO] 2025-04-11 15:09:32,254: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-04-11 15:09:32,254: Started XML-RPC server [http://localhost:35643/]
+[rospy.init][INFO] 2025-04-11 15:09:32,255: ROS Slave URI: [http://localhost:35643/]
+[rospy.impl.masterslave][INFO] 2025-04-11 15:09:32,255: _ready: http://localhost:35643/
+[rospy.registration][INFO] 2025-04-11 15:09:32,255: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-04-11 15:09:32,256: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-04-11 15:09:32,355: registered with master
+[rospy.rosout][INFO] 2025-04-11 15:09:32,355: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-04-11 15:09:32,357: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-11 15:09:32,358: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-04-11 15:09:32,362: Sonar processor initialized
+[rospy.internal][INFO] 2025-04-11 15:09:32,620: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-04-11 15:09:32,834: topic[/RosAria/sonar] adding connection to [http://localhost:41577/], count 0
+[rospy.internal][WARNING] 2025-04-11 15:10:08,984: Unknown error initiating TCP/IP socket to localhost:33377 (http://localhost:41577/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    d = sock.recv(buff_size)
+error: [Errno 104] Connection reset by peer
+
+[rospy.internal][INFO] 2025-04-11 15:10:08,984: topic[/RosAria/sonar] removing connection to http://localhost:41577/
+[rospy.internal][INFO] 2025-04-11 15:10:09,344: topic[/rosout] removing connection to /rosout

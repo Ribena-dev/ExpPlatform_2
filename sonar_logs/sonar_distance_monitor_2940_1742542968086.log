@@ -1,0 +1,2325 @@
+[rospy.client][INFO] 2025-03-21 14:42:48,098: init_node, name[/sonar_distance_monitor_2940_1742542968086], pid[2940]
+[xmlrpc][INFO] 2025-03-21 14:42:48,098: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-21 14:42:48,098: Started XML-RPC server [http://localhost:41429/]
+[rospy.init][INFO] 2025-03-21 14:42:48,098: ROS Slave URI: [http://localhost:41429/]
+[rospy.impl.masterslave][INFO] 2025-03-21 14:42:48,098: _ready: http://localhost:41429/
+[rospy.registration][INFO] 2025-03-21 14:42:48,099: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-21 14:42:48,099: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-21 14:42:48,199: registered with master
+[rospy.rosout][INFO] 2025-03-21 14:42:48,199: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-21 14:42:48,204: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-21 14:42:48,208: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-21 14:42:48,226: Sonar distance monitor initialized
+[rosout][INFO] 2025-03-21 14:42:48,227: Monitoring for the 5 closest sonar readings
+[rosout][INFO] 2025-03-21 14:42:48,228: Sonar distance monitor running. Press Ctrl+C to stop.
+[rospy.internal][INFO] 2025-03-21 14:42:48,264: topic[/RosAria/sonar] adding connection to [http://localhost:39253/], count 0
+[rosout][ERROR] 2025-03-21 14:42:48,334: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rospy.internal][INFO] 2025-03-21 14:42:48,417: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-21 14:42:48,437: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:48,540: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:48,637: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:48,740: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:48,837: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:48,940: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,037: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,140: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,237: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,340: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,437: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,540: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,637: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,740: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,837: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:49,941: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,038: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,141: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,238: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,341: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,438: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,541: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,638: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,741: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,838: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:50,941: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,038: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,141: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,238: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,341: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,438: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,541: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,638: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,741: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,838: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:51,941: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,038: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,141: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,238: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,342: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,439: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,542: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,639: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,742: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,839: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:52,942: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,039: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,142: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,239: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,342: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,439: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,542: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,639: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,742: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,839: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:53,942: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,039: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,142: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,239: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,342: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,439: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,543: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,639: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,743: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,839: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:54,943: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,040: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,143: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,240: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,343: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,440: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,543: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,640: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,743: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,840: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:55,943: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,040: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,143: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,240: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,343: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,440: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,543: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,640: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,743: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,840: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:56,944: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,040: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,144: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,241: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,344: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,441: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,544: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,641: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,744: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,841: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:57,944: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,041: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,144: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,241: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,344: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,441: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,544: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,641: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,744: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,841: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:58,944: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,041: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,144: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,241: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,345: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,441: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,545: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,642: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,745: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,842: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:42:59,945: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,042: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,145: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,242: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,345: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,442: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,545: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,642: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,745: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,842: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:00,945: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,042: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,145: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,242: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,345: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,442: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,545: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,642: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,746: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,843: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:01,946: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,043: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,146: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,243: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,346: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,443: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,546: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,643: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,746: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,843: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:02,946: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,043: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,146: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,243: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,346: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,443: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,546: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,643: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,746: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,843: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:03,946: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,043: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,147: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,243: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,347: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,444: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,547: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,644: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,747: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,844: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:04,947: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,044: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,147: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,244: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,347: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,444: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,547: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,644: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,747: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,844: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:05,947: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,044: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,147: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,244: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,347: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,444: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,548: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,644: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,748: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,844: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:06,948: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,045: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,148: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,245: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,348: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,445: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,548: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,645: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,748: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,845: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:07,948: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,045: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,148: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,245: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,348: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,445: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,548: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,645: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,748: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,845: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:08,949: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,045: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,149: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,245: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,349: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,446: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,549: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,646: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,749: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,846: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:09,949: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,046: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,149: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,246: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,349: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,446: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,549: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,646: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,749: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,846: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:10,949: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:11,046: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rosout][ERROR] 2025-03-21 14:43:11,149: bad callback: <bound method SonarDistanceMonitor.sonar_callback of <__main__.SonarDistanceMonitor instance at 0x7f159f2fee60>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar-distance-monitor.py", line 64, in sonar_callback
+    distances = [self.calculate_distance(point) for point in msg.points]
+  File "sonar-distance-monitor.py", line 42, in calculate_distance
+    if (point.x == 0.0 & point.y == 0.0):return
+TypeError: unsupported operand type(s) for &: 'float' and 'float'
+
+[rospy.core][INFO] 2025-03-21 14:43:11,151: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-21 14:43:11,159: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-21 14:43:11,160: topic[/RosAria/sonar] removing connection to http://localhost:39253/
+[rospy.topics][ERROR] 2025-03-21 14:43:11,161: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.impl.masterslave][INFO] 2025-03-21 14:43:11,162: signal-2
+[rospy.internal][WARNING] 2025-03-21 14:43:11,163: Unknown error initiating TCP/IP socket to localhost:44435 (http://localhost:39253/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.core][INFO] 2025-03-21 14:43:11,295: signal_shutdown [atexit]

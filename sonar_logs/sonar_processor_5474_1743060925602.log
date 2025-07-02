@@ -1,0 +1,1733 @@
+[rospy.client][INFO] 2025-03-27 14:35:25,614: init_node, name[/sonar_processor_5474_1743060925602], pid[5474]
+[xmlrpc][INFO] 2025-03-27 14:35:25,614: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:35:25,615: Started XML-RPC server [http://localhost:38617/]
+[rospy.init][INFO] 2025-03-27 14:35:25,615: ROS Slave URI: [http://localhost:38617/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:35:25,615: _ready: http://localhost:38617/
+[rospy.registration][INFO] 2025-03-27 14:35:25,615: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:35:25,615: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:35:25,715: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:35:25,716: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:35:25,721: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:35:25,724: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:35:25,739: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:35:25,782: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:35:25,820: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+TypeError: 'NoneType' object is not iterable
+
+[rosout][ERROR] 2025-03-27 14:35:25,925: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rospy.internal][INFO] 2025-03-27 14:35:25,935: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:35:26,022: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,125: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,222: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,325: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,422: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,525: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,622: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,725: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,822: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:26,926: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,022: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,126: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,223: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,326: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,423: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,526: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,623: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,726: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,823: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:27,926: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,023: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,126: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,223: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,326: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,423: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,526: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,623: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,726: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,823: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:28,926: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,023: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,126: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,223: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,327: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,423: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,527: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,624: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,727: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,824: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:29,927: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,024: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,127: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,224: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,327: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,424: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,527: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,624: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,727: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,824: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:30,927: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,024: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,127: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,224: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,327: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,424: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,528: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,624: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,728: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,824: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:31,928: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,024: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,128: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,225: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,328: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,425: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,528: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,625: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,728: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,825: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:32,928: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,025: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,128: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,225: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,328: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,425: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,528: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,625: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,728: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,825: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:33,928: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,025: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,129: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,225: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,329: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,425: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,529: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,626: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,729: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,826: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:34,929: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,026: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,129: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,226: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,329: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,426: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,529: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,626: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,729: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,826: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:35,929: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,026: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,129: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,226: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,330: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,426: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,529: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,626: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,730: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,826: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:36,930: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,027: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,130: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,227: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,330: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,427: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,530: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,627: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,730: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,827: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:37,930: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,027: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,130: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,227: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,330: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,427: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,530: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,627: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,730: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,827: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:38,930: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,027: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,130: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,227: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,331: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,428: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,531: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,628: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,731: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,828: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rosout][ERROR] 2025-03-27 14:35:39,931: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f59197071b8>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 28, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 55, in process_sonar_data
+    sonar_min_dist = Float32MultiArray()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/std_msgs/msg/_Float32MultiArray.py", line 82, in __init__
+    self.data = []
+AttributeError: 'Float32MultiArray' object attribute 'data' is read-only
+
+[rospy.core][INFO] 2025-03-27 14:35:39,993: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:35:40,001: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:35:40,001: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.topics][ERROR] 2025-03-27 14:35:40,003: Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 326, in close
+    c.close()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 839, in close
+    self.socket.close()
+AttributeError: 'NoneType' object has no attribute 'close'
+
+[rospy.internal][WARNING] 2025-03-27 14:35:40,004: Unknown error initiating TCP/IP socket to localhost:60417 (http://localhost:37299/): Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.read_header()
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 651, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.impl.masterslave][INFO] 2025-03-27 14:35:40,004: signal-2
+[rospy.core][INFO] 2025-03-27 14:35:40,105: signal_shutdown [atexit]

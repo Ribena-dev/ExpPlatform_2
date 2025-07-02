@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2025-07-01 14:36:52,267: init_node, name[/triggers_1378_1751355412252], pid[1378]
+[xmlrpc][INFO] 2025-07-01 14:36:52,267: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-07-01 14:36:52,267: Started XML-RPC server [http://localhost:46881/]
+[rospy.init][INFO] 2025-07-01 14:36:52,268: ROS Slave URI: [http://localhost:46881/]
+[rospy.impl.masterslave][INFO] 2025-07-01 14:36:52,268: _ready: http://localhost:46881/
+[xmlrpc][INFO] 2025-07-01 14:36:52,268: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-07-01 14:36:52,268: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-07-01 14:36:52,268: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-07-01 14:36:52,270: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.internal][INFO] 2025-07-01 14:36:52,332: topic[/trigger_msgs] adding connection to [/curr_posters_30714_1751355281749], count 0
+[rospy.internal][INFO] 2025-07-01 14:36:52,348: topic[/trigger_msgs] adding connection to [/joystick_controller_30855_1751355285723], count 1
+[rospy.init][INFO] 2025-07-01 14:36:52,368: registered with master
+[rospy.rosout][INFO] 2025-07-01 14:36:52,368: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-07-01 14:36:52,369: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-07-01 14:36:52,370: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-07-01 14:36:52,384: topic[/amcl_pose] adding connection to [http://localhost:40631/], count 0
+[rospy.core][INFO] 2025-07-01 14:36:52,428: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-07-01 14:36:52,431: topic[/trigger_msgs] removing connection to /curr_posters_30714_1751355281749
+[rospy.internal][INFO] 2025-07-01 14:36:52,431: topic[/trigger_msgs] removing connection to /joystick_controller_30855_1751355285723
+[rospy.internal][INFO] 2025-07-01 14:36:52,431: topic[/amcl_pose] removing connection to http://localhost:40631/
+[rospy.impl.masterslave][INFO] 2025-07-01 14:36:52,431: atexit

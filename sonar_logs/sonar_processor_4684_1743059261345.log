@@ -1,0 +1,919 @@
+[rospy.client][INFO] 2025-03-27 14:07:41,357: init_node, name[/sonar_processor_4684_1743059261345], pid[4684]
+[xmlrpc][INFO] 2025-03-27 14:07:41,358: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-27 14:07:41,358: Started XML-RPC server [http://localhost:33355/]
+[rospy.init][INFO] 2025-03-27 14:07:41,358: ROS Slave URI: [http://localhost:33355/]
+[rospy.impl.masterslave][INFO] 2025-03-27 14:07:41,358: _ready: http://localhost:33355/
+[rospy.registration][INFO] 2025-03-27 14:07:41,359: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-27 14:07:41,359: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-27 14:07:41,458: registered with master
+[rospy.rosout][INFO] 2025-03-27 14:07:41,459: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-27 14:07:41,464: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-27 14:07:41,467: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-27 14:07:41,482: Sonar processor initialized
+[rospy.internal][INFO] 2025-03-27 14:07:41,526: topic[/RosAria/sonar] adding connection to [http://localhost:37299/], count 0
+[rosout][ERROR] 2025-03-27 14:07:41,547: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:41,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rospy.internal][INFO] 2025-03-27 14:07:41,684: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][ERROR] 2025-03-27 14:07:41,753: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:41,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:41,953: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,153: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,353: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,456: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,553: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,656: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,753: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,856: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:42,953: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,056: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,153: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,256: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,353: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,553: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,754: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:43,954: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,154: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,354: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,554: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,754: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,857: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:44,954: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,057: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,154: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,257: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,354: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,457: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,554: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,657: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,754: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:45,954: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,155: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,355: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,458: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,555: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,755: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:46,955: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,155: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,355: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,458: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,555: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,755: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,858: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:47,955: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,058: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,155: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,258: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,355: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,459: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,555: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,658: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,756: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,859: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rosout][ERROR] 2025-03-27 14:07:48,956: bad callback: <bound method SonarProcessor.sonar_callback of <__main__.SonarProcessor instance at 0x7f2405321170>>
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/topics.py", line 750, in _invoke_callback
+    cb(msg)
+  File "sonar_get_min_dist.py", line 27, in sonar_callback
+    self.back_left_min, self.back_right_min = self.process_sonar_data(data)
+  File "sonar_get_min_dist.py", line 51, in process_sonar_data
+    self.print_sonar(br_dist)
+  File "sonar_get_min_dist.py", line 35, in print_sonar
+    print(index(data),data)
+NameError: global name 'index' is not defined
+
+[rospy.core][INFO] 2025-03-27 14:07:49,020: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-27 14:07:49,027: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-03-27 14:07:49,028: topic[/RosAria/sonar] removing connection to http://localhost:37299/
+[rospy.impl.masterslave][INFO] 2025-03-27 14:07:49,029: signal-2
+[rospy.core][INFO] 2025-03-27 14:07:49,130: signal_shutdown [atexit]

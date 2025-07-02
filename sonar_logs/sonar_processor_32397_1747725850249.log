@@ -1,0 +1,14 @@
+[rospy.client][INFO] 2025-05-20 14:24:10,261: init_node, name[/sonar_processor_32397_1747725850249], pid[32397]
+[xmlrpc][INFO] 2025-05-20 14:24:10,262: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-05-20 14:24:10,262: Started XML-RPC server [http://localhost:37697/]
+[rospy.init][INFO] 2025-05-20 14:24:10,262: ROS Slave URI: [http://localhost:37697/]
+[rospy.impl.masterslave][INFO] 2025-05-20 14:24:10,262: _ready: http://localhost:37697/
+[rospy.registration][INFO] 2025-05-20 14:24:10,263: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-05-20 14:24:10,263: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-05-20 14:24:10,362: registered with master
+[rospy.rosout][INFO] 2025-05-20 14:24:10,363: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-05-20 14:24:10,367: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-05-20 14:24:10,369: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-05-20 14:24:10,377: Sonar processor initialized
+[rospy.internal][INFO] 2025-05-20 14:24:10,428: topic[/RosAria/sonar] adding connection to [http://localhost:43919/], count 0
+[rospy.internal][INFO] 2025-05-20 14:24:10,491: topic[/rosout] adding connection to [/rosout], count 0

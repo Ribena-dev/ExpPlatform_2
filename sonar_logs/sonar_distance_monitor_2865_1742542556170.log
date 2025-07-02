@@ -1,0 +1,38 @@
+[rospy.client][INFO] 2025-03-21 14:35:56,185: init_node, name[/sonar_distance_monitor_2865_1742542556170], pid[2865]
+[xmlrpc][INFO] 2025-03-21 14:35:56,185: XML-RPC server binding to 127.0.0.1:0
+[xmlrpc][INFO] 2025-03-21 14:35:56,186: Started XML-RPC server [http://localhost:39011/]
+[rospy.init][INFO] 2025-03-21 14:35:56,186: ROS Slave URI: [http://localhost:39011/]
+[rospy.impl.masterslave][INFO] 2025-03-21 14:35:56,186: _ready: http://localhost:39011/
+[rospy.registration][INFO] 2025-03-21 14:35:56,186: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2025-03-21 14:35:56,186: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2025-03-21 14:35:56,286: registered with master
+[rospy.rosout][INFO] 2025-03-21 14:35:56,286: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-03-21 14:35:56,287: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-03-21 14:35:56,288: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2025-03-21 14:35:56,291: Sonar distance monitor initialized
+[rosout][INFO] 2025-03-21 14:35:56,291: Monitoring for the 5 closest sonar readings
+[rosout][INFO] 2025-03-21 14:35:56,291: Sonar distance monitor running. Press Ctrl+C to stop.
+[rospy.internal][INFO] 2025-03-21 14:35:56,570: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][WARNING] 2025-03-21 14:35:56,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:57,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:57,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:58,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:58,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:59,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:35:59,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:00,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:00,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:01,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:01,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:02,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:02,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:03,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:03,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:04,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:04,792: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:05,292: No sonar data received yet
+[rosout][WARNING] 2025-03-21 14:36:05,792: No sonar data received yet
+[rospy.core][INFO] 2025-03-21 14:36:06,083: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2025-03-21 14:36:06,091: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2025-03-21 14:36:06,091: signal-2
+[rospy.core][INFO] 2025-03-21 14:36:06,224: signal_shutdown [atexit]

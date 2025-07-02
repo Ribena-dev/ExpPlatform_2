@@ -1,0 +1,40 @@
+[rospy.client][INFO] 2025-04-25 15:08:44,492: init_node, name[/triggers_19883_1745568524392], pid[19883]
+[xmlrpc][INFO] 2025-04-25 15:08:44,505: XML-RPC server binding to 127.0.0.1:0
+[rospy.init][INFO] 2025-04-25 15:08:44,506: ROS Slave URI: [http://localhost:41669/]
+[xmlrpc][INFO] 2025-04-25 15:08:44,506: Started XML-RPC server [http://localhost:41669/]
+[rospy.impl.masterslave][INFO] 2025-04-25 15:08:44,507: _ready: http://localhost:41669/
+[xmlrpc][INFO] 2025-04-25 15:08:44,521: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2025-04-25 15:08:44,522: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2025-04-25 15:08:44,522: Registering publisher topic [/current_poster] type [geometry_msgs/PointStamped] with master
+[rospy.registration][INFO] 2025-04-25 15:08:44,529: Registering publisher topic [/trigger_msgs] type [std_msgs/Int16] with master
+[rospy.init][INFO] 2025-04-25 15:08:44,614: registered with master
+[rospy.rosout][INFO] 2025-04-25 15:08:44,614: initializing /rosout core topic
+[rospy.rosout][INFO] 2025-04-25 15:08:44,619: connected to core topic /rosout
+[rospy.simtime][INFO] 2025-04-25 15:08:44,621: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2025-04-25 15:08:44,715: topic[/amcl_pose] adding connection to [http://localhost:39275/], count 0
+[rospy.internal][INFO] 2025-04-25 15:08:44,751: topic[/trigger_msgs] adding connection to [/controller_joystick], count 0
+[rospy.internal][INFO] 2025-04-25 15:08:44,763: topic[/trigger_msgs] adding connection to [/curr_posters_19320_1745568510550], count 1
+[rospy.internal][INFO] 2025-04-25 15:08:44,818: topic[/trigger_msgs] adding connection to [/my_bag], count 2
+[rospy.internal][INFO] 2025-04-25 15:08:44,830: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rospy.internal][INFO] 2025-04-25 15:08:44,975: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2025-04-25 15:08:46,069: topic[/trigger_msgs] adding connection to [/my_bag], count 4
+[rospy.internal][INFO] 2025-04-25 15:08:46,069: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-25 15:08:46,223: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-04-25 15:08:46,276: topic[/trigger_msgs] adding connection to [/my_bag2], count 3
+[rosout][WARNING] 2025-04-25 15:14:49,130: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2025-04-25 15:14:49,137: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 322, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rosgraph/network.py", line 364, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rospy.internal][INFO] 2025-04-25 15:14:49,287: topic[/trigger_msgs] removing connection to /controller_joystick
+[rospy.internal][INFO] 2025-04-25 15:14:49,787: topic[/trigger_msgs] removing connection to /curr_posters_19320_1745568510550
+[rospy.core][INFO] 2025-04-25 15:15:19,706: signal_shutdown [atexit]
+[rospy.internal][INFO] 2025-04-25 15:15:19,710: topic[/trigger_msgs] removing connection to /my_bag
+[rospy.internal][INFO] 2025-04-25 15:15:19,710: topic[/trigger_msgs] removing connection to /my_bag2
+[rospy.internal][INFO] 2025-04-25 15:15:19,711: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2025-04-25 15:15:19,712: topic[/amcl_pose] removing connection to http://localhost:39275/
+[rospy.impl.masterslave][INFO] 2025-04-25 15:15:19,712: atexit
