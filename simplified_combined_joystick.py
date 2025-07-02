@@ -88,8 +88,8 @@ class ObstacleFlags:
         self.flag_back = self.calc_flag(self.rear_back)
         self.flag_front_left = self.calc_flag(self.front_front_left)
         self.flag_front_right = self.calc_flag(self.front_front_right)
-        self.flag_bleft = self.calc_flag(self.rear_back_left)
-        self.flag_bright = self.calc_flag(self.rear_right)
+        self.flag_bleft = self.calc_flag_rear(self.rear_left)
+        self.flag_bright = self.calc_flag_rear(self.rear_right)
         self.flag_back_left = self.calc_flag(self.rear_back_left)
         self.flag_back_right = self.calc_flag(self.rear_back_right)
         
@@ -98,6 +98,14 @@ class ObstacleFlags:
         if distance >= self.dist_slow:
             return 1  # Clear
         elif distance >= self.dist_stop:
+            return 2  # Slow down
+        else:
+            return 3  # Stop
+    def calc_flag_rear(self, distance):
+    
+        if distance >= 2.5:
+            return 1  # Clear
+        elif distance >= 2:
             return 2  # Slow down
         else:
             return 3  # Stop
