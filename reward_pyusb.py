@@ -13,12 +13,18 @@ else:
 	print("no MCP2221 found")
 print("checking if kernel tracking")
 if device.is_kernel_driver_active(1) is True:
-	device.detach_kernel_driver(0)
+
 	device.detach_kernel_driver(1)
 	print("kernel driver detached")
-elif device.is_kernel_driver_active(0) is False:
-	print("no kernel attached")
-	
+if device.is_kernel_driver_active(0) is True:
+	device.detach_kernel_driver(0)
+	print("kernel driver detached")
+if device.is_kernel_driver_active(2) is True:
+	device.detach_kernel_driver(2)
+	print("kernel driver detached")
+
+print(device.is_kernel_driver_active(2),device.is_kernel_driver_active(1),device.is_kernel_driver_active(0))
+
 device.set_configuration()
 def reward(pin_number):
 	device.set_configuration()
