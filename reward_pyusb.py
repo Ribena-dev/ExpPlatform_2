@@ -34,16 +34,6 @@ def reward(pin_number):
 	if device.is_kernel_driver_active(2) is True:
 		device.detach_kernel_driver(2)
 		print("no kernel attached")
-	# device.set_configuration()
-	# cmd = [0x50]+[0x00] *63
-	# pin_offset = 7 + (pin_number * 4)
-	# cmd[pin_offset] = 0x01      # Set as output
-	# cmd[pin_offset + 1] = 0x00  # Set value high
-	
-	# # Send command to device
-	# device.write(0x3, cmd)
-	# time.sleep(10)
-	#cmd[pin_offset + 1] = 0x00
 	gpio_write(device,0,1)
 	return 
 
