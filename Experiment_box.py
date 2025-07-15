@@ -469,8 +469,10 @@ while True:
                 publisher.publish(message)
 
     if phase == "Reward":
+
         if mini_timer.getTime() > reward_duration:
             if curr_trial == num_trials - 1:
+                subprocess.run('./off')
                 phase = "End of Session"
                 with open(date_folder + "/platformPositions.csv",'a') as storage:
                     wr = csv.writer(storage, dialect='excel')
@@ -489,6 +491,7 @@ while True:
                 # Send session end to activate juicer
                 mini_timer = core.Clock()
             else:
+                subprocess.run('./on')
                 phase = "Pre Trial Interval"
                 inter_trial_duration = np.random.randint(inter_trial_interval[0], inter_trial_interval[1]+1)
                 curr_target = curr_target + 1
