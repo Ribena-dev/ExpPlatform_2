@@ -12,30 +12,43 @@ if device:
 else:
 	print("no MCP2221 found")
 
+def scram():
 
-# device.set_configuration()
+	sram_cmd = [0x60] +[0x00]*63
+	sram_cmd[7] = 0x01
+	for i in range(8,12):
+
+		sram_cmd[i] = 0b00000000
+
+	device.write(0x02, sram_cmd)
+	print(sram_cmd)
+#device.set_configuration()
 def gpio_write(dev, pin, value):
-
-    cmd = [0x50] + [0x00] * 63
-    cmd[7 + pin * 4] = 0x01      # Output mode
-    cmd[7 + pin * 4 + 1] = value # Value
-    dev.write(0x03,cmd)
-    # dev.ctrl_transfer(0x21, 0x09, 0x0350, 0, cmd)
-    #print(f"GPIO{pin} = {'HIGH' if value else 'LOW'}")
-
-def reward(pin_number):
-	print("checking if kernel tracking")
-	if device.is_kernel_driver_active(1) is True:
-		device.detach_kernel_driver(1)
-		print("kernel driver detached")
-	if device.is_kernel_driver_active(0) is True:
-		device.detach_kernel_driver(0)
-		print("no kernel attached")
-	if device.is_kernel_driver_active(2) is True:
-		device.detach_kernel_driver(2)
-		print("no kernel attached")
-	gpio_write(device,0,1)
+	cmd = [0x50] + [0x00] * 63
+	cmd[2] = 0x01
+	cmd[3]= 0x00
+	cmd[4] = 0x01
+	cmd[5] = 0x00
+	print(cmd)
+	# dev.write(0x02,cmd)
+	dev.ctrl_transfer(0x21,0x09,0x03550,0,cmd)
 	return 
 
-reward(0)
-reward(2)
+def check_kernel():
+	print("checking if kernel tracking")
+	for interface in range(3):
+		if device.is_kernel_driver_active(interface) is True:
+			device.detach_kernel_driver(interface)
+		print("no kernel attached")
+	return 
+def gpio_read():
+	responds =device.read(0x02,64,1000)
+	print(responds)
+check_kernel()
+#scram()
+gpio_write(device,0,0)
+gpio_read()
+
+
+#reward(2)
+#time.sleep(5)
