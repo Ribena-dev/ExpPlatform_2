@@ -58,8 +58,8 @@ def callback(data):
         global publisher
         publisher.publish(pa)
 
-        animals = ['Cat', 'Camel', 'Rabbit', 'Donkey', 'Croc', 'Pig', '-']
-        #animals = ['Cat', 'Camel', 'Rabbit', 'Donkey','-']
+        #animals = ['Cat', 'Camel', 'Rabbit', 'Donkey', 'Croc', 'Pig', '-']
+        animals = ['Cat', 'Camel', 'Rabbit', 'Donkey','-']
         marker_in = Marker()
         marker_in.header.frame_id = "/map"
         marker_in.ns = ""
