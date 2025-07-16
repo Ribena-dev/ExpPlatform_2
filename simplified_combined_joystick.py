@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop=0.3, dist_slow=1.3):
+    def __init__(self, dist_stop, dist_slow):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         
@@ -286,7 +286,8 @@ class JoystickController:
         
         # Check obstacles on left side and rear during turning
         left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_fleft!=3)
-        rear_right_clear = (self.obstacles.flag_back_right != 3 and self.obstacles.flag_bright !=3 )
+        #rear_right_clear = (self.obstacles.flag_back_right != 3 and self.obstacles.flag_bright !=3 )
+        rear_right_clear = (self.obstacles.flag_back_right !=3 )
         
         if not left_clear or not rear_right_clear:
             twist.angular.z = 0
@@ -305,13 +306,13 @@ class JoystickController:
         # Check obstacles on right side and rear during turning
         right_clear = (self.obstacles.flag_fright != 3 and 
                       self.obstacles.flag_front_right != 3)
-        rear_left_clear = (self.obstacles.flag_back_left != 3 and self.obstacles.flag_bleft!=3)
+        rear_left_clear = (self.obstacles.flag_back_left!=3)
         
         if not right_clear or not rear_left_clear:
             twist.angular.z = 0
             rospy.loginfo_throttle(1.0, "Right turn blocked")
         elif (self.obstacles.flag_right == 2 or self.obstacles.flag_front_right == 2 or 
-              self.obstacles.flag_back_right == 2):
+              self.obstacles.flag_back_left == 2):
             twist.angular.z = self.speed_slow * angular_input * 2.5
             rospy.loginfo_throttle(1.0, "Right turn slowed")
         else:
