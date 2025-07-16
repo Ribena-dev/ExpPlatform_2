@@ -14,7 +14,7 @@ import numpy as np
 
 class ObstacleFlags:
    
-    def __init__(self, dist_stop, dist_slow):
+    def __init__(self, dist_stop=0.4, dist_slow=1.5):
         self.dist_stop = dist_stop
         self.dist_slow = dist_slow
         
@@ -103,9 +103,9 @@ class ObstacleFlags:
             return 3  # Stop
     def calc_flag_rear(self, distance):
     
-        if distance >= self.dist_slow +1:
+        if distance >= 0.2:
             return 1  # Clear
-        elif distance >= self.dist_stop + 0.5:
+        elif distance >= 0.15:
             return 2  # Slow down
         else:
             return 3  # Stop
@@ -286,8 +286,8 @@ class JoystickController:
         
         # Check obstacles on left side and rear during turning
         left_clear =(self.obstacles.flag_front_left != 3 and self.obstacles.flag_fleft!=3)
-        #rear_right_clear = (self.obstacles.flag_back_right != 3 and self.obstacles.flag_bright !=3 )
-        rear_right_clear = (self.obstacles.flag_back_right !=3 )
+        rear_right_clear = (self.obstacles.flag_back_right != 3 and self.obstacles.flag_bright !=3 )
+        # rear_right_clear = (self.obstacles.flag_back_right !=3 )
         
         if not left_clear or not rear_right_clear:
             twist.angular.z = 0
@@ -306,7 +306,7 @@ class JoystickController:
         # Check obstacles on right side and rear during turning
         right_clear = (self.obstacles.flag_fright != 3 and 
                       self.obstacles.flag_front_right != 3)
-        rear_left_clear = (self.obstacles.flag_back_left!=3)
+        rear_left_clear = (self.obstacles.flag_back_left!=3 and self.obstacles.flag_bleft !=3)
         
         if not right_clear or not rear_left_clear:
             twist.angular.z = 0
