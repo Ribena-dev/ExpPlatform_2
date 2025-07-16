@@ -3,6 +3,7 @@ import time
 import subprocess
 while True:
 
-    subprocess.run('./on')
-    time.sleep(100 )
-    subprocess.run('./off')
+    subprocess.call('./on')
+    time.sleep(10)
+    subprocess.call('./off')
+    time.sleep(10)

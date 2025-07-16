@@ -25,7 +25,7 @@ import eyelink
 from datetime import datetime
 from playsound import playsound
 from geometry_msgs.msg import Twist
-
+import time
 with open('eparams.pkl', 'rb') as handle:
     exp_info = pickle.load(handle)
 
@@ -471,8 +471,9 @@ while True:
     if phase == "Reward":
 
         if mini_timer.getTime() > reward_duration:
+            subprocess.call('./off')
             if curr_trial == num_trials - 1:
-                subprocess.run('./off')
+                
                 phase = "End of Session"
                 with open(date_folder + "/platformPositions.csv",'a') as storage:
                     wr = csv.writer(storage, dialect='excel')
@@ -491,7 +492,9 @@ while True:
                 # Send session end to activate juicer
                 mini_timer = core.Clock()
             else:
-                subprocess.run('./on')
+                
+                # time.sleep(reward_duration*10)
+                
                 phase = "Pre Trial Interval"
                 inter_trial_duration = np.random.randint(inter_trial_interval[0], inter_trial_interval[1]+1)
                 curr_target = curr_target + 1
@@ -523,7 +526,8 @@ while True:
                     message = Int16()
                     message.data = 3
                     publisher.publish(message)
-
+        else:
+            subprocess.call('./on')
     if phase == "Pre Trial Interval":
         if master_timer < 2.5:
             pt = PointStamped()

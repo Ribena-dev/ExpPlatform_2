@@ -1,4 +1,4 @@
-image: replicated_test_map_2.pgm
+image: replicated_test_map_2_cleaned.pgm
 resolution: 0.025000
 origin: [-12.200000, -14.600000, 0.000000]
 negate: 0
