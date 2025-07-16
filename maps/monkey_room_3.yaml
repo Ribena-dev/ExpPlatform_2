@@ -1,4 +1,4 @@
-image: monkey_room_3.pgm
+image: monkey_room_3_cleaned.pgm
 resolution: 0.025000
 origin: [-11.400000, -12.200000, 0.000000]
 negate: 0

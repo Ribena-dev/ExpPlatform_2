@@ -103,9 +103,9 @@ class ObstacleFlags:
             return 3  # Stop
     def calc_flag_rear(self, distance):
     
-        if distance >= 0.15:
+        if distance >= self.dist_slow +1:
             return 1  # Clear
-        elif distance >= 0.1:
+        elif distance >= self.dist_stop + 1:
             return 2  # Slow down
         else:
             return 3  # Stop
