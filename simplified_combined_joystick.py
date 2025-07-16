@@ -105,7 +105,7 @@ class ObstacleFlags:
     
         if distance >= self.dist_slow +1:
             return 1  # Clear
-        elif distance >= self.dist_stop + 1:
+        elif distance >= self.dist_stop + 0.5:
             return 2  # Slow down
         else:
             return 3  # Stop
