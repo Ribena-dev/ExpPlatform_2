@@ -60,11 +60,11 @@ class ObstacleFlags:
             self.front_right = combined_distances[4]
             
             # Rear lidar distances
-            self.rear_left = combined_distances[5]
-            self.rear_back_left = combined_distances[6]
+            self.rear_left = combined_distances[9]
+            self.rear_back_left = combined_distances[8]
             self.rear_back = combined_distances[7]
-            self.rear_back_right = combined_distances[8]
-            self.rear_right = combined_distances[9]
+            self.rear_back_right = combined_distances[6]
+            self.rear_right = combined_distances[5]
             
             # Combine left and right sides (take minimum for safety)
             #self.combined_left = min(self.front_left, self.rear_left) if self.front_left > 0 and self.rear_left > 0 else max(self.front_left, self.rear_left)
@@ -90,8 +90,8 @@ class ObstacleFlags:
         self.flag_front_right = self.calc_flag(self.front_front_right)
         self.flag_bleft = self.calc_flag_rear(self.rear_left)
         self.flag_bright = self.calc_flag_rear(self.rear_right)
-        self.flag_back_left = self.calc_flag(self.rear_back_left)
-        self.flag_back_right = self.calc_flag(self.rear_back_right)
+        self.flag_back_left = self.calc_flag_rear(self.rear_back_left)
+        self.flag_back_right = self.calc_flag_rear(self.rear_back_right)
         
     def calc_flag(self, distance):
         
@@ -103,9 +103,9 @@ class ObstacleFlags:
             return 3  # Stop
     def calc_flag_rear(self, distance):
     
-        if distance >= 0.2:
+        if distance >= 1:
             return 1  # Clear
-        elif distance >= 0.15:
+        elif distance >= 0.6:
             return 2  # Slow down
         else:
             return 3  # Stop
